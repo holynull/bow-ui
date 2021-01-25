@@ -1,40 +1,63 @@
-<!-- 增加流动性 -->
-<div class="addLiqui-pc">
-    <div class="main">
-
-        <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index;">
-            <div class="firstPart">
-                <div>
-                    <img src="assets/static/img/coins/{{boot.poolId}}-c{{i}}.png" alt="">
-                    <span>{{coin.symbol}}</span>
+<div role="tabpanel" class="tab-pane" id="profile">
+    <!-- 增加流动性 -->
+    <div class="addLiquiDiv">
+        <div class="main">
+            <div class="coinDiv">
+                <div class="firstPart">
+                    <div>
+                        <img src="assets/img/coin/HBTC.png" alt="">
+                        <span>HBTC</span>
+                    </div>
+                    <div>
+                        <span>余额</span>
+                        <span>6741</span>
+                        <span>HBTC</span>
+                    </div>
                 </div>
-                <div>
-                    <!-- <span>{{'Balance'|translate}}</span> -->
-                    <span>{{boot.balance.coinsBalance[i].toFixed(9)}}</span>
-                    <!-- <span>{{coin.symbol}}</span> -->
+                <div class="second">
+                    <input type="number" name="" placeholder="请输入数量">
+                    <button class="approve">同意划转</button>
                 </div>
             </div>
-            <div class="second">
-                <input type="number" name="{{coin.symbol}}Amt" [ngModel]="amts[i]" (ngModelChange)="amtChange(i,$event)"
-                    placeholder="{{'Enter an amount'|translate}}">
-                <button style="margin-bottom: 1em;"
-                    [ngClass]="{myBtn:isApproveEnabled(i),'myBtn-disabled':!isApproveEnabled(i)||loadStatus===1}"
-                    (click)="approve(i)"
-                    [disabled]="!isApproveEnabled(i)||loadStatus===1">{{'Approve'|translate}}</button>
+
+            <div class="coinDiv">
+                <div class="firstPart">
+                    <div>
+                        <img src="assets/img/coin/renBTC.png" alt="">
+                        <span>renBTC</span>
+                    </div>
+                    <div>
+                        <span>余额</span>
+                        <span>6741</span>
+                        <span>renBTC</span>
+                    </div>
+                </div>
+                <div class="second">
+                    <input type="number" name="" placeholder="请输入数量">
+                    <button class="approve">同意划转</button>
+                </div>
+            </div>
+
+            <div class="coinDiv">
+                <div class="firstPart">
+                    <div>
+                        <img src="assets/img/coin/wBTC.png" alt="">
+                        <span>wBTC</span>
+                    </div>
+                    <div>
+                        <span>余额</span>
+                        <span>6741</span>
+                        <span>wBTC</span>
+                    </div>
+                </div>
+                <div class="second">
+                    <input type="number" name="" placeholder="请输入数量">
+                    <button class="approve">同意划转</button>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="butDiv">
-        <!-- <button (click)="approveDai()" style="margin-bottom: 1em;">Approve
-            DAI</button>
-        <button (click)="approveBusd()" style="margin-bottom: 1em;">Approve
-            BUSD</button>
-        <button (click)="approveUsdt()" style="margin-bottom: 1em;">Approve USDT</button> -->
-        <button *ngIf="boot.accounts.length>0" (click)="addLiquidity()"
-            [disabled]="!isAddLiquidityBtnEnabled()||loadStatus===1"
-            [ngClass]="{myBtn: isAddLiquidityBtnEnabled(),'myBtn-disabled':!isAddLiquidityBtnEnabled()||loadStatus===1}">{{'Add
-            Liquidity'|translate}}</button>
-        <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" class="myBtn">{{'Connect to a
-            Wallet'|translate}}</button>
+        <div class="butDiv">
+            <button>增加流动性</button>
+        </div>
     </div>
 </div>

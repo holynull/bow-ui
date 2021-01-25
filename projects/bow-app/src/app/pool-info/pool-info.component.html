@@ -1,24 +1,30 @@
-<div class="assetDiv">
-    <div class="main">
-        <div class="tittle">
-            <div></div>
-            <p>{{"Liquidity"|translate}}</p>
-        </div>
-        <div class="consinfo">
-            <ul>
-                <li *ngFor="let coin of boot.coins;let i=index">
-                    <p><em class="coinName">{{coin.symbol}}:</em> <em class="coinVal">{{boot.poolInfo.coinsRealBalance[i].toFormat(4)}}</em></p>
-                    <span>{{percent(i).toFixed(2)}}%</span>
-                </li>
-            </ul>
-        </div>
-        <div class="sum">
-            <p>{{getCoinsStr()}}：</p>
-            <p>{{getTotal().toFormat(4)}}</p>
-        </div>
-        <div class="sum">
-            <p>{{"Virtual Price"|translate}}：</p>
-            <p>{{boot.poolInfo.virtualPrice.toFixed(4)}}</p>
+<div class="poolDiv">
+    <div class="assetDiv">
+        <div class="main">
+            <div class="tittle">
+                <div></div>
+                <p>货币储备</p>
+            </div>
+            <div class="consinfo">
+                <ul>
+                    <li *ngFor="let coin of boot.coins;let i=index">
+                        <p><em class="coinName">HBTC:</em> <em class="coinVal">0.237291</em></p>
+                        <span>23%</span>
+                    </li>
+                    <li *ngFor="let coin of boot.coins;let i=index">
+                        <p><em class="coinName">HBTC:</em> <em class="coinVal">0.237291</em></p>
+                        <span>23%</span>
+                    </li>
+                    <li *ngFor="let coin of boot.coins;let i=index">
+                        <p><em class="coinName">HBTC:</em> <em class="coinVal">0.237291</em></p>
+                        <span>23%</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="sum">
+                <p>HBTC+wBTC+renBTC：</p>
+                <p>236172863.37</p>
+            </div>
         </div>
     </div>
 </div>

@@ -1,58 +1,84 @@
-<!-- 兑换 -->
-<div class="swap-pc">
-    <div class="main">
-
-        <div class="el-checkbox-group" *ngFor="let coin of boot.coins;let i=index;">
+<div role="tabpanel" class="tab-pane active" id="swap">
+    <!-- 兑换 -->
+    <div class="swapDiv">
+      <div class="main">
+        <div class="checkMaxDiv">
+          <div class="el-checkbox-group">
             <div class="el-checkbox l" label="复选框 A">
-                <input type="radio" [ngModel]="left" name="left" value="{{i}}" (ngModelChange)="chooseLeft($event)">
-                <img src="assets/static/img/coins/{{boot.poolId}}-c{{i}}.png" alt="" (click)="chooseLeft(i)">
-                <span (click)="chooseLeft(i)">{{coin.symbol}}</span>
+                <input type="radio"  name="left">
+                <img src="assets/img/coin/HBTC.png" alt="" >
+                <span>HBTC</span>
             </div>
-            <div class="el-checkbox border_let r" label="复选框 C">
-                <input type="radio" [ngModel]="right" name="right" value="{{i}}" (ngModelChange)="chooseRight($event)">
-                <img src="assets/static/img/coins/{{boot.poolId}}-c{{i}}.png" alt="" (click)="chooseRight(i)">
-                <span (click)="chooseRight(i)">{{coin.symbol}}</span>
+            <div class="el-checkbox r" label="复选框 B">
+                <input type="radio"  name="right">
+                <img src="assets/img/coin/HBTC.png" alt="">
+                <span>HBTC</span>
             </div>
+          </div>  
+          <div class="el-checkbox-group">
+            <div class="el-checkbox l" label="复选框 A">
+                <input type="radio"  name="left">
+                <img src="assets/img/coin/renBTC.png" alt="" >
+                <span>renBTC</span>
+            </div>
+            <div class="el-checkbox r" label="复选框 B">
+                <input type="radio"  name="right">
+                <img src="assets/img/coin/renBTC.png" alt="">
+                <span>renBTC</span>
+            </div>
+          </div>
+          <div class="el-checkbox-group">
+            <div class="el-checkbox l" label="复选框 A">
+                <input type="radio"  name="left">
+                <img src="assets/img/coin/wBTC.png" alt="" >
+                <span>wBTC</span>
+            </div>
+            <div class="el-checkbox r" label="复选框 B">
+                <input type="radio"  name="right">
+                <img src="assets/img/coin/wBTC.png" alt="">
+                <span>wBTC</span>
+            </div>
+          </div>
         </div>
-        <div class="enterDiv">
-            <img src="assets/static/img/exchange.png" alt="">
-            <div class="blanceDiv"><span class="blance">{{"Balance"|translate}}</span>
-                <p>
-                    <span>{{boot.balance.coinsBalance[left].toFixed(9)}}</span>
-                    <span>&nbsp;{{boot.coins[left].symbol}}</span>
-                </p>
-                <div style="float: right;">
-                    <span>{{"Fee"|translate}}: 0.3%</span>
-                </div>
-            </div>
+          <div class="enterDiv">
             <div class="inputDiv">
-                <div class="leftDiv">
-                    <input type="number" name="amt" [ngModel]="amt" (ngModelChange)="amtChanged($event)"
-                        placeholder="{{'Enter an amount'|translate}}">
-                    <span (click)="maxAmt()">{{'MAX'|translate}}</span>
+                <div class="left">
+                  <div class="leftInput">
+                    <input type="number" name="amt" placeholder="输入数量">
+                    <span>全部</span>
+                  </div>
                 </div>
-                <div class="rightDiv">
-                    <input class="minInput" type="number" name="minAmt" [(ngModel)]="minAmt"
-                        placeholder="{{'Min Amount'|translate}}">
-                    <button (click)="approve()" [disabled]="!isApproveEnabled()"
-                        [ngClass]="{myBtn: isApproveEnabled(),'myBtn-disabled':boot.accounts.length===0||!isApproveEnabled()}">{{'Approve'|translate}}</button>
+                <div class="right">
+                  <div class="leftInput">
+                    <input class="minInput"  placeholder="接收数量">
+                  </div>
                 </div>
             </div>
-        </div>
+            <div class="blanceDiv">
+              <div class="left">
+                <div class="leftInput">
+                  <span class="blance">余额</span>
+                  <p>
+                    <span>6741</span><span>&nbsp;</span> <span>HBTC</span>
+                  </p>
+                </div>
+              </div>
+              <div class="right">
+                <!-- <div class="leftInput"> -->
+                  <button>同意划转</button>
+                <!-- </div> -->
+              </div>
+              
+             
+            </div>
+          </div>
+      </div>
+      <div class="butDiv" style="margin-top: 1em;">
+          <div>
+            <span> 汇率(包括费用): 0.3%</span>
+            <span>HBTC/renBTC</span>
+          </div>
+          <button class="myBtn" data-toggle="modal" data-target="#myModal">链接钱包</button>
+      </div>
     </div>
-    <div class="butDiv" style="margin-top: 1em;">
-        <!-- <div>
-            <span>DAI/USDT Rate (including fees): 0.98786</span>
-            <img src="assets/static/img/qiehuan.png" alt="">
-        </div> -->
-        <!-- <div>
-            <span>{{"Fee"|translate}}: 0.3%</span>
-        </div> -->
-        <!-- <button *ngIf="boot.accounts.length>0&&!approved" (click)="approve()" [disabled]="status==1">First
-            Approve</button> -->
-        <button *ngIf="boot.accounts.length>0" (click)="exchange()" [disabled]="!isExchangeEnabled()"
-            [ngClass]="{myBtn: isExchangeEnabled(),'myBtn-disabled':!isExchangeEnabled()}">{{"Exchange"|translate}}</button>
-        <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" class="myBtn">{{"Connect to a
-            Wallet"|translate}}</button>
-    </div>
-</div>
+  </div>
