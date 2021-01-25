@@ -1,0 +1,51 @@
+<!-- 取出流动性 -->
+<div class="withdrawLiqui-pc">
+    <div class="main">
+        <div class="LiquidityRatio">
+            <p>{{boot.balance.lp.toFixed(9,1)}} <span>{{boot.liquiditySymbol}}</span>  </p>
+            <div class="enterDiv">
+                <div class="inputDiv">
+                    <input type="number" name="redeemPrecent" [ngModel]="redeemPrecent"
+                        (ngModelChange)="redeemPrecentChange($event)"
+                        placeholder="{{'Please enter a number'|translate}}" >
+                    <span>%</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="el-checkbox-group">
+                <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
+                    <div class="firstPart">
+                        <div>
+                            <img src="assets/static/img/coins/{{boot.poolId}}-c{{i}}.png" alt="">
+                            <span>{{coin.symbol}}</span>
+                        </div>
+                        <div>
+                            <label for="daiEabled">{{"Redeem All to"|translate}} {{coin.symbol}}</label>
+                            <input type="radio" name="redeemToIndex" [ngModel]="redeemToIndex"
+                                (ngModelChange)="redeemToIndexChange($event)" value="{{i}}"
+                                [disabled]="!redeemPrecent||redeemPrecent===null||redeemPrecent===0"> 
+                        </div>
+                    </div>
+                    <div class="second">
+                        <!-- [disabled]="redeemPrecent&&redeemPrecent!==null&&redeemPrecent!==0" -->
+                        <input type="text" name="{{coin.symbol}}Amt" [(ngModel)]="amts[i]"
+                            placeholder="{{'Enter an amount'|translate}}" >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="averageDiv">
+        <div class="leftDiv">
+            <mat-slide-toggle [color]="slideToggleColor" [checked]="false" [disabled]="!redeemPrecent||redeemPrecent===null||redeemPrecent===0" (change)="reset($event)" #redeemToThree>{{"Redeem to all coins"|translate}}</mat-slide-toggle>
+        </div>
+    </div>
+    <div class="butDiv">
+        <button *ngIf="boot.accounts.length>0" (click)="redeemCoin()" [disabled]="status===1"
+            [ngClass]="{'myBtn':status===0||status===2,'myBtn-disabled': status===1}">{{"Withdraw Liquidity"|translate}}</button>
+        <button *ngIf="boot.accounts.length==0" (click)="boot.connectWallet()" class="myBtn">{{"Connect to a
+            Wallet"|translate}}</button>
+    </div>
+</div>

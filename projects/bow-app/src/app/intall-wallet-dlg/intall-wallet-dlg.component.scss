@@ -1,0 +1,25 @@
+.row ul li {
+    float: left;
+    // width: 50%;
+    // padding-top: 20px;
+    height: 5em;
+}
+.row ul li a{
+    display: block;
+    height: 64px;
+    margin: 0;
+}
+
+.row ul li img {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin: 0 10px;
+}
+
+.row ul li span {
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 3.5em;
+}
