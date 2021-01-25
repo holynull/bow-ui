@@ -1,0 +1,1633 @@
+@media screen and (max-width: 768px) {
+  html{
+    body{
+      background-color: #EAF2F9;
+      font-family: "PingFangSC-Regular, PingFang SC";
+      padding-bottom: 40px;
+      input::-webkit-input-placeholder {     
+        font-weight: 400;
+        color: #7E92A6;  
+      } 
+      input:-moz-placeholder {       
+        font-weight: 400;
+        color: #7E92A6; 
+      } 
+      input::-moz-placeholder {     
+        font-weight: 400;
+        color: #7E92A6; 
+      } 
+      input:-ms-input-placeholder {
+        font-weight: 400;
+        color: #7E92A6; 
+      }
+      .hide{
+        display: none;
+      }
+      button:focus {
+        outline: none;
+      }
+      .header{
+        margin-bottom: 15px;
+        .navigation {
+            width: 100%;
+            height: 60px;
+            .navigation .cursor {
+              cursor: pointer;
+            }
+            .main {
+              width: 94%;
+              margin: 0 auto;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .logo{
+                width: 100px;
+                min-width: 112px;
+                position: relative;
+                img{
+                  width: 100%;
+                }
+              }
+              .leftpart{
+                height: 66px; 
+                width: 166px;
+                background: url(../img/bg_dropdown.png) no-repeat;
+                background-size: 100% 100%;
+                .walletBtn{
+                  height: 51px;
+                  width: 110px;
+                  padding-top: 16px;
+                  padding-left: 20px;
+                  display: inline-block;
+                  .ConnectedButton{
+                    display: none;
+                    height: 100%; 
+                    width: 100%;
+                    background: url(../img/Connected.png) no-repeat;
+                    background-size: 100% 100%;
+                    span{
+                      width: 62px ;
+                      float: right;
+                      line-height: 37px;
+                      text-overflow:ellipsis;
+                      white-space:nowrap;
+                      overflow:hidden;
+                      color: #ffffff;
+                    }
+                  }
+                  .noConnectButton{
+                    // display: none;
+                    height: 100%; 
+                    width: 100%;
+                    background: url(../img/noConnect.png) no-repeat;
+                    background-size: 100% 100%;
+                    span{
+                      width: 62px ;
+                      float: right;
+                      line-height: 37px;
+                      text-overflow:ellipsis;
+                      white-space:nowrap;
+                      overflow:hidden;
+                      color: #000000;
+                    }
+                  }
+                }
+                .xialaBtn{
+                  width: 50px;
+                  float: right;
+                  .dropdown{
+                    button{
+                      width: 50px;
+                      height: 50px;
+                      background: none;
+                      outline: none;
+                    }
+                    .dropdown-menu{               
+                      background: linear-gradient(138deg, #EAF2F9 0%, #E3EDF7 100%);
+                      box-shadow: 8px 8px 9px 0px rgba(128, 152, 176, 0.2);
+                      border-radius: 18px;
+                      border: none;
+                      margin: 0.625rem 0 0;
+                      color: #2C3A47;
+                      img{
+                        width: 20px;
+                        margin-right: 5px;
+                      }
+                    }
+                  }
+                }
+              }
+          }
+        }
+      }
+      .centerDiv{
+        width: 100%;
+        height: auto;
+        padding-top: 0.1rem;
+        .contentDiv{
+          width: 100%;
+          // height: 300px;
+          margin: 0 auto;
+          padding-bottom: 20px;
+          // background: antiquewhite;
+          .tableDiv{
+            width: 100%;
+            .nav{
+              width: 94%; 
+              height: 2.75rem;    
+              margin: 0 auto;                     
+              background: linear-gradient(359deg, #F1F5FA 0%, #DEE8F2 99%, #DEE8F2 100%, #DEE8F2 100%);
+              box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -3px -3px 9px 0px rgba(255, 255, 255, 0.79);
+              border-radius: 46px;
+              .active{  
+                // height: 100%;                        
+                background: linear-gradient(173deg, #EAF1F9 0%, #E4EDF7 100%);
+                box-shadow: 0px 0px 5px 0px rgba(95, 115, 131, 0.52), -2px -2px 9px 0px rgba(110, 134, 151, 0.14), 2px 2px 6px 0px rgba(255, 255, 255, 0.49);
+                border-radius: 43px;
+                font-weight: 500;
+                color: #000000;
+                font-size: 0.92rem;
+              }
+             li{
+              width: 33.3%;
+              height: 100%;          
+              font-size: 0.85rem;
+              font-family: "PingFangSC-Regular, PingFang SC";
+              font-weight: 400;
+              color: #7E92A6;
+              line-height: 2.75rem;;  
+              text-align: center;
+              a{
+                display: block;
+              }
+             }
+            }
+            .tab-content{
+              margin-top: 10px;
+              .tab-pane{
+                .swapDiv{
+                  .main{
+                    height: 300px;
+                    width: 100%;
+                    background: url(../img/swapBG.png) no-repeat;
+                    background-size: 100% 100%;
+                    .checkMaxDiv{
+                      padding-top: 14px;
+                      .el-checkbox-group{
+                        width:92% ;
+                        height: 49px;
+                        margin: 0 auto;
+                        // background: orange;
+                        padding: 10px 20px;
+                        .el-checkbox{
+                          input{
+                            margin-right: 5px;
+                            width: 15px;
+                            height: 15px;                        
+                            background: #DEE8F2;
+                            // box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 3px 0px rgba(255, 255, 255, 0.23);        
+                            border-radius: 26px;
+                            cursor: pointer;
+                          }
+                          img{
+                            width: 30px;
+                          }
+                          span{
+                            width: 45px;
+                            text-align: center;
+                            display: inline-block;
+                            font-size: 0.82rem;
+                          }
+                        }
+                      }
+                    } 
+                    .enterDiv{
+                      margin-top: 15px;
+                      .inputDiv{
+                        width: 94%;
+                        margin: 0 auto;
+                        height: auto;
+                        font-size: 12px;
+                        input{
+                           background:none ; 
+                           outline: none;
+                           height: 42px;
+                           line-height: 42px;
+                           padding-left: 10px;                             
+                           font-weight: bold;
+                           color: #000000;
+                        }
+                        .leftInput{
+                          width: 150px;
+                          margin: 0 auto;
+                          height: 42px;
+                          background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                          box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                          border-radius: 10px;
+                        }
+                        .left{
+                          width: 50%;
+                          float: left;
+                          .leftInput{
+                            // width: 150px;
+                            // margin: 0 auto;
+                            // height: 42px;
+                            // background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                            // box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                            // border-radius: 10px;
+                            input{
+                              width: 70%;
+                              // height: 42px;
+                              // line-height: 42px;
+                              // padding-left: 10px;                             
+                              // font-weight: bold;
+                              // color: #000000;
+                            }
+                            span{                        
+                              font-family: "PingFangSC-Regular, PingFang SC";
+                              font-weight: 400;
+                              color: #3A8DFF;
+                            }
+                          }
+                        }
+                        .right{
+                          width: 50%;
+                          float: left;
+                          input{
+                            width: 90%;
+                          }
+                        }
+                      }
+                      .blanceDiv{
+                        width: 94%;
+                        margin: 0 auto;
+                        height: auto;
+                        .left{
+                          width: 50%;
+                          float: left;
+                          padding: 10px 20px;
+                          line-height: 40px;
+                          span{
+                            display: inline-block;
+                            float: left;
+                          }
+                          p{
+                            float: right;
+                          }
+                        }
+                        .right{
+                          width: 50%;
+                          float: left;
+                          padding: 10px 15px;
+                          button{
+                            width: 148px;
+                            height: 42px;
+                            background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                            box-shadow: 4px 7px 21px 0px rgba(163, 202, 255, 0.72);
+                            border-radius: 12px;                    
+                            font-weight: 400;
+                            color: #FFFFFF;
+                          }
+                        }
+                      }
+                    }
+                  }
+                  .butDiv{
+                    width: 100%;
+                    height: 100px;
+                    div{
+                      width: 95%;
+                      height: 30px;
+                      line-height: 30px;                     
+                      font-family: "PingFangSC-Regular, PingFang SC";
+                      font-weight: 400;
+                      color: #6B6B6B;
+                      span{
+                        font-size: 14px;
+                        float: right;   
+                      }
+                    }
+                    button{
+                      width: 90%;
+                      margin: 20px auto;
+                      height: 50px;
+                      background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                      box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                      border-radius: 16px;
+                      color: #fff;
+                      font-size: 16px;
+                      display: block;
+                    }
+                  }
+                }
+                .addLiquiDiv{
+                  height: auto;
+                  width: 100%;
+                  position: relative;
+                  .main {
+                    width: 95%;
+                    margin: 0 auto;
+                    // height: 348px;
+                    padding-top: 5px;
+                    .coinDiv {
+                      border-radius: 16px;
+                      margin-bottom: 18px;
+                      height: 100px;             
+                      background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+                      box-shadow: 8px 8px 30px 0px rgba(128, 152, 176, 0.2), -22px -8px 15px 0px #F3F9FF;
+                      border-radius: 26px;
+                      .firstPart {
+                        width: 90%;
+                        height: 48px;
+                        margin: 0px auto;
+                        line-height: 45px;
+                        div:nth-child(1) {
+                          float: left;
+                          img {
+                            width: 30px;
+                            margin-top: -3px;
+                            margin-right: 8px;
+                          }
+                          span {
+                            font-size: 16px;
+                            font-family: "PingFangSC-Medium, PingFang SC";
+                            font-weight: 500;
+                            color: #000000;
+                            display: inline-block;
+                          }
+                        }
+                        div:nth-child(2) {
+                          float: right;
+                          font-family: "PingFangSC-Regular, PingFang SC";
+                          font-weight: 400;
+                          span:nth-child(1) {
+                            font-size: 14px;
+                            color: #000000;
+                          }
+                          span:nth-child(2),
+                          span:nth-child(3) {              
+                            color: #3A8DFF;
+                          }
+                        }
+                      }
+                      .second {    
+                        height: 40px;
+                        width: 90%; 
+                        margin: 0 auto;
+                        input {
+                          float: left;
+                          width: 60%;
+                          margin-bottom: 12px;
+                          padding: 0px 13px;
+                          height: 40px;
+                          border-radius: 10px;
+                          margin-right: 20px;
+                          font-family:" DINAlternate-Bold, DINAlternate";
+                          font-weight: bold;
+                          color: #000000;                         
+                          background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                          box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                        }
+                        .approve {                          
+                          background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                          box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                          border-radius: 12px;
+                          width: 90px;
+                          font-size: 12px;
+                          line-height: 40px;
+                          height: 40px;
+                          color: #ffffff;
+                          margin-bottom: 12px;
+                          float: right;
+                        }
+                      }
+                    }
+                  }
+                  .butDiv {
+                    width: 100%;
+                    button {
+                      width: 90%;
+                      margin: 0px auto;
+                      height: 50px;
+                      background: #2480FF;
+                      border-radius: 16px;
+                      color: #fff;
+                      font-size: 16px;
+                      display: block;         
+                      background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                      box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                    }
+                  }
+                }
+                .withdrawLiquiDiv{
+                  // background-color: #ffffff;
+                  height: auto;
+                  width: 95%;
+                  margin: 0 auto;
+                  position: relative;
+                  background-size: 100% 100%;
+                  .main {
+                    width: 100%;
+                    // height: 356px;
+                    border-radius: 12px;
+                    padding-top: 5px;
+                    .LiquidityRatio {
+                      // width: 90%;
+                      height: 63px;
+                      margin: 0 .8em;                
+                      background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                      box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 14px 0px rgba(255, 255, 255, 0.96);
+                      border-radius: 10px;
+                      margin-bottom: 10px;
+                      padding-right: 20PX;
+                      p {
+                        // width: 41%;
+                        font-size: 14px;
+                        float: left;
+                        color: #FFFFFF;
+                        line-height: 43px;
+                        padding-left: 15px;                       
+                        font-weight: 500;
+                        color: #000000;
+                        line-height: 63px;
+                      }
+                      .enterDiv {
+                        float: right;
+                        width: 50%;
+                        .inputDiv {
+                          width: 101%;
+                          display: block;
+                          margin-bottom: 12px;
+                          background: #FAFAFA;
+                          padding: 0px 7px;
+                          height: 44px;
+                          margin: 0 auto;
+                          margin-top: 8px;
+                          border: 1px solid #E1E5EA;
+                          border-radius: 10px;                          
+                          background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                          box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);                         
+                          // background: #DEE8F2;
+                          // box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 3px 0px rgba(255, 255, 255, 0.23);
+                          input {
+                            width: 90%;
+                            background:none;
+                            height: 44px;
+                            float: left;
+                          }
+                        }                     
+                      }
+                    }
+                    .coin_enterDiv{
+                      width: 100%;
+                      height: auto; 
+                      margin-top: 18px;                  
+                      background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+                      box-shadow: 8px 8px 30px 0px rgba(128, 152, 176, 0.2), -12px -8px 15px 0px #F3F9FF;;
+                      border-radius: 13px;
+                      padding-top: 25px;
+                      padding-bottom: 8px;
+                      .el-checkbox {
+                        width: 100%;
+                        margin-bottom: 20px;
+                        .coinDiv {
+                          border-radius: 16px;
+                          margin-bottom: 10px;
+                          .firstPart {
+                            width: 90%;
+                            height: 45px;
+                            margin: 0px auto;
+                            line-height: 45px;
+                            div:nth-child(1) {
+                              float: left;
+                              img {
+                                width: 23px;
+                                margin-top: -6px;
+                                margin-right: 6px;
+                              }
+                              span {
+                                font-size: 14px;
+                                font-family: PingFangSC-Medium, PingFang SC;
+                                font-weight: 500;
+                                color: #000000;
+                                display: inline-block;
+                              } 
+                            }
+                            .second{
+                              display: inline-block;
+                              margin-left: 18px;
+                              width: 45%;
+                              input {
+                                width: 100%;
+                                display: inline-block;
+                                margin-bottom: 12px;
+                                background: #FAFAFA;
+                                padding: 0px 13px;
+                                height: 40px;
+                                margin: 0 auto;
+                                border: 1px solid #E1E5EA;
+                                border-radius: 10px;                             
+                                background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                                box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                              }
+                            }
+                            div:nth-child(3) {
+                              float: right;
+                              input {
+                                width: 16px;
+                                height: 16px;
+                                border-radius: 10px;
+                                border: 1px solid #E1E5EA;
+                              }
+                              label{
+                                width: 35px;
+                                font-size: 14px;
+                                height: 40px;
+                                font-weight: normal;
+                                margin-left: 5px;
+                                line-height: 43px;
+                                margin-bottom: 0px;                             
+                                font-weight: 400;
+                                color: #33404D;
+                                float: right;
+                              }
+                            }  
+                          }  
+                        }
+                      }
+                    }    
+                  } 
+                  .averageDiv {
+                    width: 100%;
+                    height: 48px;
+                    margin-top: 20px;
+                    .leftDiv {
+                      float: right;
+                      // width: 140px;   
+                      height: 28px;
+                      // background: linear-gradient(90deg, #2480FF 0%, #2480FF 73%, #2480FF 100%);
+                      border-radius: 15px;
+                      padding-right: 3px;
+                      span{                    
+                        font-weight: 400;
+                        color: #33404D;
+                        float: right;
+                        line-height: 28px;
+                        margin-right: 10px;
+                        font-size: 14px;
+                      }
+                      .ifOpen{
+                        float: right;
+                          /* 开关的大小*/
+                        .switch-container{
+                          height: 24px;
+                          width:48px;
+
+                          }
+                          /*设置checkbox不显示*/
+                          .switch{
+                            display: none;
+                          }
+                          /*设置label标签为椭圆状*/
+                          .switch-container label{
+                            display: block;                          
+                            background: #DEE8F2;
+                            box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 3px 0px rgba(255, 255, 255, 0.23);
+                            height: 100%;
+                            width: 100%;
+                            cursor: pointer;
+                            border-radius: 25px;
+                            position: relative;
+                          }
+                        /*在label标签内容之前添加如下样式，形成一个未选中状态*/
+                        .switch-container label:before {
+                          content: '';
+                          display: block;
+                          border-radius: 25px;
+                          height: 100%;
+                          width: 24px;   
+                          background: #F4F9FF;
+                          box-shadow: 0px 49px 70px -23px rgba(98, 143, 173, 0.29);
+                          position: absolute;
+                          left: 0px;
+                          box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+                          -webkit-transition: all 0.5s ease;
+                          transition: all 0.5s ease;
+                        }
+                        /*选中后，未选中样式消失*/
+                        #switch:checked~label:before {
+                          left: 24px;  
+                        }
+                        /*选中后label的背景色改变*/
+                        #switch:checked~label {
+                          background-color:#3A8DFF;
+                        }
+                        /*选中后，未选中样式消失*/
+                        #switch1:checked~label:before {
+                          left: 24px;  
+                        }
+                        /*选中后label的背景色改变*/
+                        #switch1:checked~label {
+                          background-color: #4dbd74;
+                        }
+                      }
+                    }
+                  } 
+                  .butDiv{
+                    button {
+                      width: 90%;
+                      margin: 0px auto;
+                      height: 50px;
+                      background: #2480FF;
+                      border-radius: 16px;
+                      color: #fff;
+                      font-size: 16px;
+                      display: block;        
+                      background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                      box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                    }               
+                  }             
+                }
+              }
+            }
+          }
+        }
+      } 
+      .poolDiv{
+        .assetDiv {
+          margin-top: 20px;
+          width: 95%;
+          margin: 0 auto;
+          // height: 300px;
+          padding-bottom: 20px;
+          background: #FFFFFF;
+          box-shadow: 0px 14px 44px 0px #EAF2FF;
+          border-radius: 18px;
+          background: linear-gradient(142deg, #ECF3FA 0%, #E3EDF7 100%);
+          box-shadow: 22px 16px 30px 0px rgba(128, 152, 176, 0.2), -19px -9px 23px 3px rgba(255, 255, 255, 0.79);
+          .main {
+            width: 92%;
+            padding-top: 5px;
+            margin: 0 auto;
+            padding-top: 30px;
+            .tittle {
+              width: 100%;
+              height: 30px;
+              div {
+                float: left;
+                width: 6px;
+                height: 21px;
+                background: #2480FF;
+                border-radius: 38px;
+              }
+              p {
+                float: left;
+                font-size: 18px;
+                font-weight: 500;
+                color: #000000;
+                line-height: 19px;
+                margin-left: 10px;
+              }
+            }
+            .consinfo {
+              width: 100%;
+              // height: 150px;
+              border-bottom: 1px solid #E1E5EA;
+              ul {
+                width: 100%;
+                margin-top:5px;
+                li {
+                  width: 100%;
+                  height: 55px;
+                  line-height: 45px;
+                  padding: 0 0 10px;
+                  p {
+                    float: left;
+                    width: 70%;
+                    margin: 0px;
+                    .coinName {
+                      width: 50px;
+                      display: inline-block;
+                      font-size: 14px;
+                      font-weight: 400;
+                      color: #6B6B6B;
+                    }
+                    .coinVal {
+                      font-size: 16px;
+                      font-family: "DINPro-Regular, DINPro;";
+                      font-weight: 400;
+                      color: #000000;
+                    }
+                  }
+                  span {
+                    float: right;
+                    font-size: 16px;
+                    font-family: "DINPro-Regular, DINPro;";
+                    font-weight: 400;
+                    color: #000000;
+                  }
+                }
+              }
+            } 
+            .sum {
+              margin-top: 10px;
+              height: 40px;
+              line-height: 40px;
+              font-size: 16px;
+              p:nth-child(1) {
+                float: left;
+                width: 50%;
+                font-weight: 400;
+                color: #6B6B6B;
+              }
+              p:nth-child(2) {
+                float: right;
+                width: 50%;
+                font-family: "DINPro-Regular, DINPro;";
+                font-weight: 500;
+                color: #000000;
+                text-align: right;
+              }
+            } 
+          }
+        }
+      }
+      .modal{
+        .modal-dialog{
+          margin: 200px .5rem;        
+          background: #FFFFFF;
+          box-shadow: 0px 49px 70px -23px rgba(98, 143, 173, 0.29);  
+          border-radius: 13px;       
+          .modal-content{
+            border-radius: 13px;
+            .modal-header{
+              border: none;
+              padding-bottom: 0;
+              // width: 100%; 
+              img{
+                width: 26px;
+              }
+              h4{
+                font-size: 18px;
+                height: 30px;
+                line-height: 30px;
+                margin-left: 10px;
+              }
+            }
+            .modal-body{
+              padding-top: 0;
+              .textP{
+                line-height: 30px;
+              }
+              .row{
+                width:100%;
+                margin: 0 auto;
+                ul{
+                  width:100%;
+                  padding-top: 25px;
+                  li{
+                    width:50%;
+                    float: left;
+                    padding: 10px;
+                    padding-left: 0;
+                    img{
+                      width: 40px;
+                      margin-right: 6px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  html{
+    body{
+      width: 100%;
+      height: 100%;
+      // background-color: #EAF2F9;
+      // background: #FAFAFA;
+      background: linear-gradient(146deg, #EAF2F9 0%, #D9E4F2 100%);
+      font-family: "PingFangSC-Regular, PingFang SC";
+      padding-bottom: 40px;
+      input::-webkit-input-placeholder {     
+        font-weight: 400;
+        color: #7E92A6;  
+      } 
+      input:-moz-placeholder {       
+        font-weight: 400;
+        color: #7E92A6; 
+      } 
+      input::-moz-placeholder {     
+        font-weight: 400;
+        color: #7E92A6; 
+      } 
+      input:-ms-input-placeholder {
+        font-weight: 400;
+        color: #7E92A6; 
+      }
+      .hide{
+        display: none;
+      }
+      button:focus {
+        outline: none;
+      }
+      .header{
+        margin-bottom: 15px;
+        width: 600px;
+        margin: 0 auto;
+        .navigation {
+            width: 100%;
+            height: 60px;
+            .navigation .cursor {
+              cursor: pointer;
+            }
+            .main {
+              width: 94%;
+              margin: 0 auto;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .logo{
+                width: 100px;
+                min-width: 112px;
+                position: relative;
+                img{
+                  width: 100%;
+                }
+              }
+              .leftpart{
+                height: 66px; 
+                width: 166px;
+                background: url(../img/bg_dropdown.png) no-repeat;
+                background-size: 100% 100%;
+                .walletBtn{
+                  height: 51px;
+                  width: 110px;
+                  padding-top: 16px;
+                  padding-left: 20px;
+                  display: inline-block;
+                  .ConnectedButton{
+                    display: none;
+                    height: 100%; 
+                    width: 100%;
+                    background: url(../img/Connected.png) no-repeat;
+                    background-size: 100% 100%;
+                    span{
+                      width: 62px ;
+                      float: right;
+                      line-height: 37px;
+                      text-overflow:ellipsis;
+                      white-space:nowrap;
+                      overflow:hidden;
+                      color: #ffffff;
+                    }
+                  }
+                  .noConnectButton{
+                    // display: none;
+                    height: 100%; 
+                    width: 100%;
+                    background: url(../img/noConnect.png) no-repeat;
+                    background-size: 100% 100%;
+                    span{
+                      width: 62px ;
+                      float: right;
+                      line-height: 37px;
+                      text-overflow:ellipsis;
+                      white-space:nowrap;
+                      overflow:hidden;
+                      color: #000000;
+                    }
+                  }
+                }
+                .xialaBtn{
+                  width: 50px;
+                  float: right;
+                  .dropdown{
+                    button{
+                      width: 50px;
+                      height: 50px;
+                      background: none;
+                      outline: none;
+                    }
+                    .dropdown-menu{               
+                      background: linear-gradient(138deg, #EAF2F9 0%, #E3EDF7 100%);
+                      box-shadow: 8px 8px 9px 0px rgba(128, 152, 176, 0.2);
+                      border-radius: 18px;
+                      border: none;
+                      margin: 0.625rem 0 0;
+                      color: #2C3A47;
+                      font-size: 14px;
+                      img{
+                        width: 10px;
+                        margin-right: 5px;
+                      }
+                    }
+                  }
+                }
+              }
+          }
+        }
+      }
+      .bodyMaxDiv{
+        padding-top: 20px;
+        height: auto;
+        width: 100%;
+        background: linear-gradient(146deg, #EAF2F9 0%, #D9E4F2 100%);
+        .bodycenterDiv{
+          width: 450px;
+          margin: 0 auto;        
+          .centerDiv{
+            width: 100%;
+            height: auto;
+            padding-top: 0.1rem;
+            .contentDiv{
+              width: 100%;
+              // height: 300px;
+              margin: 0 auto;
+              padding-bottom: 20px;
+              // background: antiquewhite;
+              .tableDiv{
+                width: 100%;
+                .nav{
+                  width: 94%; 
+                  height: 2.75rem;    
+                  margin: 0 auto;                     
+                  background: linear-gradient(359deg, #F1F5FA 0%, #DEE8F2 99%, #DEE8F2 100%, #DEE8F2 100%);
+                  box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -3px -3px 9px 0px rgba(255, 255, 255, 0.79);
+                  border-radius: 46px;
+                  .active{  
+                    // height: 100%;                        
+                    background: linear-gradient(173deg, #EAF1F9 0%, #E4EDF7 100%);
+                    box-shadow: 0px 0px 5px 0px rgba(95, 115, 131, 0.52), -2px -2px 9px 0px rgba(110, 134, 151, 0.14), 2px 2px 6px 0px rgba(255, 255, 255, 0.49);
+                    border-radius: 43px;
+                    font-weight: 500;
+                    color: #000000;
+                    font-size: 0.92rem;
+                  }
+                 li{
+                  width: 33.3%;
+                  height: 100%;          
+                  font-size: 0.85rem;
+                  font-family: "PingFangSC-Regular, PingFang SC";
+                  font-weight: 400;
+                  color: #7E92A6;
+                  line-height: 2.75rem;;  
+                  text-align: center;
+                  a{
+                    display: block;
+                  }
+                 }
+                }
+                .tab-content{
+                  margin-top: 10px;
+                  .tab-pane{
+                    .swapDiv{
+                      .main{
+                        height: 300px;
+                        width: 100%;
+                        background: url(../img/swapBG.png) no-repeat;
+                        background-size: 100% 100%;
+                        .checkMaxDiv{
+                          padding-top: 14px;
+                          .el-checkbox-group{
+                            width:92% ;
+                            height: 49px;
+                            margin: 0 auto;
+                            // background: orange;
+                            padding: 10px 20px;
+                            .el-checkbox{
+                              input{
+                                margin-right: 5px;
+                                width: 15px;
+                                height: 15px;                        
+                                background: #DEE8F2;
+                                // box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 3px 0px rgba(255, 255, 255, 0.23);        
+                                border-radius: 26px;
+                                cursor: pointer;
+                              }
+                              img{
+                                width: 30px;
+                              }
+                              span{
+                                width: 45px;
+                                text-align: center;
+                                display: inline-block;
+                                font-size: 0.82rem;
+                              }
+                            }
+                          }
+                        } 
+                        .enterDiv{
+                          margin-top: 15px;
+                          .inputDiv{
+                            width: 94%;
+                            margin: 0 auto;
+                            height: auto;
+                            font-size: 12px;
+                            input{
+                               background:none ; 
+                               outline: none;
+                               height: 42px;
+                               line-height: 42px;
+                               padding-left: 10px;                             
+                               font-weight: bold;
+                               color: #000000;
+                            }
+                            .leftInput{
+                              width: 150px;
+                              margin: 0 auto;
+                              height: 42px;
+                              background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                              box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                              border-radius: 10px;
+                            }
+                            .left{
+                              width: 50%;
+                              float: left;
+                              .leftInput{
+                                // width: 150px;
+                                // margin: 0 auto;
+                                // height: 42px;
+                                // background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                                // box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                                // border-radius: 10px;
+                                input{
+                                  width: 70%;
+                                  // height: 42px;
+                                  // line-height: 42px;
+                                  // padding-left: 10px;                             
+                                  // font-weight: bold;
+                                  // color: #000000;
+                                }
+                                span{                        
+                                  font-family: "PingFangSC-Regular, PingFang SC";
+                                  font-weight: 400;
+                                  color: #3A8DFF;
+                                }
+                              }
+                            }
+                            .right{
+                              width: 50%;
+                              float: left;
+                              input{
+                                width: 90%;
+                              }
+                            }
+                          }
+                          .blanceDiv{
+                            width: 94%;
+                            margin: 0 auto;
+                            height: auto;
+                            .left{
+                              width: 50%;
+                              float: left;
+                              padding: 10px 20px;
+                              line-height: 40px;
+                              span{
+                                display: inline-block;
+                                float: left;
+                              }
+                              p{
+                                float: right;
+                              }
+                            }
+                            .right{
+                              width: 50%;
+                              float: left;
+                              padding: 10px 15px;
+                              button{
+                                width: 148px;
+                                height: 42px;
+                                background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                                box-shadow: 4px 7px 21px 0px rgba(163, 202, 255, 0.72);
+                                border-radius: 12px;                    
+                                font-weight: 400;
+                                color: #FFFFFF;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      .butDiv{
+                        width: 100%;
+                        height: 100px;
+                        div{
+                          width: 95%;
+                          height: 30px;
+                          line-height: 30px;                     
+                          font-family: "PingFangSC-Regular, PingFang SC";
+                          font-weight: 400;
+                          color: #6B6B6B;
+                          span{
+                            font-size: 14px;
+                            float: right;   
+                          }
+                        }
+                        button{
+                          width: 90%;
+                          margin: 20px auto;
+                          height: 50px;
+                          background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                          box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                          border-radius: 16px;
+                          color: #fff;
+                          font-size: 16px;
+                          display: block;
+                        }
+                      }
+                    }
+                    .addLiquiDiv{
+                      height: auto;
+                      width: 100%;
+                      position: relative;
+                      .main {
+                        width: 95%;
+                        margin: 0 auto;
+                        // height: 348px;
+                        padding-top: 5px;
+                        .coinDiv {
+                          border-radius: 16px;
+                          margin-bottom: 18px;
+                          height: 100px;             
+                          background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+                          box-shadow: 3px 4px 4px 2px rgba(128, 152, 176, 0.2), -10px -6px 15px 0px #F3F9FF;
+                          border-radius: 18hhhhpx;
+                          .firstPart {
+                            width: 90%;
+                            height: 48px;
+                            margin: 0px auto;
+                            line-height: 45px;
+                            div:nth-child(1) {
+                              float: left;
+                              img {
+                                width: 30px;
+                                margin-top: -3px;
+                                margin-right: 8px;
+                              }
+                              span {
+                                font-size: 16px;
+                                font-family: "PingFangSC-Medium, PingFang SC";
+                                font-weight: 500;
+                                color: #000000;
+                                display: inline-block;
+                              }
+                            }
+                            div:nth-child(2) {
+                              float: right;
+                              font-family: "PingFangSC-Regular, PingFang SC";
+                              font-weight: 400;
+                              span:nth-child(1) {
+                                font-size: 14px;
+                                color: #000000;
+                              }
+                              span:nth-child(2),
+                              span:nth-child(3) {              
+                                color: #3A8DFF;
+                              }
+                            }
+                          }
+                          .second {    
+                            height: 40px;
+                            width: 90%; 
+                            margin: 0 auto;
+                            input {
+                              float: left;
+                              width: 60%;
+                              margin-bottom: 12px;
+                              padding: 0px 13px;
+                              height: 40px;
+                              border-radius: 10px;
+                              margin-right: 20px;
+                              font-family:" DINAlternate-Bold, DINAlternate";
+                              font-weight: bold;
+                              color: #000000;                         
+                              background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                              box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                            }
+                            .approve {                          
+                              background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                              box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                              border-radius: 12px;
+                              width: 90px;
+                              font-size: 12px;
+                              line-height: 40px;
+                              height: 40px;
+                              color: #ffffff;
+                              margin-bottom: 12px;
+                              float: right;
+                            }
+                          }
+                        }
+                      }
+                      .butDiv {
+                        width: 100%;
+                        button {
+                          width: 90%;
+                          margin: 0px auto;
+                          height: 50px;
+                          background: #2480FF;
+                          border-radius: 16px;
+                          color: #fff;
+                          font-size: 16px;
+                          display: block;         
+                          background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                          box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                        }
+                      }
+                    }
+                    .withdrawLiquiDiv{
+                      // background-color: #ffffff;
+                      height: auto;
+                      width: 95%;
+                      margin: 0 auto;
+                      position: relative;
+                      background-size: 100% 100%;
+                      .main {
+                        width: 100%;
+                        // height: 356px;
+                        border-radius: 12px;
+                        padding-top: 5px;
+                        .LiquidityRatio {
+                          // width: 90%;
+                          height: 63px;
+                          margin: 0 .8em;                
+                          background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                          box-shadow: 2px 2px 13px 0px rgba(164, 182, 194, 0.72), -2px -2px 14px 0px rgba(255, 255, 255, 0.96);
+                          border-radius: 10px;
+                          margin-bottom: 10px;
+                          padding-right: 20PX;
+                          p {
+                            // width: 41%;
+                            font-size: 14px;
+                            float: left;
+                            color: #FFFFFF;
+                            line-height: 43px;
+                            padding-left: 15px;                       
+                            font-weight: 500;
+                            color: #000000;
+                            line-height: 63px;
+                          }
+                          .enterDiv {
+                            float: right;
+                            width: 50%;
+                            .inputDiv {
+                              width: 101%;
+                              display: block;
+                              margin-bottom: 12px;
+                              background: #FAFAFA;
+                              padding: 0px 7px;
+                              height: 44px;
+                              margin: 0 auto;
+                              margin-top: 8px;
+                              border: 1px solid #E1E5EA;
+                              border-radius: 10px;                          
+                              background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                              box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);                         
+                              // background: #DEE8F2;
+                              // box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 3px 0px rgba(255, 255, 255, 0.23);
+                              input {
+                                width: 90%;
+                                background:none;
+                                height: 44px;
+                                float: left;
+                              }
+                            }                     
+                          }
+                        }
+                        .coin_enterDiv{
+                          width: 100%;
+                          height: auto; 
+                          margin-top: 25px;                  
+                          background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+                          box-shadow: 8px 11px 17px 0px rgba(128, 152, 176, 0.2), -12px -8px 15px 0px #F3F9FF;;
+                          border-radius: 13px;
+                          padding-top: 25px;
+                          padding-bottom: 8px;
+                          .el-checkbox {
+                            width: 100%;
+                            margin-bottom: 20px;
+                            .coinDiv {
+                              border-radius: 16px;
+                              margin-bottom: 10px;
+                              .firstPart {
+                                width: 90%;
+                                height: 45px;
+                                margin: 0px auto;
+                                line-height: 45px;
+                                div:nth-child(1) {
+                                  float: left;
+                                  img {
+                                    width: 23px;
+                                    margin-top: -6px;
+                                    margin-right: 6px;
+                                  }
+                                  span {
+                                    font-size: 14px;
+                                    font-family: PingFangSC-Medium, PingFang SC;
+                                    font-weight: 500;
+                                    color: #000000;
+                                    display: inline-block;
+                                  } 
+                                }
+                                .second{
+                                  display: inline-block;
+                                  margin-left: 18px;
+                                  width: 45%;
+                                  input {
+                                    width: 100%;
+                                    display: inline-block;
+                                    margin-bottom: 12px;
+                                    background: #FAFAFA;
+                                    padding: 0px 13px;
+                                    height: 40px;
+                                    margin: 0 auto;
+                                    border: 1px solid #E1E5EA;
+                                    border-radius: 10px;                             
+                                    background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                                    box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                                  }
+                                }
+                                div:nth-child(3) {
+                                  float: right;
+                                  input {
+                                    width: 16px;
+                                    height: 16px;
+                                    border-radius: 10px;
+                                    border: 1px solid #E1E5EA;
+                                  }
+                                  label{
+                                    width: 35px;
+                                    font-size: 14px;
+                                    height: 40px;
+                                    font-weight: normal;
+                                    margin-left: 5px;
+                                    line-height: 43px;
+                                    margin-bottom: 0px;                             
+                                    font-weight: 400;
+                                    color: #33404D;
+                                    float: right;
+                                  }
+                                }  
+                              }  
+                            }
+                          }
+                        }    
+                      } 
+                      .averageDiv {
+                        width: 100%;
+                        height: 48px;
+                        margin-top: 20px;
+                        .leftDiv {
+                          float: right;
+                          // width: 140px;   
+                          height: 28px;
+                          // background: linear-gradient(90deg, #2480FF 0%, #2480FF 73%, #2480FF 100%);
+                          border-radius: 15px;
+                          padding-right: 3px;
+                          span{                    
+                            font-weight: 400;
+                            color: #33404D;
+                            float: right;
+                            line-height: 28px;
+                            margin-right: 10px;
+                            font-size: 14px;
+                          }
+                          .ifOpen{
+                            float: right;
+                              /* 开关的大小*/
+                            .switch-container{
+                              height: 24px;
+                              width:48px;
+    
+                              }
+                              /*设置checkbox不显示*/
+                              .switch{
+                                display: none;
+                              }
+                              /*设置label标签为椭圆状*/
+                              .switch-container label{
+                                display: block;                          
+                                background: #DEE8F2;
+                                box-shadow: 2px 2px 5px 0px rgba(164, 182, 194, 0.72), -2px -2px 3px 0px rgba(255, 255, 255, 0.23);
+                                height: 100%;
+                                width: 100%;
+                                cursor: pointer;
+                                border-radius: 25px;
+                                position: relative;
+                              }
+                            /*在label标签内容之前添加如下样式，形成一个未选中状态*/
+                            .switch-container label:before {
+                              content: '';
+                              display: block;
+                              border-radius: 25px;
+                              height: 100%;
+                              width: 24px;   
+                              background: #F4F9FF;
+                              box-shadow: 0px 49px 70px -23px rgba(98, 143, 173, 0.29);
+                              position: absolute;
+                              left: 0px;
+                              box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.08);
+                              -webkit-transition: all 0.5s ease;
+                              transition: all 0.5s ease;
+                            }
+                            /*选中后，未选中样式消失*/
+                            #switch:checked~label:before {
+                              left: 24px;  
+                            }
+                            /*选中后label的背景色改变*/
+                            #switch:checked~label {
+                              background-color:#3A8DFF;
+                            }
+                            /*选中后，未选中样式消失*/
+                            #switch1:checked~label:before {
+                              left: 24px;  
+                            }
+                            /*选中后label的背景色改变*/
+                            #switch1:checked~label {
+                              background-color: #4dbd74;
+                            }
+                          }
+                        }
+                      } 
+                      .butDiv{
+                        button {
+                          width: 90%;
+                          margin: 0px auto;
+                          height: 50px;
+                          background: #2480FF;
+                          border-radius: 16px;
+                          color: #fff;
+                          font-size: 16px;
+                          display: block;        
+                          background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                          box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                        }               
+                      }             
+                    }
+                  }
+                }
+              }
+            }
+          } 
+          .poolDiv{
+            .assetDiv {
+              margin-top: 20px;
+              width: 95%;
+              margin: 0 auto;
+              // height: 300px;
+              padding-bottom: 20px;
+              background: #FFFFFF;
+              box-shadow: 0px 14px 44px 0px #EAF2FF;
+              border-radius: 18px;
+              background: linear-gradient(142deg, #ECF3FA 0%, #E3EDF7 100%);
+              box-shadow: 13px 22px 18px 0px rgba(128, 152, 176, 0.2), -7px -9px 22px 3px rgba(255, 255, 255, 0.79);
+              .main {
+                width: 92%;
+                padding-top: 5px;
+                margin: 0 auto;
+                padding-top: 30px;
+                .tittle {
+                  width: 100%;
+                  height: 30px;
+                  div {
+                    float: left;
+                    width: 6px;
+                    height: 21px;
+                    background: #2480FF;
+                    border-radius: 38px;
+                  }
+                  p {
+                    float: left;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: #000000;
+                    line-height: 19px;
+                    margin-left: 10px;
+                  }
+                }
+                .consinfo {
+                  width: 100%;
+                  // height: 150px;
+                  border-bottom: 1px solid #E1E5EA;
+                  ul {
+                    width: 100%;
+                    margin-top:5px;
+                    li {
+                      width: 100%;
+                      height: 55px;
+                      line-height: 45px;
+                      padding: 0 0 10px;
+                      p {
+                        float: left;
+                        width: 70%;
+                        margin: 0px;
+                        .coinName {
+                          width: 50px;
+                          display: inline-block;
+                          font-size: 14px;
+                          font-weight: 400;
+                          color: #6B6B6B;
+                        }
+                        .coinVal {
+                          font-size: 16px;
+                          font-family: "DINPro-Regular, DINPro;";
+                          font-weight: 400;
+                          color: #000000;
+                        }
+                      }
+                      span {
+                        float: right;
+                        font-size: 16px;
+                        font-family: "DINPro-Regular, DINPro;";
+                        font-weight: 400;
+                        color: #000000;
+                      }
+                    }
+                  }
+                } 
+                .sum {
+                  margin-top: 10px;
+                  height: 40px;
+                  line-height: 40px;
+                  font-size: 16px;
+                  p:nth-child(1) {
+                    float: left;
+                    width: 50%;
+                    font-weight: 400;
+                    color: #6B6B6B;
+                  }
+                  p:nth-child(2) {
+                    float: right;
+                    width: 50%;
+                    font-family: "DINPro-Regular, DINPro;";
+                    font-weight: 500;
+                    color: #000000;
+                    text-align: right;
+                  }
+                } 
+              }
+            }
+          }
+        }
+      }
+    
+      .modal{
+        .modal-dialog{
+          margin: 170px auto;        
+          background: #FFFFFF;
+          box-shadow: 0px 49px 70px -23px rgba(98, 143, 173, 0.29);  
+          border-radius: 13px;       
+          .modal-content{
+            border-radius: 13px;
+            .modal-header{
+              border: none;
+              padding-bottom: 0;
+              // width: 100%; 
+              img{
+                width: 26px;
+              }
+              h4{
+                font-size: 18px;
+                height: 30px;
+                line-height: 30px;
+                margin-left: 10px;
+              }
+            }
+            .modal-body{
+              padding-top: 0;
+              .textP{
+                line-height: 30px;
+              }
+              .row{
+                width:100%;
+                margin: 0 auto;
+                ul{
+                  width:100%;
+                  padding-top: 25px;
+                  li{
+                    width:50%;
+                    float: left;
+                    padding: 10px;
+                    padding-left: 0;
+                    img{
+                      width: 40px;
+                      margin-right: 6px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

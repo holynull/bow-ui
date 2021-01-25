@@ -1,0 +1,350 @@
+{
+    "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+    "version": 1,
+    "newProjectRoot": "projects",
+    "projects": {
+        "bow-home": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "projects/bow-home",
+            "sourceRoot": "projects/bow-home/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/bow-home",
+                        "index": "projects/bow-home/src/index.html",
+                        "main": "projects/bow-home/src/main.ts",
+                        "polyfills": "projects/bow-home/src/polyfills.ts",
+                        "tsConfig": "projects/bow-home/tsconfig.app.json",
+                        "aot": true,
+                        "assets": [
+                            "projects/bow-home/src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "libs/shared-assets/",
+                                "output": "./assets"
+                            },
+                            {
+                                "glob": "favicon.ico",
+                                "input": "libs/",
+                                "output": "./"
+                            }
+                        ],
+                        "styles": [
+                            "projects/bow-home/src/styles.scss",
+                            "libs/styles.scss"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-home/src/environments/environment.ts",
+                                    "with": "projects/bow-home/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "bow-home:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "bow-home:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "bow-home:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/bow-home/src/test.ts",
+                        "polyfills": "projects/bow-home/src/polyfills.ts",
+                        "tsConfig": "projects/bow-home/tsconfig.spec.json",
+                        "karmaConfig": "projects/bow-home/karma.conf.js",
+                        "assets": [
+                            "projects/bow-home/src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "libs/shared-assets/",
+                                "output": "./assets"
+                            },
+                            {
+                                "glob": "favicon.ico",
+                                "input": "libs/",
+                                "output": "./"
+                            }
+                        ],
+                        "styles": [
+                            "projects/bow-home/src/styles.scss",
+                            "libs/styles.scss"
+                        ],
+                        "scripts": []
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/bow-home/tsconfig.app.json",
+                            "projects/bow-home/tsconfig.spec.json",
+                            "projects/bow-home/e2e/tsconfig.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                },
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular:protractor",
+                    "options": {
+                        "protractorConfig": "projects/bow-home/e2e/protractor.conf.js",
+                        "devServerTarget": "bow-home:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "bow-home:serve:production"
+                        }
+                    }
+                }
+            }
+        },
+        "bow-app": {
+            "projectType": "application",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "scss"
+                }
+            },
+            "root": "projects/bow-app",
+            "sourceRoot": "projects/bow-app/src",
+            "prefix": "app",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-angular:browser",
+                    "options": {
+                        "outputPath": "dist/bow-app",
+                        "index": "projects/bow-app/src/index.html",
+                        "main": "projects/bow-app/src/main.ts",
+                        "polyfills": "projects/bow-app/src/polyfills.ts",
+                        "tsConfig": "projects/bow-app/tsconfig.app.json",
+                        "aot": true,
+                        "assets": [
+                            "projects/bow-app/src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "libs/shared-assets/",
+                                "output": "./assets"
+                            },
+                            {
+                                "glob": "favicon.ico",
+                                "input": "libs/",
+                                "output": "./"
+                            }
+                        ],
+                        "styles": [
+                            "libs/styles.scss"
+                        ],
+                        "scripts": []
+                    },
+                    "configurations": {
+                        "production": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-app/src/environments/environment.ts",
+                                    "with": "projects/bow-app/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        },
+                        "p1": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-app/src/environments/environment.ts",
+                                    "with": "projects/bow-app/src/environments/environment.prod.p1.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "serve": {
+                    "builder": "@angular-devkit/build-angular:dev-server",
+                    "options": {
+                        "browserTarget": "bow-app:build"
+                    },
+                    "configurations": {
+                        "production": {
+                            "browserTarget": "bow-app:build:production"
+                        }
+                    }
+                },
+                "extract-i18n": {
+                    "builder": "@angular-devkit/build-angular:extract-i18n",
+                    "options": {
+                        "browserTarget": "bow-app:build"
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/bow-app/src/test.ts",
+                        "polyfills": "projects/bow-app/src/polyfills.ts",
+                        "tsConfig": "projects/bow-app/tsconfig.spec.json",
+                        "karmaConfig": "projects/bow-app/karma.conf.js",
+                        "assets": [
+                            "projects/bow-app/src/favicon.ico",
+                            "projects/bow-app/src/assets"
+                        ],
+                        "styles": [
+                            "projects/bow-app/src/styles.scss"
+                        ],
+                        "scripts": []
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/bow-app/tsconfig.app.json",
+                            "projects/bow-app/tsconfig.spec.json",
+                            "projects/bow-app/e2e/tsconfig.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                },
+                "e2e": {
+                    "builder": "@angular-devkit/build-angular:protractor",
+                    "options": {
+                        "protractorConfig": "projects/bow-app/e2e/protractor.conf.js",
+                        "devServerTarget": "bow-app:serve"
+                    },
+                    "configurations": {
+                        "production": {
+                            "devServerTarget": "bow-app:serve:production"
+                        }
+                    }
+                }
+            }
+        },
+        "app-lib": {
+            "projectType": "library",
+            "root": "projects/app-lib",
+            "sourceRoot": "projects/app-lib/src",
+            "prefix": "lib",
+            "architect": {
+                "build": {
+                    "builder": "@angular-devkit/build-ng-packagr:build",
+                    "options": {
+                        "tsConfig": "projects/app-lib/tsconfig.lib.json",
+                        "project": "projects/app-lib/ng-package.json"
+                    },
+                    "configurations": {
+                        "production": {
+                            "tsConfig": "projects/app-lib/tsconfig.lib.prod.json"
+                        }
+                    }
+                },
+                "test": {
+                    "builder": "@angular-devkit/build-angular:karma",
+                    "options": {
+                        "main": "projects/app-lib/src/test.ts",
+                        "tsConfig": "projects/app-lib/tsconfig.spec.json",
+                        "karmaConfig": "projects/app-lib/karma.conf.js"
+                    }
+                },
+                "lint": {
+                    "builder": "@angular-devkit/build-angular:tslint",
+                    "options": {
+                        "tsConfig": [
+                            "projects/app-lib/tsconfig.lib.json",
+                            "projects/app-lib/tsconfig.spec.json"
+                        ],
+                        "exclude": [
+                            "**/node_modules/**"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "cli": {
+        "analytics": false
+    },
+    "defaultProject": "bow-home"
+}

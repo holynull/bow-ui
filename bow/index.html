@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+
+</head>
+<body>
+  <div class="header">
+    <div class="navigation">
+      <div class="main">
+          <div class="logo">
+              <img class="cursor" src="./img/logo.png" alt="logo">
+          </div>
+          <div class="leftpart">
+            <div class="walletBtn">
+              <div class="ConnectedButton" >
+                <span>0x3fb4ae0541fa1d66e0861ec1cbd0d2a19fda955a</span> 
+              </div>
+              <div class="noConnectButton">
+                <span>链接钱包</span>
+              </div>
+            </div>
+            <div class="xialaBtn">
+              <div class="dropdown">
+                <button type="button" class="" data-toggle="dropdown"></button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="#">
+                    <img src="./img/pool.png" alt="">
+                    <span>矿池1</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <img src="./img/pool.png" alt="">
+                    <span>矿池2</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <img src="./img/pool.png" alt="">
+                    <span>操作指南</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <img src="./img/pool.png" alt="">
+                    <span>中文</span>
+                  </a>
+                  <a class="dropdown-item hide" href="#">
+                    <img src="./img/pool.png" alt="">
+                    <span>English</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="bodyMaxDiv">
+    <div class="bodycenterDiv">
+      <div class="centerDiv">
+        <div class="contentDiv">
+          <div class="tableDiv">
+            <!-- 导航区 -->
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation"><a href="#home" role="tab" data-toggle="tab" class="active">兑换</a></li>
+              <li role="presentation"><a href="#profile" role="tab" data-toggle="tab">增加流动性</a></li>
+              <li role="presentation"><a href="#messages" role="tab" data-toggle="tab">取出流动性</a></li>
+            </ul>
+             
+            <!-- 面板区 -->
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="home">
+                <!-- 兑换 -->
+                <div class="swapDiv">
+                  <div class="main">
+                    <div class="checkMaxDiv">
+                      <div class="el-checkbox-group">
+                        <div class="el-checkbox l" label="复选框 A">
+                            <input type="radio"  name="left">
+                            <img src="./img/coin/HBTC.png" alt="" >
+                            <span>HBTC</span>
+                        </div>
+                        <div class="el-checkbox r" label="复选框 B">
+                            <input type="radio"  name="right">
+                            <img src="./img/coin/HBTC.png" alt="">
+                            <span>HBTC</span>
+                        </div>
+                      </div>  
+                      <div class="el-checkbox-group">
+                        <div class="el-checkbox l" label="复选框 A">
+                            <input type="radio"  name="left">
+                            <img src="./img/coin/renBTC.png" alt="" >
+                            <span>renBTC</span>
+                        </div>
+                        <div class="el-checkbox r" label="复选框 B">
+                            <input type="radio"  name="right">
+                            <img src="./img/coin/renBTC.png" alt="">
+                            <span>renBTC</span>
+                        </div>
+                      </div>
+                      <div class="el-checkbox-group">
+                        <div class="el-checkbox l" label="复选框 A">
+                            <input type="radio"  name="left">
+                            <img src="./img/coin/wBTC.png" alt="" >
+                            <span>wBTC</span>
+                        </div>
+                        <div class="el-checkbox r" label="复选框 B">
+                            <input type="radio"  name="right">
+                            <img src="./img/coin/wBTC.png" alt="">
+                            <span>wBTC</span>
+                        </div>
+                      </div>
+                    </div>
+                      <div class="enterDiv">
+                        <div class="inputDiv">
+                            <div class="left">
+                              <div class="leftInput">
+                                <input type="number" name="amt" placeholder="输入数量">
+                                <span>全部</span>
+                              </div>
+                            </div>
+                            <div class="right">
+                              <div class="leftInput">
+                                <input class="minInput"  placeholder="接收数量">
+                              </div>
+                            </div>
+                        </div>
+                        <div class="blanceDiv">
+                          <div class="left">
+                            <div class="leftInput">
+                              <span class="blance">余额</span>
+                              <p>
+                                <span>6741</span><span>&nbsp;</span> <span>HBTC</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="right">
+                            <!-- <div class="leftInput"> -->
+                              <button>同意划转</button>
+                            <!-- </div> -->
+                          </div>
+                          
+                         
+                        </div>
+                      </div>
+                  </div>
+                  <div class="butDiv" style="margin-top: 1em;">
+                      <div>
+                        <span> 汇率(包括费用): 0.3%</span>
+                        <span>HBTC/renBTC</span>
+                      </div>
+                      <button class="myBtn" data-toggle="modal" data-target="#myModal">链接钱包</button>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="profile">
+                <!-- 增加流动性 -->
+                <div class="addLiquiDiv">
+                  <div class="main">
+                      <div class="coinDiv">
+                          <div class="firstPart">
+                              <div>
+                                  <img src="./img/coin/HBTC.png" alt="">
+                                  <span>HBTC</span>
+                              </div>
+                              <div>
+                                  <span>余额</span>
+                                  <span>6741</span>
+                                  <span>HBTC</span>
+                              </div>
+                          </div>
+                          <div class="second">
+                              <input type="number" name="" placeholder="请输入数量">
+                              <button class="approve">同意划转</button>
+                          </div>
+                      </div>
+    
+                      <div class="coinDiv">
+                        <div class="firstPart">
+                            <div>
+                                <img src="./img/coin/renBTC.png" alt="">
+                                <span>renBTC</span>
+                            </div>
+                            <div>
+                                <span>余额</span>
+                                <span>6741</span>
+                                <span>renBTC</span>
+                            </div>
+                        </div>
+                        <div class="second">
+                            <input type="number" name="" placeholder="请输入数量">
+                            <button class="approve">同意划转</button>
+                        </div>
+                    </div>
+    
+                    <div class="coinDiv">
+                      <div class="firstPart">
+                          <div>
+                              <img src="./img/coin/wBTC.png" alt="">
+                              <span>wBTC</span>
+                          </div>
+                          <div>
+                              <span>余额</span>
+                              <span>6741</span>
+                              <span>wBTC</span>
+                          </div>
+                      </div>
+                      <div class="second">
+                          <input type="number" name="" placeholder="请输入数量">
+                          <button class="approve">同意划转</button>
+                      </div>
+                  </div>
+                  </div>
+                  <div class="butDiv">
+                      <button>增加流动性</button>
+                  </div>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="messages">
+                 <!-- 取出流动性 -->
+                <div class="withdrawLiquiDiv">
+                  <div class="main">
+                      <div class="LiquidityRatio">
+                          <p>流动性比(%)</p>
+                          <div class="enterDiv">
+                              <div class="inputDiv">
+                                  <input type="number"  placeholder="请输入百分比" >
+                              </div>
+                          </div>
+                      </div>
+                      <div class="coin_enterDiv">
+                        <div class="el-checkbox">
+                            <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
+                                <div class="firstPart">
+                                    <div>
+                                        <img src="./img/coin/HBTC.png" alt="">
+                                        <span>HBTC</span>
+                                    </div>
+                                    <div class="second">
+                                      <input type="text"
+                                          placeholder="请输入数量" >
+                                  </div>
+                                    <div>
+                                      <input type="radio">  
+                                      <label for="daiEabled">全部</label> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="el-checkbox">
+                          <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
+                              <div class="firstPart">
+                                  <div>
+                                      <img src="./img/coin/HBTC.png" alt="">
+                                      <span>HBTC</span>
+                                  </div>
+                                  <div class="second">
+                                    <input type="text"
+                                        placeholder="请输入数量" >
+                                </div>
+                                  <div>
+                                    <input type="radio">  
+                                    <label for="daiEabled">全部</label> 
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+    
+                      <div class="el-checkbox">
+                        <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
+                            <div class="firstPart">
+                                <div>
+                                    <img src="./img/coin/HBTC.png" alt="">
+                                    <span>HBTC</span>
+                                </div>
+                                <div class="second">
+                                  <input type="text"
+                                      placeholder="请输入数量" >
+                              </div>
+                                <div>
+                                  <input type="radio">  
+                                  <label for="daiEabled">全部</label> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      </div>
+                  </div>
+                  <div class="averageDiv">
+                      <div class="leftDiv">
+                          <div class="ifOpen">
+                            <div class="switch-container ">
+                              <input  type="checkbox" id="switch" class="switch">
+                              <label for="switch"  onclick="test()"></label>    
+                            </div>
+                        </div>
+                        <span>赎回成全部币种</span>
+                      </div>
+                  </div>
+                  <div class="butDiv">
+                      <button >取出流动性</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="poolDiv">
+        <div class="assetDiv">
+          <div class="main">
+              <div class="tittle">
+                  <div></div>
+                  <p>货币储备</p>
+              </div>
+              <div class="consinfo">
+                  <ul>
+                      <li *ngFor="let coin of boot.coins;let i=index">
+                          <p><em class="coinName">HBTC:</em> <em class="coinVal">0.237291</em></p>
+                          <span>23%</span>
+                      </li>
+                      <li *ngFor="let coin of boot.coins;let i=index">
+                        <p><em class="coinName">HBTC:</em> <em class="coinVal">0.237291</em></p>
+                        <span>23%</span>
+                      </li>
+                      <li *ngFor="let coin of boot.coins;let i=index">
+                        <p><em class="coinName">HBTC:</em> <em class="coinVal">0.237291</em></p>
+                        <span>23%</span>
+                      </li>
+                  </ul>
+              </div>
+              <div class="sum">
+                  <p>HBTC+wBTC+renBTC：</p>
+                  <p>236172863.37</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form data-name="" role="form" onsubmit="return false">
+                <div class="modal-header">
+                    <img src="./img/wallet.png" alt="">
+                    <h4 class="road_title">
+                      选择钱包
+                    </h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                   
+                </div>
+                <div class="modal-body">
+                  <div> <p class="textP">请选择要连接到此DAPP的钱包</p></div>
+                    <div class="row">
+                        <ul>
+                          <li>
+                            <img src="./img/wallet/metamask.png" alt="">
+                            <span>MetaMask</span>
+                          </li>
+                          <li>
+                            <img src="./img/wallet/binanceWLT.jpg" alt="">
+                            <span>Binance</span>
+                          </li>
+                          <li>
+                            <img src="./img/wallet/walletconnect.png" alt="">
+                            <span>WalletConnect</span>
+                          </li>
+                        </ul>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div><!-- /.modal -->
+  <!-- </div> -->
+
+</body>
+</html>
+<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="./js/all.min.js"></script> -->
+<!-- <script src="./js/bootstrap.min.js"></script> -->
+<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
