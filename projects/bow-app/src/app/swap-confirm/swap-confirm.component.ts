@@ -4,7 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
     selector: 'app-swap-confirm',
     templateUrl: './swap-confirm.component.html',
-    styleUrls: ['./swap-confirm.component.scss']
+    styleUrls: ['./swap-confirm.component.less']
 })
 export class SwapConfirmComponent implements OnInit {
 

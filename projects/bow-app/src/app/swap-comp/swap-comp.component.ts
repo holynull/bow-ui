@@ -19,7 +19,7 @@ export enum LoadStatus {
 @Component({
     selector: 'app-swap-comp',
     templateUrl: './swap-comp.component.html',
-    styleUrls: ['./swap-comp.component.scss']
+    styleUrls: ['./swap-comp.component.less']
 })
 export class SwapCompComponent implements OnInit {
     left: string = '0';

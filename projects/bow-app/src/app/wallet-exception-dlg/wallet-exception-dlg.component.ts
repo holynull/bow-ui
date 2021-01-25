@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment';
 @Component({
     selector: 'app-wallet-exception-dlg',
     templateUrl: './wallet-exception-dlg.component.html',
-    styleUrls: ['./wallet-exception-dlg.component.scss']
+    styleUrls: ['./wallet-exception-dlg.component.less']
 })
 export class WalletExceptionDlgComponent implements OnInit {
 

@@ -8,7 +8,7 @@ import { IntallWalletDlgComponent } from './intall-wallet-dlg/intall-wallet-dlg.
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
+    styleUrls: ['./app.component.less']
 })
 export class AppComponent {
     title = 'sssp-app';

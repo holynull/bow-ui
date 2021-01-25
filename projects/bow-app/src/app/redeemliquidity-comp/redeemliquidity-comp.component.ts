@@ -11,7 +11,7 @@ export enum ActionStatus {
 @Component({
     selector: 'app-redeemliquidity-comp',
     templateUrl: './redeemliquidity-comp.component.html',
-    styleUrls: ['./redeemliquidity-comp.component.scss']
+    styleUrls: ['./redeemliquidity-comp.component.less']
 })
 export class RedeemliquidityCompComponent implements OnInit {
 

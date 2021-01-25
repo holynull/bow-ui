@@ -18,7 +18,7 @@ export enum LoadStatus {
 @Component({
     selector: 'app-addliquidity-comp',
     templateUrl: './addliquidity-comp.component.html',
-    styleUrls: ['./addliquidity-comp.component.scss']
+    styleUrls: ['./addliquidity-comp.component.less']
 })
 export class AddliquidityCompComponent implements OnInit {
 

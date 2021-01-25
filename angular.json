@@ -7,7 +7,7 @@
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
-                    "style": "scss"
+                    "style": "less"
                 }
             },
             "root": "projects/bow-home",
@@ -37,8 +37,8 @@
                             }
                         ],
                         "styles": [
-                            "projects/bow-home/src/styles.scss",
-                            "libs/styles.scss"
+                            "projects/bow-home/src/styles.less",
+                            "libs/styles.less"
                         ],
                         "scripts": []
                     },
@@ -111,8 +111,8 @@
                             }
                         ],
                         "styles": [
-                            "projects/bow-home/src/styles.scss",
-                            "libs/styles.scss"
+                            "projects/bow-home/src/styles.less",
+                            "libs/styles.less"
                         ],
                         "scripts": []
                     }
@@ -148,7 +148,7 @@
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
-                    "style": "scss"
+                    "style": "less"
                 }
             },
             "root": "projects/bow-app",
@@ -178,7 +178,8 @@
                             }
                         ],
                         "styles": [
-                            "libs/styles.scss"
+                            "projects/bow-app/src/styles.less",
+                            "libs/styles.less"
                         ],
                         "scripts": []
                     },
@@ -266,13 +267,22 @@
                         "tsConfig": "projects/bow-app/tsconfig.spec.json",
                         "karmaConfig": "projects/bow-app/karma.conf.js",
                         "assets": [
-                            "projects/bow-app/src/favicon.ico",
-                            "projects/bow-app/src/assets"
+                            "projects/bow-app/src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "libs/shared-assets/",
+                                "output": "./assets"
+                            },
+                            {
+                                "glob": "favicon.ico",
+                                "input": "libs/",
+                                "output": "./"
+                            }
                         ],
                         "styles": [
-                            "projects/bow-app/src/styles.scss"
+                            "projects/bow-app/src/styles.less",
+                            "libs/styles.less"
                         ],
-                        "scripts": []
                     }
                 },
                 "lint": {
@@ -304,6 +314,11 @@
         },
         "app-lib": {
             "projectType": "library",
+            "schematics": {
+                "@schematics/angular:component": {
+                    "style": "less"
+                }
+            },
             "root": "projects/app-lib",
             "sourceRoot": "projects/app-lib/src",
             "prefix": "lib",

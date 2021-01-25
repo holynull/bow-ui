@@ -4,7 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 @Component({
     selector: 'app-addlp-confirm',
     templateUrl: './addlp-confirm.component.html',
-    styleUrls: ['./addlp-confirm.component.scss']
+    styleUrls: ['./addlp-confirm.component.less']
 })
 export class AddlpConfirmComponent implements OnInit {
 

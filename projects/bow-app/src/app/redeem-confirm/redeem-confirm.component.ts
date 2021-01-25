@@ -4,7 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
     selector: 'app-redeem-confirm',
     templateUrl: './redeem-confirm.component.html',
-    styleUrls: ['./redeem-confirm.component.scss']
+    styleUrls: ['./redeem-confirm.component.less']
 })
 export class RedeemConfirmComponent implements OnInit {
 

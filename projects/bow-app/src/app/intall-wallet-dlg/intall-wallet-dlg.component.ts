@@ -5,7 +5,7 @@ import { BootService } from '../services/boot.service';
 @Component({
     selector: 'app-intall-wallet-dlg',
     templateUrl: './intall-wallet-dlg.component.html',
-    styleUrls: ['./intall-wallet-dlg.component.scss']
+    styleUrls: ['./intall-wallet-dlg.component.less']
 })
 export class IntallWalletDlgComponent implements OnInit {
 

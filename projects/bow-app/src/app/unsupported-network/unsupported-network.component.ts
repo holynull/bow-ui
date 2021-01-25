@@ -4,7 +4,7 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
     selector: 'app-unsupported-network',
     templateUrl: './unsupported-network.component.html',
-    styleUrls: ['./unsupported-network.component.scss']
+    styleUrls: ['./unsupported-network.component.less']
 })
 export class UnsupportedNetworkComponent implements OnInit {
 

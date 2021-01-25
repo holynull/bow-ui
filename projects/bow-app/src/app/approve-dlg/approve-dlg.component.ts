@@ -4,7 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
     selector: 'app-approve-dlg',
     templateUrl: './approve-dlg.component.html',
-    styleUrls: ['./approve-dlg.component.scss']
+    styleUrls: ['./approve-dlg.component.less']
 })
 export class ApproveDlgComponent implements OnInit {
 
