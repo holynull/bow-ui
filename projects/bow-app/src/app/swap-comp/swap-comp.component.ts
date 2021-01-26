@@ -114,13 +114,13 @@ export class SwapCompComponent implements OnInit {
             //     this.loaded.emit();
             //     return;
             // } else {
-                this.boot.exchange(Number(this.left), Number(this.right), this.amt, this.minAmt ? this.minAmt : '0').then(res => {
-                    console.log(res);
-                    this.boot.loadData();
-                    this.loaded.emit();
-                    this.loadStatus = LoadStatus.Loaded;
-                    this.updateApproveStatus();
-                });
+            this.boot.exchange(Number(this.left), Number(this.right), this.amt, this.minAmt ? this.minAmt : '0').then(res => {
+                console.log(res);
+                this.boot.loadData();
+                this.loaded.emit();
+                this.loadStatus = LoadStatus.Loaded;
+                this.updateApproveStatus();
+            });
             // }
         }
     }
@@ -135,14 +135,20 @@ export class SwapCompComponent implements OnInit {
 
     public async connectWallet() {
         if (!this.boot.isMetaMaskInstalled() && !this.boot.isBinanceInstalled()) {
-            this.dialog.open(IntallWalletDlgComponent, { width: '30em' });
+            this.dialog.open(IntallWalletDlgComponent, {
+                height: 'auto',
+                width: '30%'
+            });
             return;
         } else {
             this.chooseWallet();
         }
     }
     chooseWallet() {
-        this.dialog.open(ChooseWalletDlgComponent, { width: '30em' });
+        this.dialog.open(ChooseWalletDlgComponent, {
+            height: 'auto',
+            width: '30%'
+        });
     }
     amtChanged(val) {
         this.amt = val;

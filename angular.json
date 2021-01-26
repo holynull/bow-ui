@@ -38,7 +38,8 @@
                         ],
                         "styles": [
                             "projects/bow-home/src/styles.less",
-                            "libs/styles.less"
+                            "libs/base.less",
+                            "libs/mat.scss"
                         ],
                         "scripts": []
                     },
@@ -112,7 +113,8 @@
                         ],
                         "styles": [
                             "projects/bow-home/src/styles.less",
-                            "libs/styles.less"
+                            "libs/base.less",
+                            "libs/mat.scss"
                         ],
                         "scripts": []
                     }
@@ -179,7 +181,8 @@
                         ],
                         "styles": [
                             "projects/bow-app/src/styles.less",
-                            "libs/styles.less"
+                            "libs/base.less",
+                            "libs/mat.scss"
                         ],
                         "scripts": []
                     },
@@ -281,8 +284,9 @@
                         ],
                         "styles": [
                             "projects/bow-app/src/styles.less",
-                            "libs/styles.less"
-                        ],
+                            "libs/base.less",
+                            "libs/mat.scss"
+                        ]
                     }
                 },
                 "lint": {

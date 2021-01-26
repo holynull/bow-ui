@@ -42,7 +42,10 @@ export class AppComponent {
     }
 
     chooseWallet() {
-        let dlgRef = this.dialog.open(ChooseWalletDlgComponent, { width: '30em' });
+        let dlgRef = this.dialog.open(ChooseWalletDlgComponent, {
+            height: 'auto',
+            minWidth: '30%'
+        });
         dlgRef.afterClosed().toPromise().then(res => {
             this.header.onLoaded();
         });
@@ -50,7 +53,10 @@ export class AppComponent {
 
     public async connectWallet() {
         if (!this.boot.isMetaMaskInstalled() && !this.boot.isBinanceInstalled()) {
-            this.dialog.open(IntallWalletDlgComponent, { width: '30em' });
+            this.dialog.open(IntallWalletDlgComponent, {
+                height: 'auto',
+                width: '30%'
+            });
             return;
         } else {
             this.chooseWallet();

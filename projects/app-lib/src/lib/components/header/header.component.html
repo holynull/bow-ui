@@ -7,12 +7,15 @@
             </div>
             <div class="leftpart">
                 <div class="walletBtn">
-                    <div class="ConnectedButton">
-                        <span>0x3fb4ae0541fa1d66e0861ec1cbd0d2a19fda955a</span>
+                    <div class="ConnectedButton" style="cursor:pointer" (click)="onConnectWallet()"
+                        *ngIf="needWallet && account; else noConnect">
+                        <span>{{account}}</span>
                     </div>
-                    <div class="noConnectButton">
-                        <span>链接钱包</span>
-                    </div>
+                    <ng-template #noConnect>
+                        <div class="noConnectButton" *ngIf="needWallet" (click)="onConnectWallet()">
+                            <span>链接钱包</span>
+                        </div>
+                    </ng-template>
                 </div>
                 <div class="xialaBtn">
                     <div class="dropdown">

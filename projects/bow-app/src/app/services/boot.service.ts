@@ -146,7 +146,11 @@ export class BootService {
                         await this.loadData();
                     } else {
                         if (!this.web3.currentProvider.isMetaMask) {
-                            this.dialog.open(UnsupportedNetworkComponent, { data: { chainId: chainId }, height: '20em', width: '32em' });
+                            this.dialog.open(UnsupportedNetworkComponent, {
+                                data: { chainId: chainId },
+                                height: 'auto',
+                                width: '30%'
+                            });
                             this.balance.clear();
                             this.poolInfo.clear();
                             // this.accounts = [];
@@ -195,7 +199,11 @@ export class BootService {
                 this.initContracts();
                 await this.loadData();
             } else {
-                this.dialog.open(UnsupportedNetworkComponent, { data: { chainId: networkInfo.chainId }, height: '20em', width: '32em' });
+                this.dialog.open(UnsupportedNetworkComponent, {
+                    data: { chainId: networkInfo.chainId },
+                    height: 'auto',
+                    width: '30%'
+                });
                 return;
             }
         }
@@ -303,6 +311,7 @@ export class BootService {
 
     public async loadData() {
         if (this.web3) {
+            let emptyPool = true;
             this.chainConfig.contracts.coins.forEach(async (e, index) => {
                 let balanceStr = await this.contracts[index].methods.balanceOf(this.accounts[0]).call({ from: this.accounts[0] });
                 let decimals = await this.contracts[index].methods.decimals().call({ from: this.accounts[0] });
@@ -311,6 +320,9 @@ export class BootService {
                 this.balance.coinsBalance[index] = new BigNumber(balanceStr).div(new BigNumber(10).exponentiatedBy(decimals));
                 let pBalanceStr = await this.contracts[index].methods.balanceOf(this.chainConfig.contracts.Pool.address).call({ from: this.accounts[0] });
                 this.poolInfo.coinsBalance[index] = new BigNumber(pBalanceStr).div(new BigNumber(10).exponentiatedBy(decimals));
+                if (this.poolInfo.coinsBalance[index].comparedTo(0) > 0) {
+                    emptyPool = false;
+                }
                 this.poolInfo.coinsRealBalance[index] = this.poolInfo.coinsBalance[index].minus(new BigNumber(adminBalanceStr).div(new BigNumber(10).exponentiatedBy(decimals)));
             });
             let lpBalanceStr = await this.poolContract.methods.balanceOf(this.accounts[0]).call({ from: this.accounts[0] });
@@ -323,8 +335,10 @@ export class BootService {
             this.poolInfo.totalSupply = new BigNumber(totalSupplyStr).div(new BigNumber(10).exponentiatedBy(lpDecimals));
             // this.poolInfo.fee = new BigNumber(feeStr).div(new BigNumber(10).exponentiatedBy(10));
             // this.poolInfo.adminFee=new BigNumber(adminFeeStr).div(new BigNumber(10).exponentiatedBy(10));
-            let virtualPrice = await this.getVirtualPrice();
-            this.poolInfo.virtualPrice = virtualPrice;
+            if (!emptyPool) {
+                let virtualPrice = await this.getVirtualPrice();
+                this.poolInfo.virtualPrice = virtualPrice;
+            }
         }
     }
 
@@ -345,7 +359,11 @@ export class BootService {
             console.log("total amt: " + totalCoins.toFixed(18));
             console.log("lp: " + lp.toFixed(18));
             if (slippage.comparedTo(0) < 0) {
-                let dialogRef = this.dialog.open(AddlpSlippageConfirmComponent, { data: { slippage: slippage.toFixed(4, BigNumber.ROUND_UP) }, height: '20em', width: '32em' });
+                let dialogRef = this.dialog.open(AddlpSlippageConfirmComponent, {
+                    data: { slippage: slippage.toFixed(4, BigNumber.ROUND_UP) },
+                    height: 'auto',
+                    width: '30%'
+                });
                 return dialogRef.afterClosed().toPromise().then(async res => {
                     if (res === true) {
                         return this._addLiquidity(amts);
@@ -369,12 +387,16 @@ export class BootService {
             });
         }).catch(e => {
             console.log(e);
-            this.dialog.open(WalletExceptionDlgComponent, { data: { content: "addliquidity_exception" }, height: '20em', width: '32em' });
+            this.dialog.open(WalletExceptionDlgComponent, { data: { content: "addliquidity_exception" } });
         });
     }
     public async approve(i: number, amt: string): Promise<any> {
         if (this.poolContract) {
-            let dialogRef = this.dialog.open(ApproveDlgComponent, { data: { amt: amt, symbol: this.coins[i].symbol }, height: '20em', width: '32em' });
+            let dialogRef = this.dialog.open(ApproveDlgComponent, {
+                data: { amt: amt, symbol: this.coins[i].symbol },
+                height: 'auto',
+                width: '30%'
+            });
             return dialogRef.afterClosed().toPromise().then(async res => {
                 let amt;
                 if (res && res.continu && res.infinite === true) {
@@ -412,7 +434,7 @@ export class BootService {
                 console.log(e);
             });
         }).catch(e => {
-            this.dialog.open(WalletExceptionDlgComponent, { data: { content: "exchange_exception" }, height: '20em', width: '32em' });
+            this.dialog.open(WalletExceptionDlgComponent, { data: { content: "exchange_exception" } });
             console.log(e);
         });
     }
@@ -420,7 +442,7 @@ export class BootService {
         if (this.poolContract) {
             let slippage = new BigNumber(minAmt).div(new BigNumber(amt)).minus(1).multipliedBy(100);
             if (slippage.comparedTo(0) < 0) {
-                let dialogRef = this.dialog.open(SwapConfirmComponent, { data: { slippage: slippage.toFixed(4, BigNumber.ROUND_UP) }, height: '20em', width: '32em' });
+                let dialogRef = this.dialog.open(SwapConfirmComponent, { data: { slippage: slippage.toFixed(4, BigNumber.ROUND_UP) } });
                 return dialogRef.afterClosed().toPromise().then(async res => {
                     if (res === true) {
                         return this._exchange(i, j, amt, minAmt);
@@ -461,7 +483,7 @@ export class BootService {
                     console.log(e);
                 });
             }).catch(e => {
-                this.dialog.open(WalletExceptionDlgComponent, { data: { content: "redeem_ImBalance_exception" }, height: '20em', width: '32em' });
+                this.dialog.open(WalletExceptionDlgComponent, { data: { content: "redeem_ImBalance_exception" } });
                 console.log(e);
             });
         }
@@ -500,7 +522,7 @@ export class BootService {
                     console.log(e);
                 });
             }).catch(e => {
-                this.dialog.open(WalletExceptionDlgComponent, { data: { content: "redeem_allcoin_exception" }, height: '20em', width: '32em' });
+                this.dialog.open(WalletExceptionDlgComponent, { data: { content: "redeem_allcoin_exception" } });
                 console.log(e);
             });
         }
@@ -534,7 +556,7 @@ export class BootService {
                 });
             }).catch(e => {
                 console.log(e);
-                this.dialog.open(WalletExceptionDlgComponent, { data: { content: "redeem_onecoin_exception" }, height: '20em', width: '32em' });
+                this.dialog.open(WalletExceptionDlgComponent, { data: { content: "redeem_onecoin_exception" } });
             });
         }
     }
