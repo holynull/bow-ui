@@ -24,18 +24,18 @@ export const environment = {
                 }
             }
         },
-        97: {
+        256: {
             enabled: true,
-            name: 'BSC Testnet',
-            rpc: 'https://data-seed-prebsc-1-s1.binance.org:8545/',
+            name: 'HECO Testnet',
+            rpc: 'https://http-testnet.hecochain.com',
             contracts: {
                 coins: [
-                    { symbol: 'DAI', address: '0xec5dcb5dbf4b114c9d0f65bccab49ec54f6a0867' },
-                    { symbol: 'BUSD', address: '0xed24fc36d5ee211ea25a80239fb8c4cfd80f12ee' },
-                    { symbol: 'USDT', address: '0x337610d27c682e347c9cd60bd4b3b107c9d34ddd' },
+                    { symbol: 'bowDAI', address: '0xE4663EfDa57d5bc66448bf185c2FE9559b43Fa21' },
+                    { symbol: 'bowHUSD', address: '0xd6a8FA35f220ed7cbeaD085F648Dbe549e71fC2F' },
+                    { symbol: 'bowUSDT', address: '0x969Bd0E251eF73D5abc67dd3C8cEA3bFF5aff756' },
                 ],
                 Pool: {
-                    address: '0x936EaEB69174e9f67b07213890DF8E0c29A71c83',
+                    address: '0xb434c766CB2C9A597aE55F28aFAB2C5624B9cDA2',
                 }
             }
         },
