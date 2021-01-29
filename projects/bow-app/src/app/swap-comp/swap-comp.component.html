@@ -3,19 +3,19 @@
     <div class="swapDiv">
       <div class="main">
         <div class="checkMaxDiv">
-          <div class="el-checkbox-group">
+          <div class="el-checkbox-group" *ngFor="let coin of boot.coins;let i=index;">
             <div class="el-checkbox l" label="复选框 A">
-                <input type="radio"  name="left">
-                <img src="assets/img/coin/HBTC.png" alt="" >
+                <input type="radio" [ngModel]="left" name="left" value="{{i}}" (ngModelChange)="chooseLeft($event)">
+                <img src="assets/img/coin/{{boot.poolId}}-c{{i}}.png" alt="" >
                 <span>HBTC</span>
             </div>
             <div class="el-checkbox r" label="复选框 B">
-                <input type="radio"  name="right">
-                <img src="assets/img/coin/HBTC.png" alt="">
+                <input type="radio" [ngModel]="right" name="right" value="{{i}}" (ngModelChange)="chooseRight($event)">
+                <img src="assets/static/img/coins/{{boot.poolId}}-c{{i}}.png" alt="" (click)="chooseRight(i)">
                 <span>HBTC</span>
             </div>
           </div>  
-          <div class="el-checkbox-group">
+          <!-- <div class="el-checkbox-group">
             <div class="el-checkbox l" label="复选框 A">
                 <input type="radio"  name="left">
                 <img src="assets/img/coin/renBTC.png" alt="" >
@@ -38,14 +38,15 @@
                 <img src="assets/img/coin/wBTC.png" alt="">
                 <span>wBTC</span>
             </div>
-          </div>
+          </div> -->
         </div>
           <div class="enterDiv">
             <div class="inputDiv">
                 <div class="left">
                   <div class="leftInput">
-                    <input type="number" name="amt" placeholder="输入数量">
-                    <span>全部</span>
+                    <input type="number" name="amt" [ngModel]="amt" (ngModelChange)="amtChanged($event)"
+                    placeholder="{{'Enter an amount'|translate}}">
+                    <span (click)="maxAmt()">{{'MAX'|translate}}</span>
                   </div>
                 </div>
                 <div class="right">
@@ -57,15 +58,16 @@
             <div class="blanceDiv">
               <div class="left">
                 <div class="leftInput">
-                  <span class="blance">余额</span>
+                  <span class="blance">{{"Balance"|translate}}</span>
                   <p>
-                    <span>6741</span><span>&nbsp;</span> <span>HBTC</span>
+                    <span>{{boot.balance.coinsBalance[left].toFixed(9)}}</span><span>&nbsp;</span> <span>{{boot.coins[left].symbol}}</span>
                   </p>
                 </div>
               </div>
               <div class="right">
                 <!-- <div class="leftInput"> -->
-                  <button>同意划转</button>
+                  <button (click)="approve()" [disabled]="!isApproveEnabled()"
+                  [ngClass]="{myBtn: isApproveEnabled(),'myBtn-disabled':boot.accounts.length===0||!isApproveEnabled()}">{{'Approve'|translate}}</button>
                 <!-- </div> -->
               </div>
               
@@ -75,10 +77,13 @@
       </div>
       <div class="butDiv" style="margin-top: 1em;">
           <div>
-            <span> 汇率(包括费用): 0.3%</span>
-            <span>HBTC/renBTC</span>
+            <span>{{"Fee"|translate}}: 0.3%</span>
+            <!-- <span>HBTC/renBTC</span> -->
           </div>
-          <button class="myBtn" data-toggle="modal" data-target="#myModal">链接钱包</button>
+          <button *ngIf="boot.accounts.length>0" (click)="exchange()" [disabled]="!isExchangeEnabled()"
+            [ngClass]="{myBtn: isExchangeEnabled(),'myBtn-disabled':!isExchangeEnabled()}">{{"Exchange"|translate}}</button>
+          <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" class="myBtn">{{"Connect to a
+            Wallet"|translate}}</button>
       </div>
     </div>
   </div>

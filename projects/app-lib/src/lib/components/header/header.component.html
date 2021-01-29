@@ -13,7 +13,7 @@
                     </div>
                     <ng-template #noConnect>
                         <div class="noConnectButton" *ngIf="needWallet" (click)="onConnectWallet()">
-                            <span>链接钱包</span>
+                            <span>{{"Connect to a Wallet"|translate}}</span>
                         </div>
                     </ng-template>
                 </div>
@@ -23,22 +23,22 @@
                         <div class="dropdown-menu dropdown-menu-right">
                             <a class="dropdown-item" href="#">
                                 <img src="assets/img/pool.png" alt="">
-                                <span>矿池1</span>
+                                <span>{{"Pool 1"|translate}}</span>
                             </a>
                             <a class="dropdown-item" href="#">
                                 <img src="assets/img/pool.png" alt="">
-                                <span>矿池2</span>
+                                <span>{{"Pool 2"|translate}}</span>
                             </a>
                             <a class="dropdown-item" href="#">
-                                <img src="assets/img/pool.png" alt="">
-                                <span>操作指南</span>
+                                <img src="assets/img/zhinan.png" alt="">
+                                <span>{{"Tutorial"|translate}}</span>
                             </a>
-                            <a class="dropdown-item" href="#">
-                                <img src="assets/img/pool.png" alt="">
+                            <a class="dropdown-item" href="#" ngIf="lang.curLanguage.indexOf('en')===0" (click)="changeLang(lang.curLanguage.indexOf('zh')===0?'en':'zh')">
+                                <img src="assets/img/cn.png" alt="">
                                 <span>中文</span>
                             </a>
-                            <a class="dropdown-item hide" href="#">
-                                <img src="assets/img/pool.png" alt="">
+                            <a class="dropdown-item hide" href="#" *ngIf="lang.curLanguage.indexOf('zh')===0" (click)="changeLang(lang.curLanguage.indexOf('zh')===0?'en':'zh')">
+                                <img src="assets/img/en.png" alt="">
                                 <span>English</span>
                             </a>
                         </div>
