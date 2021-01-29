@@ -34,7 +34,7 @@
     // height: calc(100vh - 60px);
     height: 145vh;
     width: 100%;
-    background: url(/assets/img/home/bigBG.png) no-repeat;
+    background: url(../assets/img/home/bigBG.png) no-repeat;
     background-size: 100% 100%;
     .bodyCenter{
       width: 1200px;
@@ -63,7 +63,7 @@
           .titleImg{
             width: 155px;
             height: 70px;
-            background: url(/assets/img/home/Introduction_bg.png) no-repeat;
+            background: url(../assets/img/home/Introduction_bg.png) no-repeat;
             background-size: 100% 100%;             
             font-family: "PingFangSC-Heavy, PingFang SC";
             font-weight: 800;
@@ -109,7 +109,7 @@
             .imgDiv{
               width: 40px;
               height: 50px;
-              background: url(/assets/img/home/contact.png) no-repeat;
+              background: url(../assets/img/home/contact.png) no-repeat;
               background-size: 100% 100%;
               float: left;
             }
@@ -126,7 +126,7 @@
           margin-top: 50px;
           height: 130px;
           width: 580px;
-          background:url(/assets/img/home/platforms.png) no-repeat;
+          background:url(../assets/img/home/platforms.png) no-repeat;
           background-size: 100% 100%;
           ul{
             width: 85%;
