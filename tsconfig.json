@@ -30,6 +30,18 @@
     },
     {
       "path": "./projects/app-lib/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/bow-fauce/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/bow-fauce/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/bow-stake/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/bow-stake/tsconfig.spec.json"
     }
 ]
 }

@@ -1,0 +1,69 @@
+ <!-- deposit lp AND reward  -->
+ <div class="stakeMaxDiv">
+  <div class="stake_reward">
+    <div class="main" style="margin-top: 20px;">
+      <div class="tittle">
+          <!-- <div></div> -->
+          <p>质押和奖励</p>
+      </div>
+      <div class="depAndWithd">
+        <div class="depositDiv">
+          <p class="textDiv">
+              <span class="text_span">renBTC</span>
+              <span class="val_span">4578.22</span>
+          </p>
+          <div class="inputDiv">
+              <div>
+                  <input type="number" name="depositPercent"
+                  placeholder="请输入百分比">
+                  <span class="percentage">%</span>
+              </div>
+              <button>Approve
+                  LP</button>
+              <!-- <button *ngIf="boot.accounts.length>0&&!needApproveLP" [ngClass]="{'myBtn':loadStatus===0||loadStatus===2,'myBtn-disabled': loadStatus===1}" [disabled]="loadStatus===1" (click)="depositLP()">Deposit
+                  LP</button>
+              <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" >{{"Connect to a
+                  Wallet"|translate}}</button> -->
+          </div>
+      </div>
+      <div class="withdrawdiv">
+          <p class="textDiv">
+              <span class="text_span">Staking renBTC</span>
+              <span class="val_span">765428.243</span>
+          </p>
+          <div class="inputDiv">
+              <div>
+                  <input type="number" name="withdrawLPPercent" 
+                      placeholder="请输入百分比">
+                  <!-- <span class="allBtn">ALL</span> -->
+                      <span class="percentage">%</span>
+              </div>
+              <button>Withdraw LP</button>
+              <!-- <button *ngIf="boot.accounts.length==0" (click)="connectWallet()">{{"Connect to a
+                  Wallet"|translate}}</button> -->
+
+              <!-- <div class="butDiv" style="display:none">
+                  <button *ngIf="boot.accounts.length>0" [ngClass]="{'myBtn':loadStatus===0||loadStatus===2,'myBtn-disabled': loadStatus===1}" [disabled]="loadStatus===1" (click)="withdrawAllLP()">Withdraw All LP</button>
+                  <button *ngIf="boot.accounts.length==0" (click)="boot.connectWallet()" class="myBtn">{{"Connect to a
+                      Wallet"|translate}}</button>
+              </div> -->
+          </div>
+      </div>
+      </div>
+
+      <div class="rewardDiv">
+          <p class="textDiv">
+              <span class="val_span">7645.432</span>
+              <span class="text_span">Pending renBTC</span>
+          </p>
+          <div class="btnDiv">
+          <button >Get Pending renBTC</button>
+          <!-- <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" class="myBtn">{{"Connect to a
+              Wallet"|translate}}</button> -->
+          </div>
+      </div>
+    </div>
+  </div>  
+
+ </div>
+ 

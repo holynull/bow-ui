@@ -3,10 +3,13 @@
    <div class="withdrawLiquiDiv">
      <div class="main">
          <div class="LiquidityRatio">
-             <p>流动性比(%)</p>
+          <p>{{boot.balance.lp.toFixed(9,1)}} <span>{{boot.liquiditySymbol}}</span>  </p>
              <div class="enterDiv">
                  <div class="inputDiv">
-                     <input type="number"  placeholder="请输入百分比" >
+                     <input type="number" name="redeemPrecent" [ngModel]="redeemPrecent"
+                     (ngModelChange)="redeemPrecentChange($event)"
+                     placeholder="{{'Please enter a number'|translate}}">
+                     <span>%</span>
                  </div>
              </div>
          </div>
@@ -15,22 +18,24 @@
                <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
                    <div class="firstPart">
                        <div>
-                           <img src="assets/img/coin/HBTC.png" alt="">
-                           <span>HBTC</span>
+                           <img src="assets/img/coin/{{boot.poolId}}-c{{i}}.png" alt="">
+                           <span>{{coin.symbol}}</span>
                        </div>
                        <div class="second">
-                         <input type="text"
-                             placeholder="请输入数量" >
+                         <input type="text" name="{{coin.symbol}}Amt" [(ngModel)]="amts[i]"
+                         placeholder="{{'Enter an amount'|translate}}" >
                      </div>
                        <div>
-                         <input type="radio">  
-                         <label for="daiEabled">全部</label> 
+                         <input type="radio" name="redeemToIndex" [ngModel]="redeemToIndex"
+                         (ngModelChange)="redeemToIndexChange($event)" value="{{i}}"
+                         [disabled]="!redeemPrecent||redeemPrecent===null||redeemPrecent===0">  
+                         <label for="daiEabled" >{{'MAX'|translate}}</label> 
                        </div>
                    </div>
                </div>
            </div>
 
-           <div class="el-checkbox">
+           <!-- <div class="el-checkbox">
              <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
                  <div class="firstPart">
                      <div>
@@ -66,22 +71,26 @@
                    </div>
                </div>
            </div>
-       </div>
+       </div> -->
          </div>
      </div>
      <div class="averageDiv">
          <div class="leftDiv">
-             <div class="ifOpen">
+             <!-- <div class="ifOpen">
                <div class="switch-container ">
                  <input  type="checkbox" id="switch" class="switch">
                  <label for="switch"  onclick="test()"></label>    
                </div>
            </div>
-           <span>赎回成全部币种</span>
+           <span>赎回成全部币种</span> -->
+           <mat-slide-toggle [color]="slideToggleColor" [checked]="false" [disabled]="!redeemPrecent||redeemPrecent===null||redeemPrecent===0" (change)="reset($event)" #redeemToThree>{{"Redeem to all coins"|translate}}</mat-slide-toggle>
          </div>
      </div>
      <div class="butDiv">
-         <button >取出流动性</button>
-     </div>
+      <button *ngIf="boot.accounts.length>0" (click)="redeemCoin()" [disabled]="status===1"
+        [ngClass]="{'myBtn':status===0||status===2,'myBtn-disabled': status===1}">{{"Withdraw Liquidity"|translate}}</button>
+      <button *ngIf="boot.accounts.length==0" (click)="boot.connectWallet()" class="myBtn">{{"Connect to a
+          Wallet"|translate}}</button>
+      </div>
    </div>
  </div>
