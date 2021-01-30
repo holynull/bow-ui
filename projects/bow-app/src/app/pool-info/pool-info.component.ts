@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import BigNumber from 'bignumber.js';
-import { BootService } from '../services/boot.service';
+import { BootService } from 'app-lib';
 
 @Component({
     selector: 'app-pool-info',

@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { BootService } from './services/boot.service';
+import { BootService } from 'app-lib';
 import { HeaderComponent, LanguageService } from 'app-lib';
 import { MatDialog } from '@angular/material/dialog';
 import { ChooseWalletDlgComponent } from './choose-wallet-dlg/choose-wallet-dlg.component';

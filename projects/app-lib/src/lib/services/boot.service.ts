@@ -1,5 +1,6 @@
 import {
     ApplicationRef,
+    Inject,
     Injectable
 } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
@@ -7,16 +8,16 @@ import WalletConnectProvider from '@walletconnect/web3-provider';
 import { BigNumber } from 'bignumber.js';
 import { interval, Observable, Subject } from 'rxjs';
 import { Contract } from 'web3-eth-contract';
-import { environment } from '../../environments/environment';
-import { AddlpSlippageConfirmComponent } from '../addlp-slippage-confirm/addlp-slippage-confirm.component';
-import { ApproveDlgComponent } from '../approve-dlg/approve-dlg.component';
+import { AddlpSlippageConfirmComponent } from '../components/addlp-slippage-confirm/addlp-slippage-confirm.component';
+import { ApproveDlgComponent } from '../components/approve-dlg/approve-dlg.component';
 import { Balance } from '../model/balance';
 import { PoolInfo } from '../model/pool-info';
-import { SwapConfirmComponent } from '../swap-confirm/swap-confirm.component';
-import { UnsupportedNetworkComponent } from '../unsupported-network/unsupported-network.component';
-import { WalletExceptionDlgComponent } from '../wallet-exception-dlg/wallet-exception-dlg.component';
-import HRC20 from '../../abi/HRC20.json';
-import BowPool from '../../abi/BowPool.json';
+import { SwapConfirmComponent } from '../components/swap-confirm/swap-confirm.component';
+import { UnsupportedNetworkComponent } from '../components/unsupported-network/unsupported-network.component';
+import { WalletExceptionDlgComponent } from '../components/wallet-exception-dlg/wallet-exception-dlg.component';
+import HRC20 from '../abi/HRC20.json';
+import BowPool from '../abi/BowPool.json';
+import { EnvService } from './env.service';
 
 
 const Web3_1_3 = require('web3_1_3');
@@ -28,9 +29,9 @@ export class BootService {
 
     walletReady: Subject<any> = new Subject();
 
-    poolId = environment.poolId;
-    coins = environment.coins;
-    liquiditySymbol = environment.liquiditySymbol;
+    poolId = this.env.environment.poolId;
+    coins = this.env.environment.coins;
+    liquiditySymbol = this.env.environment.liquiditySymbol;
     web3: any;
     binanceWeb3: any;
     metamaskWeb3: any;
@@ -59,7 +60,7 @@ export class BootService {
 
     virtualPrice: BigNumber;
 
-    constructor(private dialog: MatDialog, private applicationRef: ApplicationRef) {
+    constructor(private dialog: MatDialog, private applicationRef: ApplicationRef, private env: EnvService) {
         this.balance.coinsBalance = new Array();
         this.poolInfo.coinsBalance = new Array();
         this.coins.forEach(e => {
@@ -140,7 +141,7 @@ export class BootService {
                     }
                     let networkInfo = await this.getNetworkInfo(chainId);
                     if (networkInfo.isSupported) {
-                        this.chainConfig = environment.chains[chainId];
+                        this.chainConfig = this.env.environment.chains[chainId];
                         this.chainId = chainId;
                         this.initContracts();
                         await this.loadData();
@@ -221,7 +222,7 @@ export class BootService {
             } else {
                 chainId = _chainId;
             }
-            let chainConfig = environment.chains[chainId];
+            let chainConfig = this.env.environment.chains[chainId];
             if (!chainConfig || !chainConfig.enabled) {
                 return { isSupported: false, chainId: chainId, config: chainConfig };
             } else {
@@ -239,9 +240,9 @@ export class BootService {
             // infuraId: "a1b8fe06fc1349b1b812bdb7b8f79465",
             rpc: {
                 // @ts-ignore
-                56: environment.chains[56].rpc,
+                56: env.environment.chains[56].rpc,
                 // @ts-ignore
-                97: environment.chains[97].rpc,
+                97: env.environment.chains[97].rpc,
             },
         });
         // Subscribe to session connection

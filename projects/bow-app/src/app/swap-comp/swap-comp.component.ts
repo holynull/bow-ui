@@ -1,12 +1,9 @@
-import { EventEmitter, Output } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import BigNumber from 'bignumber.js';
-import { environment } from '../../environments/environment';
 import { ChooseWalletDlgComponent } from '../choose-wallet-dlg/choose-wallet-dlg.component';
 import { IntallWalletDlgComponent } from '../intall-wallet-dlg/intall-wallet-dlg.component';
-import { PriceDiffComponent } from '../price-diff/price-diff.component';
-import { BootService } from '../services/boot.service';
+import { BootService } from 'app-lib';
 
 export enum ApproveStatus {
     None, Approved, NoApproved

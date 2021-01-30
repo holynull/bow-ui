@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/cor
 import { ThemePalette } from '@angular/material/core';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import BigNumber from 'bignumber.js';
-import { BootService } from '../services/boot.service';
+import { BootService } from 'app-lib';
 
 export enum ActionStatus {
     None, Transfering, TrasactionEnd
