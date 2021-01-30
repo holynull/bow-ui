@@ -27,3 +27,10 @@ html body .hide {
 html body button:focus {
   outline: none;
 }
+html body ul {
+  padding: 0;
+  margin: 0;
+}
+html body li {
+  list-style-type: none;
+}
