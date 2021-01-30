@@ -20,13 +20,12 @@ import { PoolInfoComponent } from './pool-info/pool-info.component';
 import { RedeemConfirmComponent } from './redeem-confirm/redeem-confirm.component';
 import { RedeemliquidityCompComponent } from './redeemliquidity-comp/redeemliquidity-comp.component';
 import { SwapCompComponent } from './swap-comp/swap-comp.component';
-import { SwapConfirmComponent } from './swap-confirm/swap-confirm.component';
-import { UnsupportedNetworkComponent } from './unsupported-network/unsupported-network.component';
+import { SwapConfirmComponent } from '../../../app-lib/src/lib/components/swap-confirm/swap-confirm.component';
+import { UnsupportedNetworkComponent } from '../../../app-lib/src/lib/components/unsupported-network/unsupported-network.component';
 import { PriceDiffComponent } from './price-diff/price-diff.component';
-import { ApproveDlgComponent } from './approve-dlg/approve-dlg.component';
-import { AddlpSlippageConfirmComponent } from './addlp-slippage-confirm/addlp-slippage-confirm.component';
-import { WalletExceptionDlgComponent } from './wallet-exception-dlg/wallet-exception-dlg.component';
+import { ApproveDlgComponent } from '../../../app-lib/src/lib/components/approve-dlg/approve-dlg.component';
 import { MatIconModule } from '@angular/material/icon';
+import { environment } from '../environments/environment';
 
 @NgModule({
     declarations: [
@@ -43,12 +42,10 @@ import { MatIconModule } from '@angular/material/icon';
         AddlpConfirmComponent,
         PriceDiffComponent,
         ApproveDlgComponent,
-        AddlpSlippageConfirmComponent,
-        WalletExceptionDlgComponent
     ],
     imports: [
         BrowserModule,
-        AppLibModule,
+        AppLibModule.forRoot(environment),
         BrowserAnimationsModule,
         MatDialogModule,
         MatButtonModule,

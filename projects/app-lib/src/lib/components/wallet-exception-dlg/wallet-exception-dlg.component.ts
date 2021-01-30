@@ -1,6 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { environment } from '../../environments/environment';
+import { EnvService } from '../../services/env.service';
 
 @Component({
     selector: 'app-wallet-exception-dlg',
@@ -11,9 +11,9 @@ export class WalletExceptionDlgComponent implements OnInit {
 
     content: string;
 
-    liquditySymbol: string = environment.liquiditySymbol;
+    liquditySymbol: string = this.env.environment.liquiditySymbol;
 
-    constructor(@Inject(MAT_DIALOG_DATA) public dlgData: any, private dialogRef: MatDialogRef<WalletExceptionDlgComponent>) {
+    constructor(@Inject(MAT_DIALOG_DATA) public dlgData: any, private dialogRef: MatDialogRef<WalletExceptionDlgComponent>, private env: EnvService) {
         this.content = dlgData.content;
     }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { BootService } from '../services/boot.service';
+import { BootService } from 'app-lib';
 
 @Component({
     selector: 'app-choose-wallet-dlg',
