@@ -21,6 +21,8 @@ import { UnsupportedNetworkComponent } from './components/unsupported-network/un
 import { WalletExceptionDlgComponent } from './components/wallet-exception-dlg/wallet-exception-dlg.component';
 import { FormsModule } from '@angular/forms';
 import { EnvService } from './services/env.service';
+import { ChooseWalletDlgComponent } from './components/choose-wallet-dlg/choose-wallet-dlg.component';
+import { InstallWalletDlgComponent } from './components/install-wallet-dlg/install-wallet-dlg.component';
 
 
 @NgModule({
@@ -33,6 +35,8 @@ import { EnvService } from './services/env.service';
         SwapConfirmComponent,
         UnsupportedNetworkComponent,
         WalletExceptionDlgComponent,
+        ChooseWalletDlgComponent,
+        InstallWalletDlgComponent,
     ],
     imports: [
         CommonModule,
@@ -63,6 +67,8 @@ import { EnvService } from './services/env.service';
         ApproveDlgComponent,
         SwapConfirmComponent,
         UnsupportedNetworkComponent,
+        ChooseWalletDlgComponent,
+        InstallWalletDlgComponent,
     ]
 })
 export class AppLibModule {

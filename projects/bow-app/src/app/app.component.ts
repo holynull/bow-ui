@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { BootService } from 'app-lib';
 import { HeaderComponent, LanguageService } from 'app-lib';
 import { MatDialog } from '@angular/material/dialog';
-import { ChooseWalletDlgComponent } from './choose-wallet-dlg/choose-wallet-dlg.component';
-import { IntallWalletDlgComponent } from './intall-wallet-dlg/intall-wallet-dlg.component';
+import { ChooseWalletDlgComponent } from 'app-lib';
+import { InstallWalletDlgComponent } from 'app-lib';
 
 @Component({
     selector: 'app-root',
@@ -53,7 +53,7 @@ export class AppComponent {
 
     public async connectWallet() {
         if (!this.boot.isMetaMaskInstalled() && !this.boot.isBinanceInstalled()) {
-            this.dialog.open(IntallWalletDlgComponent, {
+            this.dialog.open(InstallWalletDlgComponent, {
                 height: 'auto',
                 width: '30%'
             });
