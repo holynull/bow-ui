@@ -14,8 +14,6 @@ import { AppLibModule } from 'app-lib';
 import { AddliquidityCompComponent } from './addliquidity-comp/addliquidity-comp.component';
 import { AddlpConfirmComponent } from './addlp-confirm/addlp-confirm.component';
 import { AppComponent } from './app.component';
-import { ChooseWalletDlgComponent } from './choose-wallet-dlg/choose-wallet-dlg.component';
-import { IntallWalletDlgComponent } from './intall-wallet-dlg/intall-wallet-dlg.component';
 import { PoolInfoComponent } from './pool-info/pool-info.component';
 import { RedeemConfirmComponent } from './redeem-confirm/redeem-confirm.component';
 import { RedeemliquidityCompComponent } from './redeemliquidity-comp/redeemliquidity-comp.component';
@@ -31,12 +29,10 @@ import { environment } from '../environments/environment';
     declarations: [
         AppComponent,
         PoolInfoComponent,
-        IntallWalletDlgComponent,
         SwapCompComponent,
         AddliquidityCompComponent,
         RedeemliquidityCompComponent,
         UnsupportedNetworkComponent,
-        ChooseWalletDlgComponent,
         SwapConfirmComponent,
         RedeemConfirmComponent,
         AddlpConfirmComponent,
