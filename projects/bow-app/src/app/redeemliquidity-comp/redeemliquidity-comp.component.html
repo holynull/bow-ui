@@ -1,87 +1,61 @@
 <div role="tabpanel" class="tab-pane" id="messages">
     <!-- 取出流动性 -->
-   <div class="withdrawLiquiDiv">
-     <div class="main">
-         <div class="LiquidityRatio">
-             <p>流动性比(%)</p>
-             <div class="enterDiv">
-                 <div class="inputDiv">
-                     <input type="number"  placeholder="请输入百分比" >
-                 </div>
-             </div>
-         </div>
-         <div class="coin_enterDiv">
-           <div class="el-checkbox">
-               <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
-                   <div class="firstPart">
-                       <div>
-                           <img src="assets/img/coin/HBTC.png" alt="">
-                           <span>HBTC</span>
-                       </div>
-                       <div class="second">
-                         <input type="text"
-                             placeholder="请输入数量" >
-                     </div>
-                       <div>
-                         <input type="radio">  
-                         <label for="daiEabled">全部</label> 
-                       </div>
-                   </div>
-               </div>
-           </div>
-
-           <div class="el-checkbox">
-             <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
-                 <div class="firstPart">
-                     <div>
-                         <img src="assets/img/coin/HBTC.png" alt="">
-                         <span>HBTC</span>
-                     </div>
-                     <div class="second">
-                       <input type="text"
-                           placeholder="请输入数量" >
-                   </div>
-                     <div>
-                       <input type="radio">  
-                       <label for="daiEabled">全部</label> 
-                     </div>
-                 </div>
-             </div>
-         </div>
-
-         <div class="el-checkbox">
-           <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index">
-               <div class="firstPart">
-                   <div>
-                       <img src="assets/img/coin/HBTC.png" alt="">
-                       <span>HBTC</span>
-                   </div>
-                   <div class="second">
-                     <input type="text"
-                         placeholder="请输入数量" >
-                 </div>
-                   <div>
-                     <input type="radio">  
-                     <label for="daiEabled">全部</label> 
-                   </div>
-               </div>
-           </div>
-       </div>
-         </div>
-     </div>
-     <div class="averageDiv">
-         <div class="leftDiv">
-             <div class="ifOpen">
-               <div class="switch-container ">
-                 <input  type="checkbox" id="switch" class="switch">
-                 <label for="switch"  onclick="test()"></label>    
-               </div>
-           </div>
-           <span>赎回成全部币种</span>
-         </div>
-     </div>
-     <div class="butDiv">
-         <button >取出流动性</button>
-     </div>
-   </div>
- </div>
+    <div class="withdrawLiquiDiv">
+        <div class="main">
+            <div class="LiquidityRatio">
+                <p>流动性比(%){{boot.liquiditySymbol}}</p>
+                <div class="enterDiv">
+                    <div class="inputDiv">
+                        <input type="number" name="redeemPercent" [ngModel]="redeemPercent"
+                            (ngModelChange)="redeemPercentChange($event)"
+                            placeholder="{{'Please enter a number'|translate}}">
+                    </div>
+                </div>
+            </div>
+            <div class="coin_enterDiv" *ngFor="let coin of boot.coins;let i=index">
+                <div class="el-checkbox">
+                    <div class="coinDiv">
+                        <div class="firstPart">
+                            <div>
+                                <img src="assets/img/coins/{{boot.poolId}}-c{{i}}.png" alt="">
+                                <span>{{coin.symbol}}</span>
+                            </div>
+                            <div class="second">
+                                <input type="text" name="{{coin.symbol}}Amt" [(ngModel)]="amts[i]"
+                                    placeholder="{{'Enter an amount'|translate}}">
+                            </div>
+                            <div>
+                                <label for="daiEabled">{{"All"|translate}} </label>
+                                <input type="radio" name="redeemToIndex" [ngModel]="redeemToIndex"
+                                    (ngModelChange)="redeemToIndexChange($event)" value="{{i}}"
+                                    [disabled]="!redeemPercent||redeemPercent===null||redeemPercent===0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="averageDiv">
+            <!-- <div class="leftDiv">
+                <div class="ifOpen">
+                    <div class="switch-container ">
+                        <input type="checkbox" id="switch" class="switch">
+                        <label for="switch" onclick="test()"></label>
+                        
+                    </div>
+                </div>
+                <span>赎回成全部币种</span>
+            </div> -->
+            <mat-slide-toggle [color]="slideToggleColor" [checked]="false"
+                [disabled]="!redeemPercent||redeemPercent===null||redeemPercent===0" (change)="reset($event)"
+                #redeemToThree>{{"Redeem to all coins"|translate}}</mat-slide-toggle>
+        </div>
+        <div class="butDiv">
+            <button *ngIf="boot.accounts.length>0" (click)="redeemCoin()" [disabled]="status===1"
+                [ngClass]="{'':status===0||status===2,'btn-disabled': status===1}">{{"Withdraw
+                Liquidity"|translate}}</button>
+            <button *ngIf="boot.accounts.length==0" (click)="connectWallet()">{{"Connect to a
+                Wallet"|translate}}</button>
+        </div>
+    </div>
+</div>
