@@ -1,3 +1,7 @@
+<lib-header [showPoolsMenu]="true" [needWallet]="true" [vpDiff]="getVpDiff()"
+  [network]="boot.chainConfig?boot.chainConfig.name:'Unsupport Network'"
+  [account]="boot.accounts.length>0?boot.accounts[0]:''" (chooseWallet)="chooseWallet()"
+  (connectWallet)="connectWallet()" #header></lib-header>
  <!-- deposit lp AND reward  -->
  <div class="stakeMaxDiv">
   <div class="stake_reward">

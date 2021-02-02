@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import BigNumber from 'bignumber.js';
-import { ChooseWalletDlgComponent } from '../choose-wallet-dlg/choose-wallet-dlg.component';
-import { IntallWalletDlgComponent } from '../intall-wallet-dlg/intall-wallet-dlg.component';
+import { ChooseWalletDlgComponent } from 'app-lib';
+import { IntallWalletDlgComponent } from 'app-lib';
 import { BootService } from 'app-lib';
 
 export enum ApproveStatus {
