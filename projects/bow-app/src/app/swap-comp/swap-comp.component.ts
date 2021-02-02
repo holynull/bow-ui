@@ -2,8 +2,13 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import BigNumber from 'bignumber.js';
 import { ChooseWalletDlgComponent } from 'app-lib';
+<<<<<<< HEAD
 import { IntallWalletDlgComponent } from 'app-lib';
 import { BootService } from 'app-lib';
+=======
+import { InstallWalletDlgComponent } from 'app-lib';
+import { ProxyService } from 'app-lib';
+>>>>>>> upstream/main
 
 export enum ApproveStatus {
     None, Approved, NoApproved
@@ -36,7 +41,7 @@ export class SwapCompComponent implements OnInit {
     @Output() loading: EventEmitter<any> = new EventEmitter();
     @Output() loaded: EventEmitter<any> = new EventEmitter();
 
-    constructor(public boot: BootService, private dialog: MatDialog) {
+    constructor(public boot: ProxyService, private dialog: MatDialog) {
         this.boot.walletReady.subscribe(res => {
             this.updateApproveStatus();
         });
@@ -83,7 +88,7 @@ export class SwapCompComponent implements OnInit {
         if (this.amt) {
             this.loadStatus = LoadStatus.Loading;
             this.loading.emit();
-            this.boot.approve(Number(this.left), this.amt).then(() => {
+            this.boot.approve(Number(this.left), this.amt, this.boot.chainConfig.contracts.proxy.address).then(() => {
                 this.loaded.emit();
                 this.updateApproveStatus();
                 this.loadStatus = LoadStatus.Loaded;
@@ -132,7 +137,7 @@ export class SwapCompComponent implements OnInit {
 
     public async connectWallet() {
         if (!this.boot.isMetaMaskInstalled() && !this.boot.isBinanceInstalled()) {
-            this.dialog.open(IntallWalletDlgComponent, {
+            this.dialog.open(InstallWalletDlgComponent, {
                 height: 'auto',
                 width: '30%'
             });
@@ -159,7 +164,7 @@ export class SwapCompComponent implements OnInit {
 
     updateApproveStatus() {
         if (!new BigNumber(this.left).isNaN() && !new BigNumber(this.amt).isNaN() && this.boot.accounts && this.boot.accounts.length > 0) {
-            this.boot.allowance(this.left).then(amt => {
+            this.boot.allowance(this.left, this.boot.chainConfig.contracts.proxy.address).then(amt => {
                 if (amt.comparedTo(new BigNumber(this.amt)) >= 0) {
                     this.approveStatus = ApproveStatus.Approved;
                 } else {
