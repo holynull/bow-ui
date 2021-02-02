@@ -1,28 +1,26 @@
-import { NgModule } from '@angular/core';
-import { AppLibComponent } from './app-lib.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CommonModule } from '@angular/common';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ModuleWithProviders, NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
-import { BootService } from './services/boot.service';
-import { ModuleWithProviders } from '@angular/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { AppLibComponent } from './app-lib.component';
 import { AddlpSlippageConfirmComponent } from './components/addlp-slippage-confirm/addlp-slippage-confirm.component';
 import { ApproveDlgComponent } from './components/approve-dlg/approve-dlg.component';
+import { ChooseWalletDlgComponent } from './components/choose-wallet-dlg/choose-wallet-dlg.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { InstallWalletDlgComponent } from './components/install-wallet-dlg/install-wallet-dlg.component';
 import { SwapConfirmComponent } from './components/swap-confirm/swap-confirm.component';
 import { UnsupportedNetworkComponent } from './components/unsupported-network/unsupported-network.component';
 import { WalletExceptionDlgComponent } from './components/wallet-exception-dlg/wallet-exception-dlg.component';
-import { FormsModule } from '@angular/forms';
 import { EnvService } from './services/env.service';
-import { ChooseWalletDlgComponent } from './components/choose-wallet-dlg/choose-wallet-dlg.component';
-import { InstallWalletDlgComponent } from './components/install-wallet-dlg/install-wallet-dlg.component';
 
 
 @NgModule({

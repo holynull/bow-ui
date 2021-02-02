@@ -1,9 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { BootService } from 'app-lib';
 import { HeaderComponent, LanguageService } from 'app-lib';
 import { MatDialog } from '@angular/material/dialog';
 import { ChooseWalletDlgComponent } from 'app-lib';
 import { InstallWalletDlgComponent } from 'app-lib';
+import { ProxyService } from 'app-lib';
 
 @Component({
     selector: 'app-root',
@@ -18,7 +18,7 @@ export class AppComponent {
     @ViewChild('header')
     header: HeaderComponent;
 
-    constructor(public boot: BootService, public lang: LanguageService, private dialog: MatDialog) {
+    constructor(public boot: ProxyService, public lang: LanguageService, private dialog: MatDialog) {
         if (this.boot.isMetaMaskInstalled() || this.boot.isBinanceInstalled()) {
             let web3Type = localStorage.getItem('web3Type');
             if (web3Type && web3Type === 'walletconnect') {

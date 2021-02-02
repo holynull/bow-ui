@@ -1,9 +1,9 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import BigNumber from 'bignumber.js';
-import { ChooseWalletDlgComponent } from '../choose-wallet-dlg/choose-wallet-dlg.component';
-import { IntallWalletDlgComponent } from '../intall-wallet-dlg/intall-wallet-dlg.component';
-import {BootService} from 'app-lib';
+import { ChooseWalletDlgComponent } from 'app-lib';
+import { InstallWalletDlgComponent } from 'app-lib';
+import { ProxyService } from 'app-lib';
 
 export enum ApproveStatus {
     None, Approved, NoApproved
@@ -29,7 +29,7 @@ export class AddliquidityCompComponent implements OnInit {
     @Output() loading: EventEmitter<any> = new EventEmitter();
     @Output() loaded: EventEmitter<any> = new EventEmitter();
 
-    constructor(public boot: BootService, private dialog: MatDialog) {
+    constructor(public boot: ProxyService, private dialog: MatDialog) {
         this.amts = new Array<number>();
         this.approveStatus = new Array();
         for (let i = 0; i < this.boot.coins.length; i++) {
@@ -60,7 +60,7 @@ export class AddliquidityCompComponent implements OnInit {
     updateApproveStatus() {
         for (let i = 0; i < this.boot.coins.length; i++) {
             if (this.boot.accounts && this.boot.accounts.length > 0) {
-                this.boot.allowance(i).then(amt => {
+                this.boot.allowance(i, this.boot.poolAddress).then(amt => {
                     if (amt.comparedTo(new BigNumber(this.amts[i])) >= 0) {
                         this.approveStatus[i] = ApproveStatus.Approved;
                     } else {
@@ -73,7 +73,7 @@ export class AddliquidityCompComponent implements OnInit {
     approve(i: number) {
         this.loadStatus = LoadStatus.Loading;
         this.loading.emit();
-        this.boot.approve(i, String(this.amts[i] ? this.amts[i] : 0)).then(r => {
+        this.boot.approve(i, String(this.amts[i] ? this.amts[i] : 0), this.boot.poolAddress).then(r => {
             this.updateApproveStatus();
             this.loadStatus = LoadStatus.Loaded;
             this.loaded.emit();
@@ -166,7 +166,7 @@ export class AddliquidityCompComponent implements OnInit {
 
     public async connectWallet() {
         if (!this.boot.isMetaMaskInstalled() && !this.boot.isBinanceInstalled()) {
-            this.dialog.open(IntallWalletDlgComponent, {
+            this.dialog.open(InstallWalletDlgComponent, {
                 height: 'auto',
                 width: '30%'
             });

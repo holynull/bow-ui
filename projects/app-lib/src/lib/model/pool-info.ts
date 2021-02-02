@@ -9,6 +9,19 @@ export class PoolInfo {
     coinsRealBalance: BigNumber[];
     coinsAdminFee: BigNumber[];
 
+    totalAllocPoint: BigNumber = new BigNumber(0);
+    allocPoint: BigNumber = new BigNumber(0);
+    accTokenPerShare: BigNumber = new BigNumber(0);
+    shareRewardRate: BigNumber = new BigNumber(0);
+    swapRewardRate: BigNumber = new BigNumber(0);
+    totalVolAccPoints: BigNumber = new BigNumber(0);
+    totalVolReward: BigNumber = new BigNumber(0);
+
+    tokenTotalSupply: BigNumber = new BigNumber(0);
+    tokenAvailableSupply: BigNumber = new BigNumber(0);
+    tokenBalance: BigNumber = new BigNumber(0);
+    totalLPStaking: BigNumber = new BigNumber(0);
+
     constructor(coinsLength: number) {
         this.coinsBalance = new Array(coinsLength);
         this.coinsAdminFee = new Array(coinsLength);

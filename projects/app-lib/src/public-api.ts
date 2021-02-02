@@ -14,4 +14,5 @@ export * from './lib/components/choose-wallet-dlg/choose-wallet-dlg.component';
 export * from './lib/components/install-wallet-dlg/install-wallet-dlg.component';
 export * from './lib/services/language.service';
 export * from './lib/services/boot.service';
+export * from './lib/services/proxy.service';
 export * from './lib/app-lib.module';

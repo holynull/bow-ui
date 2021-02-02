@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
-import { BootService } from '../../services/boot.service';
+import { ProxyService } from '../../services/proxy.service';
 
 @Component({
     selector: 'app-choose-wallet-dlg',
@@ -9,7 +9,7 @@ import { BootService } from '../../services/boot.service';
 })
 export class ChooseWalletDlgComponent implements OnInit {
 
-    constructor(public boot: BootService, public dialogRef: MatDialogRef<ChooseWalletDlgComponent>) { }
+    constructor(public boot: ProxyService, public dialogRef: MatDialogRef<ChooseWalletDlgComponent>) { }
 
     ngOnInit(): void {
     }

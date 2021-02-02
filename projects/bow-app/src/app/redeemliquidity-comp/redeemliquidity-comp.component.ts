@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/cor
 import { ThemePalette } from '@angular/material/core';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import BigNumber from 'bignumber.js';
-import { BootService } from 'app-lib';
+import { ProxyService } from 'app-lib';
 
 export enum ActionStatus {
     None, Transfering, TrasactionEnd
@@ -31,7 +31,7 @@ export class RedeemliquidityCompComponent implements OnInit {
     @ViewChild('redeemToThree')
     redeemToThree: MatSlideToggle;
 
-    constructor(public boot: BootService) {
+    constructor(public boot: ProxyService) {
         this.amts = new Array();
         this.boot.coins.forEach((e, i, arr) => {
             this.amts.push(0);

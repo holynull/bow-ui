@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import BigNumber from 'bignumber.js';
-import { BootService } from 'app-lib';
+import { ProxyService } from 'app-lib';
 
 @Component({
     selector: 'app-pool-info',
@@ -9,7 +9,7 @@ import { BootService } from 'app-lib';
 })
 export class PoolInfoComponent implements OnInit {
 
-    constructor(public boot: BootService) { }
+    constructor(public boot: ProxyService) { }
 
     ngOnInit(): void {
     }
