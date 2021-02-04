@@ -2,21 +2,31 @@
     <div class="main" style="margin-top: 20px;">
         <div class="tittle">
             <!-- <div></div> -->
-            <p>质押和奖励</p>
+            <p>{{"stake & reward"|translate}}</p>
         </div>
         <div class="depAndWithd">
             <div class="depositDiv">
                 <p class="textDiv">
-                    <span class="text_span">renBTC</span>
-                    <span class="val_span">4578.22</span>
+                    <span class="text_span">{{boot.liquiditySymbol}}</span>
+                    <span class="val_span">{{boot.balance.lp.toFixed(4,1)}}</span>
                 </p>
                 <div class="inputDiv">
                     <div>
-                        <input type="number" name="depositPercent" placeholder="请输入百分比">
+                        <input type="number" name="depositPercent" [ngModel]="depositPercent"
+                            (ngModelChange)="depositPercentChange($event)"
+                            placeholder="{{'enter_percentage'|translate}}">
                         <span class="percentage">%</span>
                     </div>
-                    <button>Approve
+                    <button *ngIf="boot.accounts.length>0&&needApproveLP"
+                        [ngClass]="{'':loadStatus===0||loadStatus===2,'btn-disabled': loadStatus===1}"
+                        [disabled]="loadStatus===1" (click)="approveLP()">Approve
                         LP</button>
+                    <button *ngIf="boot.accounts.length>0&&!needApproveLP"
+                        [ngClass]="{'':loadStatus===0||loadStatus===2,'btn-disabled': loadStatus===1}"
+                        [disabled]="loadStatus===1" (click)="depositLP()">Deposit
+                        LP</button>
+                    <button *ngIf="boot.accounts.length==0" (click)="connectWallet()">{{"Connect to a
+                        Wallet"|translate}}</button>
                     <!-- <button *ngIf="boot.accounts.length>0&&!needApproveLP" [ngClass]="{'myBtn':loadStatus===0||loadStatus===2,'myBtn-disabled': loadStatus===1}" [disabled]="loadStatus===1" (click)="depositLP()">Deposit
               LP</button>
           <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" >{{"Connect to a
@@ -25,16 +35,22 @@
             </div>
             <div class="withdrawdiv">
                 <p class="textDiv">
-                    <span class="text_span">Staking renBTC</span>
-                    <span class="val_span">765428.243</span>
+                    <span class="text_span">Staking {{boot.liquiditySymbol}}</span>
+                    <span class="val_span">{{boot.balance.stakingLP.toFixed(4,1)}}</span>
                 </p>
                 <div class="inputDiv">
                     <div>
-                        <input type="number" name="withdrawLPPercent" placeholder="请输入百分比">
+                        <input type="number" name="withdrawLPPercent" [ngModel]="withdrawLPPercent"
+                            (ngModelChange)="withdrawLPPercentChange($event)"
+                            placeholder="{{'enter_percentage'|translate}}">
                         <!-- <span class="allBtn">ALL</span> -->
                         <span class="percentage">%</span>
                     </div>
-                    <button>Withdraw LP</button>
+                    <button *ngIf="boot.accounts.length>0"
+                        [ngClass]="{'':loadStatus===0||loadStatus===2,'btn-disabled': loadStatus===1}"
+                        [disabled]="loadStatus===1" (click)="withdrawLP()">Withdraw LP</button>
+                    <button *ngIf="boot.accounts.length==0" (click)="connectWallet()">{{"Connect to a
+                        Wallet"|translate}}</button>
                     <!-- <button *ngIf="boot.accounts.length==0" (click)="connectWallet()">{{"Connect to a
               Wallet"|translate}}</button> -->
 
@@ -49,11 +65,13 @@
 
         <div class="rewardDiv">
             <p class="textDiv">
-                <span class="val_span">7645.432</span>
-                <span class="text_span">Pending renBTC</span>
+                <span class="val_span">{{boot.balance.pendingToken.toFixed(4,1)}}</span>
+                <span class="text_span">Pending {{boot.tokenSymbol}}</span>
             </p>
             <div class="btnDiv">
-                <button>Get Pending renBTC</button>
+                <button *ngIf="boot.accounts.length>0" [ngClass]="{'':loadStatus===0||loadStatus===2,'btn-disabled': loadStatus===1}" [disabled]="loadStatus===1" (click)="getPending()">Get Pending {{boot.tokenSymbol}}</button>
+                <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" class="myBtn">{{"Connect to a
+                    Wallet"|translate}}</button>
                 <!-- <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" class="myBtn">{{"Connect to a
           Wallet"|translate}}</button> -->
             </div>

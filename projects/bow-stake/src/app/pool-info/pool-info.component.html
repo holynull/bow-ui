@@ -4,21 +4,53 @@
             <div></div>
             <p>Pool's Reward Info</p>
         </div>
-        <div class="consinfo">
+        <!-- <div class="consinfo">
             <ul>
                 <li>
                     <p><span class="coinName">renBTC:</span></p>
                     <span>20%</span>
                 </li>
             </ul>
+        </div> -->
+        <div class="sum">
+            <div>Allocation Percent:</div>
+            <div>{{allocationPercent().toFixed(2,1)}}%</div>
+        </div>
+        <!-- <div class="sum">
+            <div>{{boot.tokenSymbol}} per Share:</div>
+            <div>{{boot.poolInfo.accTokenPerShare.toFormat(4,1)}}</div>
+        </div> -->
+        <div class="sum">
+            <div>LP farming Percent:</div>
+            <div>{{farmingRewardPercent().toFixed(0,1)}}% ({{farmingRewardAmt()}})</div>
         </div>
         <div class="sum">
-            <div>LP farming Percent</div>
-            <div>89,801.3964</div>
+            <div>Volume Percent:</div>
+            <div>{{volRewardPercent().toFixed(0,1)}}% ({{volRewardAmt()}})</div>
         </div>
         <div class="sum">
-            <div>Volume Percent</div>
-            <div>9,501.3964</div>
+            <div>Total Volume:</div>
+            <div>{{boot.poolInfo.totalVolAccPoints.toFormat(4,1)}}</div>
+        </div>
+        <div class="sum">
+            <div>Total Volume Reward:</div>
+            <div>{{boot.poolInfo.totalVolReward.toFormat(4,1)}}</div>
+        </div>
+        <div class="sum">
+            <div>{{boot.tokenSymbol}} Total Supply:</div>
+            <div>{{boot.poolInfo.tokenTotalSupply.toFormat(4,1)}}</div>
+        </div>
+        <div class="sum">
+            <div>{{boot.tokenSymbol}} Available Supply:</div>
+            <div>{{boot.poolInfo.tokenAvailableSupply.toFormat(4,1)}}</div>
+        </div>
+        <div class="sum">
+            <div>{{boot.tokenSymbol}} Balance:</div>
+            <div>{{tokenBalance().toFormat(4,1)}}</div>
+        </div>
+        <div class="sum">
+            <div>{{boot.liquiditySymbol}} Balance:</div>
+            <div>{{boot.poolInfo.totalLPStaking.toFormat(4,1)}}</div>
         </div>
     </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProxyService } from 'app-lib';
 
 @Component({
   selector: 'app-user-info',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInfoComponent implements OnInit {
 
-  constructor() { }
+  constructor(public boot:ProxyService) { }
 
   ngOnInit(): void {
   }

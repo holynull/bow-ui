@@ -4,7 +4,7 @@
     (connectWallet)="connectWallet()" #header></lib-header>
 <!-- deposit lp AND reward  -->
 <div class="stakeMaxDiv">
-    <app-staking></app-staking>
+    <app-staking (loading)="header.onLoading()" (loaded)="header.onLoaded()"></app-staking>
     <app-user-info></app-user-info>
 
     <app-pool-info></app-pool-info>
