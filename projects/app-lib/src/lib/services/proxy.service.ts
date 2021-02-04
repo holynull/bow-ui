@@ -478,7 +478,7 @@ export class ProxyService {
             let slippage = lp.div(totalCoins).minus(1).multipliedBy(100);
             console.log("total amt: " + totalCoins.toFixed(18));
             console.log("lp: " + lp.toFixed(18));
-            if (slippage.comparedTo(0) < 0) {
+            if (slippage.comparedTo(0) < 0 && !this.poolInfo.isEmpty()) {
                 let dialogRef = this.dialog.open(AddlpSlippageConfirmComponent, { data: { slippage: slippage.toFixed(4, BigNumber.ROUND_UP) } });
                 return dialogRef.afterClosed().toPromise().then(async res => {
                     if (res === true) {
