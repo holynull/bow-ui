@@ -1,0 +1,579 @@
+.stakeMaxDiv{
+  background: #EAF2F9;
+  padding-bottom: 30px;
+  .stake_reward {
+    // background-color: #ffffff;
+    height: auto;
+    width: 100%;
+    background-size: 100% 100%;
+    .main{
+        width: 100%;
+        // height: 356px;
+        border-radius: 12px;
+        // border: 1px solid #f0f1f1;
+        padding: 5px 0;
+        .tittle {
+            width: 91%;
+            height: 36px;
+            margin: 12px auto;
+            div {
+                float: left;
+                width: 7px;
+                height: 36px;
+                background: #2480FF;
+                border-radius: 38px;
+            }
+            p {
+                float: left;
+                font-family: "PingFangSC-Medium, PingFang SC";
+                font-weight: 500;           
+                font-size: 25px;
+                font-weight: 500;
+                color: #040820;
+                line-height: 36px;
+            }            
+        }
+        .depAndWithd{           
+          background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+          box-shadow: 15px 8px 30px 0px rgba(128, 152, 176, 0.2), -22px -8px 15px 0px #F3F9FF;
+          border-radius: 26px;
+          padding-bottom: 20px;
+        }
+        .depositDiv,.withdrawdiv,.rewardDiv {
+            width: 90%;
+            margin: 0px auto;
+            overflow: hidden;
+            margin-bottom: 10px;
+            // background: #2480FF;
+            // border-radius: 16px;
+            // color: #fff;
+            // font-size: 16px;
+            // display: block;
+            .textDiv{
+                margin: 12px 0 5px;
+                overflow: hidden;
+                font-size: 14px;
+                .text_span{
+                    float: left;               
+                    font-family: "PingFangSC-Medium, PingFang SC";
+                    font-weight: 500;
+                    color: #000000;
+                }
+                .val_span{
+                    float: right;
+                    font-family: "DINAlternate-Bold, DINAlternate";
+                    font-weight: bold;
+                    color: #000000;
+                }
+            }
+            .inputDiv{
+              div{
+                width: 44%;
+                height: 42px;
+                position: relative;
+                float: left;
+                    input{
+                        width: 100%;
+                        float: left;
+                        height: 42px;        
+                        background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                        box-shadow:inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                        border-radius: 10px;
+                        border: 1px solid #f0f1f1;
+                        padding-left: 12px;
+                    }
+                    // .allBtn{
+                    //     width: 1px;
+                    //     height: 30px;               
+                    //     font-weight: 500;
+                    //     color: #2480FF;
+                    //     line-height: 30px;
+                    //     position: absolute;
+                    //     top: 6px;
+                    //     right: -15px;
+                    //     width: 50px;
+                    //     text-align: center;
+                    //     display: inline-block;
+                    //     border-left:solid 1px #f0f1f1;
+                    //     cursor: pointer;
+                    // }
+                    .percentage{                
+                        font-family: "PingFangSC-Medium, PingFang SC";
+                        font-weight: 500;
+                        color: #141415;
+                        width: 1px;
+                        height: 30px;               
+                        line-height: 30px;
+                        position: absolute;
+                        top: 6px;
+                        right: -15px;
+                        width: 50px;
+                        text-align: center;
+                        display: inline-block;
+                        cursor: pointer;
+                    }
+              }
+                button{ 
+                    float: right;
+                    width: 45%;  
+                    height: 42px;      
+                    border-radius: 10px;
+                    border: 1px solid #2480FF;
+                    font-weight: 500; 
+                    color: #FFFFFF;
+                    line-height: 42px;
+                    background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                    box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                    font-size: 13px;
+                    padding: 0 8px;
+                }
+            }  
+        }
+        .withdrawdiv {
+            .inputDiv{
+              div{
+              }
+            }
+        }
+        .rewardDiv{
+            margin-top: 22px;
+            margin-bottom: 0px;
+            padding: 6px 0px;
+            border-top: solid 1px #f0f1f1;
+            .textDiv{
+                float: left;
+                width: 56%;
+                .val_span{                
+                    font-weight: bold;
+                    color: #000000;
+                    line-height: 28px;
+                    font-size: 14px;
+                    float: left;
+                }
+                .text_span{  
+                    margin-left: 10px;           
+                    font-weight: 500;
+                    color: #000000;
+                    line-height: 28px;
+                    font-size: 12px;
+                    float: left;
+                }
+    
+            }
+            .btnDiv{
+                width: 44%;
+                float: right;
+                button{
+                  height: 42px;
+                  width: 100%;
+                  border-radius: 10px; 
+                  border: none;
+                  color: #FFFFFF;      
+                  background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                  // box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                }
+            }
+        }
+    } 
+  }
+  .assetDiv {
+    margin-top: 20px;
+    width: 100%;
+    // height: 300px;
+    padding-bottom: 20px;
+    background: linear-gradient(142deg, #ECF3FA 0%, #E3EDF7 100%);
+    box-shadow: 15px 16px 30px 0px rgba(128, 152, 176, 0.2), -19px -9px 23px 3px rgba(255, 255, 255, 0.66);
+    border-radius: 18px;
+    .main {
+      width: 90%;
+      padding-top: 20px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      .tittle {
+        width: 100%;
+        height: 30px;
+        div {
+          float: left;
+          width: 7px;
+          height: 30px;
+          background: #2480FF;
+          border-radius: 38px;
+        }
+        p {
+          float: left;
+          font-size: 18px;
+          font-family: "PingFangSC-Medium, PingFang SC";
+          font-weight: 500;
+          color: #000000;
+          line-height: 30px;
+          margin-left: 10px;
+        }
+      }
+      .consinfo {
+        width: 100%;
+        // height: 150px;
+        border-bottom: 1px solid #E1E5EA;
+        ul {
+          width: 100%;
+          margin-top: 20px;
+          li {
+            width: 100%;
+            height: 55px;
+            line-height: 45px;
+            padding: 0 0 10px;
+            p {
+              float: left;
+              width: 70%;
+              margin: 0px;
+              .coinName {
+                max-width: 20em;
+                display: inline-block;
+                font-size: 14px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #6B6B6B;
+                float: left;
+              }
+              .coinVal {
+                font-size: 16px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #000000;
+              }
+            }
+            span {
+              float: right;
+              font-size: 16px;
+              font-family: PingFangSC-Regular, PingFang SC;
+              font-weight: 400;
+              color: #000000;
+            }
+          }
+        }
+      }
+      .sum {
+        margin-top: 10px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        display: flex;
+        div {
+          display: flex;
+          // float: left;
+          width: 50%;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #6B6B6B;
+        }
+        div:nth-child(1){
+          flex-direction: row;
+        }
+        div:nth-child(2){
+          flex-direction: row-reverse;           
+          font-family: "DINPro-Regular, DINPro";
+          font-weight: 400;
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  background-color: #EAF2F9;
+  font-family: "PingFangSC-Regular, PingFang SC";
+  padding-bottom: 40px;
+ 
+  .stakeMaxDiv{
+    background: #EAF2F9;
+    .stake_reward {
+      // background-color: #ffffff;
+      height: auto;
+      width: 100%;
+      background-size: 100% 100%;
+      .main{
+          width: 100%;
+          // height: 356px;
+          border-radius: 12px;
+          // border: 1px solid #f0f1f1;
+          padding: 5px 0;
+          .tittle {
+              width: 91%;
+              height: 36px;
+              margin: 12px auto;
+              div {
+                  float: left;
+                  width: 7px;
+                  height: 36px;
+                  background: #2480FF;
+                  border-radius: 38px;
+              }
+              p {
+                  float: left;
+                  font-family: "PingFangSC-Medium, PingFang SC";
+                  font-weight: 500;           
+                  font-size: 25px;
+                  font-weight: 500;
+                  color: #040820;
+                  line-height: 36px;
+              }            
+          }
+          .depAndWithd{           
+            background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+            box-shadow: 15px 8px 30px 0px rgba(128, 152, 176, 0.2), -22px -8px 15px 0px #F3F9FF;
+            border-radius: 26px;
+            padding-bottom: 20px;
+          }
+          .depositDiv,.withdrawdiv,.rewardDiv {
+              width: 90%;
+              margin: 0px auto;
+              overflow: hidden;
+              margin-bottom: 10px;
+              // background: #2480FF;
+              // border-radius: 16px;
+              // color: #fff;
+              // font-size: 16px;
+              // display: block;
+              .textDiv{
+                  margin: 12px 0 5px;
+                  overflow: hidden;
+                  font-size: 14px;
+                  .text_span{
+                      float: left;               
+                      font-family: "PingFangSC-Medium, PingFang SC";
+                      font-weight: 500;
+                      color: #000000;
+                  }
+                  .val_span{
+                      float: right;
+                      font-family: "DINAlternate-Bold, DINAlternate";
+                      font-weight: bold;
+                      color: #000000;
+                  }
+              }
+              .inputDiv{
+                div{
+                  width: 44%;
+                  height: 42px;
+                  position: relative;
+                  float: left;
+                      input{
+                          width: 100%;
+                          float: left;
+                          height: 42px;        
+                          background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+                          box-shadow:inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+                          border-radius: 10px;
+                          border: 1px solid #f0f1f1;
+                          padding-left: 12px;
+                      }
+                      // .allBtn{
+                      //     width: 1px;
+                      //     height: 30px;               
+                      //     font-weight: 500;
+                      //     color: #2480FF;
+                      //     line-height: 30px;
+                      //     position: absolute;
+                      //     top: 6px;
+                      //     right: -15px;
+                      //     width: 50px;
+                      //     text-align: center;
+                      //     display: inline-block;
+                      //     border-left:solid 1px #f0f1f1;
+                      //     cursor: pointer;
+                      // }
+                      .percentage{                
+                          font-family: "PingFangSC-Medium, PingFang SC";
+                          font-weight: 500;
+                          color: #141415;
+                          width: 1px;
+                          height: 30px;               
+                          line-height: 30px;
+                          position: absolute;
+                          top: 6px;
+                          right: -15px;
+                          width: 50px;
+                          text-align: center;
+                          display: inline-block;
+                          cursor: pointer;
+                      }
+                }
+                  button{ 
+                      float: right;
+                      width: 45%;  
+                      height: 42px;      
+                      border-radius: 10px;
+                      border: 1px solid #2480FF;
+                      font-weight: 500; 
+                      color: #FFFFFF;
+                      line-height: 42px;
+                      background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                      box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                      font-size: 13px;
+                      padding: 0 8px;
+                  }
+              }  
+          }
+          .withdrawdiv {
+              .inputDiv{
+                div{
+                }
+              }
+          }
+          .rewardDiv{
+              margin-top: 22px;
+              margin-bottom: 0px;
+              padding: 6px 0px;
+              border-top: solid 1px #f0f1f1;
+              .textDiv{
+                  float: left;
+                  width: 56%;
+                  .val_span{                
+                      font-weight: bold;
+                      color: #000000;
+                      line-height: 28px;
+                      font-size: 14px;
+                      float: left;
+                  }
+                  .text_span{  
+                      margin-left: 10px;           
+                      font-weight: 500;
+                      color: #000000;
+                      line-height: 28px;
+                      font-size: 12px;
+                      float: left;
+                  }
+      
+              }
+              .btnDiv{
+                  width: 44%;
+                  float: right;
+                  button{
+                    height: 42px;
+                    width: 100%;
+                    border-radius: 10px; 
+                    border: none;
+                    color: #FFFFFF;      
+                    background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+                    // box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+                  }
+              }
+          }
+      } 
+    }
+    .assetDiv {
+      margin-top: 20px;
+      width: 100%;
+      // height: 300px;
+      padding-bottom: 20px;
+      background: linear-gradient(142deg, #ECF3FA 0%, #E3EDF7 100%);
+      box-shadow: 15px 16px 30px 0px rgba(128, 152, 176, 0.2), -19px -9px 23px 3px rgba(255, 255, 255, 0.66);
+      border-radius: 18px;
+      .main {
+        width: 90%;
+        padding-top: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        .tittle {
+          width: 100%;
+          height: 30px;
+          div {
+            float: left;
+            width: 7px;
+            height: 30px;
+            background: #2480FF;
+            border-radius: 38px;
+          }
+          p {
+            float: left;
+            font-size: 18px;
+            font-family: "PingFangSC-Medium, PingFang SC";
+            font-weight: 500;
+            color: #000000;
+            line-height: 30px;
+            margin-left: 10px;
+          }
+        }
+        .consinfo {
+          width: 100%;
+          // height: 150px;
+          border-bottom: 1px solid #E1E5EA;
+          ul {
+            width: 100%;
+            margin-top: 20px;
+            li {
+              width: 100%;
+              height: 55px;
+              line-height: 45px;
+              padding: 0 0 10px;
+              p {
+                float: left;
+                width: 70%;
+                margin: 0px;
+                .coinName {
+                  max-width: 20em;
+                  display: inline-block;
+                  font-size: 14px;
+                  font-family: PingFangSC-Regular, PingFang SC;
+                  font-weight: 400;
+                  color: #6B6B6B;
+                }
+                .coinVal {
+                  font-size: 16px;
+                  font-family: PingFangSC-Regular, PingFang SC;
+                  font-weight: 400;
+                  color: #000000;
+                }
+              }
+              span {
+                float: right;
+                font-size: 16px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #000000;
+              }
+            }
+          }
+        }
+        .sum {
+          margin-top: 10px;
+          height: 40px;
+          line-height: 40px;
+          font-size: 16px;
+          display: flex;
+          div {
+            display: flex;
+            // float: left;
+            width: 50%;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #6B6B6B;
+          }
+          div:nth-child(1){
+            flex-direction: row;
+          }
+          div:nth-child(2){
+            flex-direction: row-reverse;           
+            font-family: "DINPro-Regular, DINPro";
+            font-weight: 400;
+            color: #000000;
+          }
+        }
+      
+
+      
+      }
+    }
+
+
+  }
+}
+@media screen and (min-width: 768px) {
+  .stakeMaxDiv{
+    background: #EAF2F9;
+    width: 420px;
+    margin: 0 auto;
+  }
+}

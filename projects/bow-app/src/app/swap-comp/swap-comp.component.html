@@ -35,7 +35,7 @@
             <div class="blanceDiv">
               <div class="left">
                 <div class="leftInput">
-                  <span class="blance">{{"Balance"|translate}}</span>
+                  <!-- <span class="blance">{{"Balance"|translate}}</span> -->
                   <p>
                     <span>{{boot.balance.coinsBalance[left].toFormat(4)}}</span><span>&nbsp;</span> <span>{{boot.coins[left].symbol}}</span>
                   </p>
@@ -47,7 +47,7 @@
                   [ngClass]="{myBtn: isApproveEnabled(),'myBtn-disabled':boot.accounts.length===0||!isApproveEnabled()}">{{'Approve'|translate}}</button>
                 <!-- </div> -->
               </div>
-              
+               
              
             </div>
           </div>

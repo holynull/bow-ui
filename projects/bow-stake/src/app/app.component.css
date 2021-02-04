@@ -1,0 +1,530 @@
+.stakeMaxDiv {
+  background: #EAF2F9;
+  padding-bottom: 30px;
+}
+.stakeMaxDiv .stake_reward {
+  height: auto;
+  width: 100%;
+  background-size: 100% 100%;
+}
+.stakeMaxDiv .stake_reward .main {
+  width: 100%;
+  border-radius: 12px;
+  padding: 5px 0;
+}
+.stakeMaxDiv .stake_reward .main .tittle {
+  width: 91%;
+  height: 36px;
+  margin: 12px auto;
+}
+.stakeMaxDiv .stake_reward .main .tittle div {
+  float: left;
+  width: 7px;
+  height: 36px;
+  background: #2480FF;
+  border-radius: 38px;
+}
+.stakeMaxDiv .stake_reward .main .tittle p {
+  float: left;
+  font-family: "PingFangSC-Medium, PingFang SC";
+  font-size: 25px;
+  font-weight: 500;
+  color: #040820;
+  line-height: 36px;
+}
+.stakeMaxDiv .stake_reward .main .depAndWithd {
+  background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+  box-shadow: 15px 8px 30px 0px rgba(128, 152, 176, 0.2), -22px -8px 15px 0px #F3F9FF;
+  border-radius: 26px;
+  padding-bottom: 20px;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv,
+.stakeMaxDiv .stake_reward .main .withdrawdiv,
+.stakeMaxDiv .stake_reward .main .rewardDiv {
+  width: 90%;
+  margin: 0px auto;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv .textDiv,
+.stakeMaxDiv .stake_reward .main .withdrawdiv .textDiv,
+.stakeMaxDiv .stake_reward .main .rewardDiv .textDiv {
+  margin: 12px 0 5px;
+  overflow: hidden;
+  font-size: 14px;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv .textDiv .text_span,
+.stakeMaxDiv .stake_reward .main .withdrawdiv .textDiv .text_span,
+.stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .text_span {
+  float: left;
+  font-family: "PingFangSC-Medium, PingFang SC";
+  font-weight: 500;
+  color: #000000;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv .textDiv .val_span,
+.stakeMaxDiv .stake_reward .main .withdrawdiv .textDiv .val_span,
+.stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .val_span {
+  float: right;
+  font-family: "DINAlternate-Bold, DINAlternate";
+  font-weight: bold;
+  color: #000000;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv .inputDiv div,
+.stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv div,
+.stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv div {
+  width: 44%;
+  height: 42px;
+  position: relative;
+  float: left;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv .inputDiv div input,
+.stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv div input,
+.stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv div input {
+  width: 100%;
+  float: left;
+  height: 42px;
+  background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+  box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+  border-radius: 10px;
+  border: 1px solid #f0f1f1;
+  padding-left: 12px;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv .inputDiv div .percentage,
+.stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv div .percentage,
+.stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv div .percentage {
+  font-family: "PingFangSC-Medium, PingFang SC";
+  font-weight: 500;
+  color: #141415;
+  width: 1px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  top: 6px;
+  right: -15px;
+  width: 50px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+.stakeMaxDiv .stake_reward .main .depositDiv .inputDiv button,
+.stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv button,
+.stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv button {
+  float: right;
+  width: 45%;
+  height: 42px;
+  border-radius: 10px;
+  border: 1px solid #2480FF;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 42px;
+  background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+  box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+  font-size: 13px;
+  padding: 0 8px;
+}
+.stakeMaxDiv .stake_reward .main .rewardDiv {
+  margin-top: 22px;
+  margin-bottom: 0px;
+  padding: 6px 0px;
+  border-top: solid 1px #f0f1f1;
+}
+.stakeMaxDiv .stake_reward .main .rewardDiv .textDiv {
+  float: left;
+  width: 56%;
+}
+.stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .val_span {
+  font-weight: bold;
+  color: #000000;
+  line-height: 28px;
+  font-size: 14px;
+  float: left;
+}
+.stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .text_span {
+  margin-left: 10px;
+  font-weight: 500;
+  color: #000000;
+  line-height: 28px;
+  font-size: 12px;
+  float: left;
+}
+.stakeMaxDiv .stake_reward .main .rewardDiv .btnDiv {
+  width: 44%;
+  float: right;
+}
+.stakeMaxDiv .stake_reward .main .rewardDiv .btnDiv button {
+  height: 42px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  color: #FFFFFF;
+  background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+}
+.stakeMaxDiv .assetDiv {
+  margin-top: 20px;
+  width: 100%;
+  padding-bottom: 20px;
+  background: linear-gradient(142deg, #ECF3FA 0%, #E3EDF7 100%);
+  box-shadow: 15px 16px 30px 0px rgba(128, 152, 176, 0.2), -19px -9px 23px 3px rgba(255, 255, 255, 0.66);
+  border-radius: 18px;
+}
+.stakeMaxDiv .assetDiv .main {
+  width: 90%;
+  padding-top: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.stakeMaxDiv .assetDiv .main .tittle {
+  width: 100%;
+  height: 30px;
+}
+.stakeMaxDiv .assetDiv .main .tittle div {
+  float: left;
+  width: 7px;
+  height: 30px;
+  background: #2480FF;
+  border-radius: 38px;
+}
+.stakeMaxDiv .assetDiv .main .tittle p {
+  float: left;
+  font-size: 18px;
+  font-family: "PingFangSC-Medium, PingFang SC";
+  font-weight: 500;
+  color: #000000;
+  line-height: 30px;
+  margin-left: 10px;
+}
+.stakeMaxDiv .assetDiv .main .consinfo {
+  width: 100%;
+  border-bottom: 1px solid #E1E5EA;
+}
+.stakeMaxDiv .assetDiv .main .consinfo ul {
+  width: 100%;
+  margin-top: 20px;
+}
+.stakeMaxDiv .assetDiv .main .consinfo ul li {
+  width: 100%;
+  height: 55px;
+  line-height: 45px;
+  padding: 0 0 10px;
+}
+.stakeMaxDiv .assetDiv .main .consinfo ul li p {
+  float: left;
+  width: 70%;
+  margin: 0px;
+}
+.stakeMaxDiv .assetDiv .main .consinfo ul li p .coinName {
+  max-width: 20em;
+  display: inline-block;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #6B6B6B;
+  float: left;
+}
+.stakeMaxDiv .assetDiv .main .consinfo ul li p .coinVal {
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #000000;
+}
+.stakeMaxDiv .assetDiv .main .consinfo ul li span {
+  float: right;
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #000000;
+}
+.stakeMaxDiv .assetDiv .main .sum {
+  margin-top: 10px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  display: flex;
+}
+.stakeMaxDiv .assetDiv .main .sum div {
+  display: flex;
+  width: 50%;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #6B6B6B;
+}
+.stakeMaxDiv .assetDiv .main .sum div:nth-child(1) {
+  flex-direction: row;
+}
+.stakeMaxDiv .assetDiv .main .sum div:nth-child(2) {
+  flex-direction: row-reverse;
+  font-family: "DINPro-Regular, DINPro";
+  font-weight: 400;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  background-color: #EAF2F9;
+  font-family: "PingFangSC-Regular, PingFang SC";
+  padding-bottom: 40px;
+  .stakeMaxDiv {
+    background: #EAF2F9;
+  }
+  .stakeMaxDiv .stake_reward {
+    height: auto;
+    width: 100%;
+    background-size: 100% 100%;
+  }
+  .stakeMaxDiv .stake_reward .main {
+    width: 100%;
+    border-radius: 12px;
+    padding: 5px 0;
+  }
+  .stakeMaxDiv .stake_reward .main .tittle {
+    width: 91%;
+    height: 36px;
+    margin: 12px auto;
+  }
+  .stakeMaxDiv .stake_reward .main .tittle div {
+    float: left;
+    width: 7px;
+    height: 36px;
+    background: #2480FF;
+    border-radius: 38px;
+  }
+  .stakeMaxDiv .stake_reward .main .tittle p {
+    float: left;
+    font-family: "PingFangSC-Medium, PingFang SC";
+    font-size: 25px;
+    font-weight: 500;
+    color: #040820;
+    line-height: 36px;
+  }
+  .stakeMaxDiv .stake_reward .main .depAndWithd {
+    background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+    box-shadow: 15px 8px 30px 0px rgba(128, 152, 176, 0.2), -22px -8px 15px 0px #F3F9FF;
+    border-radius: 26px;
+    padding-bottom: 20px;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv,
+  .stakeMaxDiv .stake_reward .main .rewardDiv {
+    width: 90%;
+    margin: 0px auto;
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv .textDiv,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv .textDiv,
+  .stakeMaxDiv .stake_reward .main .rewardDiv .textDiv {
+    margin: 12px 0 5px;
+    overflow: hidden;
+    font-size: 14px;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv .textDiv .text_span,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv .textDiv .text_span,
+  .stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .text_span {
+    float: left;
+    font-family: "PingFangSC-Medium, PingFang SC";
+    font-weight: 500;
+    color: #000000;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv .textDiv .val_span,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv .textDiv .val_span,
+  .stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .val_span {
+    float: right;
+    font-family: "DINAlternate-Bold, DINAlternate";
+    font-weight: bold;
+    color: #000000;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv .inputDiv div,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv div,
+  .stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv div {
+    width: 44%;
+    height: 42px;
+    position: relative;
+    float: left;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv .inputDiv div input,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv div input,
+  .stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv div input {
+    width: 100%;
+    float: left;
+    height: 42px;
+    background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+    box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+    border-radius: 10px;
+    border: 1px solid #f0f1f1;
+    padding-left: 12px;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv .inputDiv div .percentage,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv div .percentage,
+  .stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv div .percentage {
+    font-family: "PingFangSC-Medium, PingFang SC";
+    font-weight: 500;
+    color: #141415;
+    width: 1px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 6px;
+    right: -15px;
+    width: 50px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .stakeMaxDiv .stake_reward .main .depositDiv .inputDiv button,
+  .stakeMaxDiv .stake_reward .main .withdrawdiv .inputDiv button,
+  .stakeMaxDiv .stake_reward .main .rewardDiv .inputDiv button {
+    float: right;
+    width: 45%;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid #2480FF;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 42px;
+    background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+    box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+    font-size: 13px;
+    padding: 0 8px;
+  }
+  .stakeMaxDiv .stake_reward .main .rewardDiv {
+    margin-top: 22px;
+    margin-bottom: 0px;
+    padding: 6px 0px;
+    border-top: solid 1px #f0f1f1;
+  }
+  .stakeMaxDiv .stake_reward .main .rewardDiv .textDiv {
+    float: left;
+    width: 56%;
+  }
+  .stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .val_span {
+    font-weight: bold;
+    color: #000000;
+    line-height: 28px;
+    font-size: 14px;
+    float: left;
+  }
+  .stakeMaxDiv .stake_reward .main .rewardDiv .textDiv .text_span {
+    margin-left: 10px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 28px;
+    font-size: 12px;
+    float: left;
+  }
+  .stakeMaxDiv .stake_reward .main .rewardDiv .btnDiv {
+    width: 44%;
+    float: right;
+  }
+  .stakeMaxDiv .stake_reward .main .rewardDiv .btnDiv button {
+    height: 42px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+  }
+  .stakeMaxDiv .assetDiv {
+    margin-top: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+    background: linear-gradient(142deg, #ECF3FA 0%, #E3EDF7 100%);
+    box-shadow: 15px 16px 30px 0px rgba(128, 152, 176, 0.2), -19px -9px 23px 3px rgba(255, 255, 255, 0.66);
+    border-radius: 18px;
+  }
+  .stakeMaxDiv .assetDiv .main {
+    width: 90%;
+    padding-top: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .stakeMaxDiv .assetDiv .main .tittle {
+    width: 100%;
+    height: 30px;
+  }
+  .stakeMaxDiv .assetDiv .main .tittle div {
+    float: left;
+    width: 7px;
+    height: 30px;
+    background: #2480FF;
+    border-radius: 38px;
+  }
+  .stakeMaxDiv .assetDiv .main .tittle p {
+    float: left;
+    font-size: 18px;
+    font-family: "PingFangSC-Medium, PingFang SC";
+    font-weight: 500;
+    color: #000000;
+    line-height: 30px;
+    margin-left: 10px;
+  }
+  .stakeMaxDiv .assetDiv .main .consinfo {
+    width: 100%;
+    border-bottom: 1px solid #E1E5EA;
+  }
+  .stakeMaxDiv .assetDiv .main .consinfo ul {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .stakeMaxDiv .assetDiv .main .consinfo ul li {
+    width: 100%;
+    height: 55px;
+    line-height: 45px;
+    padding: 0 0 10px;
+  }
+  .stakeMaxDiv .assetDiv .main .consinfo ul li p {
+    float: left;
+    width: 70%;
+    margin: 0px;
+  }
+  .stakeMaxDiv .assetDiv .main .consinfo ul li p .coinName {
+    max-width: 20em;
+    display: inline-block;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #6B6B6B;
+  }
+  .stakeMaxDiv .assetDiv .main .consinfo ul li p .coinVal {
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+  }
+  .stakeMaxDiv .assetDiv .main .consinfo ul li span {
+    float: right;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #000000;
+  }
+  .stakeMaxDiv .assetDiv .main .sum {
+    margin-top: 10px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    display: flex;
+  }
+  .stakeMaxDiv .assetDiv .main .sum div {
+    display: flex;
+    width: 50%;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #6B6B6B;
+  }
+  .stakeMaxDiv .assetDiv .main .sum div:nth-child(1) {
+    flex-direction: row;
+  }
+  .stakeMaxDiv .assetDiv .main .sum div:nth-child(2) {
+    flex-direction: row-reverse;
+    font-family: "DINPro-Regular, DINPro";
+    font-weight: 400;
+    color: #000000;
+  }
+}
+@media screen and (min-width: 768px) {
+  .stakeMaxDiv {
+    background: #EAF2F9;
+    width: 420px;
+    margin: 0 auto;
+  }
+}
