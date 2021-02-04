@@ -242,6 +242,34 @@
                                     "maximumError": "10kb"
                                 }
                             ]
+                        },
+                        "p2": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-app/src/environments/environment.ts",
+                                    "with": "projects/bow-app/src/environments/environment.prod.p2.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
                         }
                     }
                 },
@@ -503,11 +531,22 @@
                         "tsConfig": "projects/bow-stake/tsconfig.app.json",
                         "aot": true,
                         "assets": [
-                            "projects/bow-stake/src/favicon.ico",
-                            "projects/bow-stake/src/assets"
+                            "projects/bow-stake/src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "libs/shared-assets/",
+                                "output": "./assets"
+                            },
+                            {
+                                "glob": "favicon.ico",
+                                "input": "libs/",
+                                "output": "./"
+                            }
                         ],
                         "styles": [
-                            "projects/bow-stake/src/styles.less"
+                            "projects/bow-stake/src/styles.less",
+                            "libs/base.less",
+                            "libs/mat.scss"
                         ],
                         "scripts": []
                     },
@@ -517,6 +556,62 @@
                                 {
                                     "replace": "projects/bow-stake/src/environments/environment.ts",
                                     "with": "projects/bow-stake/src/environments/environment.prod.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        },
+                        "p1": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-stake/src/environments/environment.ts",
+                                    "with": "projects/bow-stake/src/environments/environment.prod.p1.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "10kb"
+                                }
+                            ]
+                        },
+                        "p2": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-stake/src/environments/environment.ts",
+                                    "with": "projects/bow-stake/src/environments/environment.prod.p2.ts"
                                 }
                             ],
                             "optimization": true,

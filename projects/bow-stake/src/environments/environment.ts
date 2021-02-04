@@ -3,7 +3,35 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    poolId: "p1",
+    liquiditySymbol: "BSLP-01",
+    virtualPriceDiff: 0.006,
+    coins: [{ symbol: 'bowDAI' }, { symbol: 'bowHUSD' }, { symbol: 'bowUSDT' }],
+    chains: {
+        256: {
+            enabled: true,
+            name: 'DEV',
+            rpc: 'https://http-testnet.hecochain.com',
+            contracts: {
+                proxy: {
+                    address: "0x958A1fCfD9EEE9c7Dd87df6cF67Aca1907D516b7"
+                },
+                pid: 0
+            }
+        },
+        1337: {
+            enabled: true,
+            name: 'DEV',
+            rpc: 'http://localhost:8545/',
+            contracts: {
+                proxy: {
+                    address: "0xB54a89207514270F4e15B9c8E64Fa1d0C90A3371"
+                },
+                pid: 0
+            }
+        },
+    },
 };
 
 /*

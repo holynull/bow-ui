@@ -5,25 +5,37 @@
   To learn more about this file see: https://angular.io/config/solution-tsconfig.
 */
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./projects/bow-home/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/bow-home/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/bow-app/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/bow-app/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/app-lib/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/app-lib/tsconfig.spec.json"
-    }
-]
+    "files": [],
+    "references": [
+        {
+            "path": "./projects/bow-home/tsconfig.app.json"
+        },
+        {
+            "path": "./projects/bow-home/tsconfig.spec.json"
+        },
+        {
+            "path": "./projects/bow-app/tsconfig.app.json"
+        },
+        {
+            "path": "./projects/bow-app/tsconfig.spec.json"
+        },
+        {
+            "path": "./projects/app-lib/tsconfig.lib.json"
+        },
+        {
+            "path": "./projects/app-lib/tsconfig.spec.json"
+        },
+        {
+            "path": "./projects/bow-faucet/tsconfig.app.json"
+        },
+        {
+            "path": "./projects/bow-faucet/tsconfig.spec.json"
+        },
+        {
+            "path": "./projects/bow-stake/tsconfig.app.json"
+        },
+        {
+            "path": "./projects/bow-stake/tsconfig.spec.json"
+        }
+    ]
 }
