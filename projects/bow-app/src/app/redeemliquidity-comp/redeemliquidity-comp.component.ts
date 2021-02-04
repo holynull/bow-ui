@@ -17,7 +17,7 @@ export class RedeemliquidityCompComponent implements OnInit {
 
     amts: Array<number>;
 
-    redeemPrecent: number = 0;
+    redeemPercent: number = 0;
 
     redeemToIndex: string = '4';
 
@@ -43,8 +43,8 @@ export class RedeemliquidityCompComponent implements OnInit {
 
     async redeemCoin() {
         await this.boot.loadData();
-        if (this.redeemPrecent && this.redeemPrecent !== 0) { // 输入要赎回流动性的数量（百分比）
-            let lps = this.boot.balance.lp.multipliedBy(this.redeemPrecent).dividedBy(100).toFixed(18, BigNumber.ROUND_UP);
+        if (this.redeemPercent && this.redeemPercent !== 0) { // 输入要赎回流动性的数量（百分比）
+            let lps = this.boot.balance.lp.multipliedBy(this.redeemPercent).dividedBy(100).toFixed(18, BigNumber.ROUND_UP);
             if (Number(this.redeemToIndex) >= 0 && Number(this.redeemToIndex) <= 2) { // 赎回成一种币
                 this.status = ActionStatus.Transfering;
                 this.loading.emit();
@@ -82,14 +82,14 @@ export class RedeemliquidityCompComponent implements OnInit {
         }
     }
 
-    redeemPrecentChange(val) {
-        if (!this.redeemPrecent || this.redeemPrecent === 0) {
+    redeemPercentChange(val) {
+        if (!this.redeemPercent || this.redeemPercent === 0) {
             this.redeemToThree.checked = true;
         }
-        this.redeemPrecent = val;
-        if (this.redeemPrecent && this.redeemPrecent !== 0) {
+        this.redeemPercent = val;
+        if (this.redeemPercent && this.redeemPercent !== 0) {
             if (this.redeemToThree.checked) {
-                let lps = this.boot.balance.lp.multipliedBy(this.redeemPrecent).dividedBy(100);
+                let lps = this.boot.balance.lp.multipliedBy(this.redeemPercent).dividedBy(100);
                 this.amts.forEach((e, i, arr) => {
                     let amt = this.boot.poolInfo.coinsRealBalance[i].multipliedBy(lps).div(this.boot.poolInfo.totalSupply);
                     arr[i] = Number(amt.toFixed(9, BigNumber.ROUND_DOWN))
@@ -103,7 +103,7 @@ export class RedeemliquidityCompComponent implements OnInit {
     async redeemToIndexChange(val) {
         this.redeemToThree.checked = false;
         this.redeemToIndex = val;
-        let lps = this.boot.balance.lp.multipliedBy(this.redeemPrecent).dividedBy(100).toFixed(18, BigNumber.ROUND_DOWN);
+        let lps = this.boot.balance.lp.multipliedBy(this.redeemPercent).dividedBy(100).toFixed(18, BigNumber.ROUND_DOWN);
         let res = await this.boot.calcWithdrawOneCoin(lps, this.redeemToIndex);
         this.amts.forEach((e, i, arr) => {
             if (Number(this.redeemToIndex) === i) {
@@ -116,7 +116,7 @@ export class RedeemliquidityCompComponent implements OnInit {
 
     reset(val) {
         if (val.checked) {
-            this.redeemPrecentChange(this.redeemPrecent);
+            this.redeemPercentChange(this.redeemPercent);
             this.redeemToIndex = '-1';
         }
     }

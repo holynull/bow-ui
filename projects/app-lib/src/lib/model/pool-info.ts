@@ -49,4 +49,13 @@ export class PoolInfo {
         this.totalSupply = new BigNumber(0);
     }
 
+    isEmpty() {
+        for (let i = 0; i < this.coinsBalance.length; i++) {
+            if (this.coinsBalance[i].comparedTo(0) > 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
 }

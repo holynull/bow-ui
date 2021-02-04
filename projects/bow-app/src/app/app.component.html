@@ -9,9 +9,9 @@
                 <div class="tableDiv">
                     <!-- 导航区 -->
                     <ul class="nav nav-tabs" role="tablist">
-                        <li role="presentation"><a href="#" (click)="changeTab(0)" role="tab" data-toggle="tab" [ngClass]="{active: curTab==0}">兑换</a></li>
-                        <li role="presentation"><a href="#" (click)="changeTab(1)" role="tab" data-toggle="tab" [ngClass]="{active: curTab==1}">增加流动性</a></li>
-                        <li role="presentation"><a href="#" (click)="changeTab(2)" role="tab" data-toggle="tab" [ngClass]="{active: curTab==2}">取出流动性</a></li>
+                        <li role="presentation"><a href="#" (click)="changeTab(0)" role="tab" data-toggle="tab" [ngClass]="{active: curTab==0}">{{'Swap'|translate}}</a></li>
+                        <li role="presentation"><a href="#" (click)="changeTab(1)" role="tab" data-toggle="tab" [ngClass]="{active: curTab==1}">{{'Add Liquidity'|translate}}</a></li>
+                        <li role="presentation"><a href="#" (click)="changeTab(2)" role="tab" data-toggle="tab" [ngClass]="{active: curTab==2}">{{'Manage Liquidity'|translate}}</a></li>
                     </ul>
                     <div class="tab-content">
                         <app-swap-comp [hidden]="curTab!=0" (loading)="header.onLoading()" (loaded)="header.onLoaded()"

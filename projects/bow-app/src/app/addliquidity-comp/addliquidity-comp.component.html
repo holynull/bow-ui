@@ -5,68 +5,32 @@
             <div class="coinDiv" *ngFor="let coin of boot.coins;let i=index;">
                 <div class="firstPart">
                     <div>
-                        <img src="assets/img/coin/{{boot.poolId}}-c{{i}}.png" alt="">
+                        <img src="assets/img/coins/{{boot.poolId}}-c{{i}}.png" alt="">
                         <span>{{coin.symbol}}</span>
                     </div>
                     <div>
-                        <!-- <span>余额</span> -->
-                        <span>{{boot.balance.coinsBalance[i].toFixed(9)}}</span>
-                        <!-- <span>HBTC</span> -->
+                        <span>{{'Balance'|translate}}&ngsp;</span>
+                        <span>{{boot.balance.coinsBalance[i].toFixed(4)}}&nbsp;</span>
+                        <span>{{coin.symbol}}</span>
                     </div>
                 </div>
                 <div class="second">
-                    <input type="number" name="{{coin.symbol}}Amt" [ngModel]="amts[i]" (ngModelChange)="amtChange(i,$event)"
-                    placeholder="{{'Enter an amount'|translate}}">
-                    <button class="ifApprove" style="margin-bottom: 1em;"
-                        [ngClass]="{myBtn:isApproveEnabled(i),'myBtn-disabled':!isApproveEnabled(i)||loadStatus===1}"
+                    <input type="number" name="{{coin.symbol}}Amt" [ngModel]="amts[i]"
+                        (ngModelChange)="amtChange(i,$event)" placeholder="{{'Enter an amount'|translate}}">
+                    <button
+                        [ngClass]="{approve:isApproveEnabled(i),'approve-disabled':!isApproveEnabled(i)||loadStatus===1}"
                         (click)="approve(i)"
                         [disabled]="!isApproveEnabled(i)||loadStatus===1">{{'Approve'|translate}}</button>
-                </div>
-            </div>
-
-            <!-- <div class="coinDiv">
-                <div class="firstPart">
-                    <div>
-                        <img src="assets/img/coin/renBTC.png" alt="">
-                        <span>renBTC</span>
-                    </div>
-                    <div>
-                        <span>余额</span>
-                        <span>6741</span>
-                        <span>renBTC</span>
-                    </div>
-                </div>
-                <div class="second">
-                    <input type="number" name="" placeholder="请输入数量">
-                    <button class="approve">同意划转</button>
-                </div>
-            </div>
-
-            <div class="coinDiv">
-                <div class="firstPart">
-                    <div>
-                        <img src="assets/img/coin/wBTC.png" alt="">
-                        <span>wBTC</span>
-                    </div>
-                    <div>
-                        <span>余额</span>
-                        <span>6741</span>
-                        <span>wBTC</span>
-                    </div>
-                </div>
-                <div class="second">
-                    <input type="number" name="" placeholder="请输入数量">
-                    <button class="approve">同意划转</button>
                 </div>
             </div> -->
         </div>
         <div class="butDiv">
             <button *ngIf="boot.accounts.length>0" (click)="addLiquidity()"
                 [disabled]="!isAddLiquidityBtnEnabled()||loadStatus===1"
-                [ngClass]="{myBtn: isAddLiquidityBtnEnabled(),'myBtn-disabled':!isAddLiquidityBtnEnabled()||loadStatus===1}">{{'Add
+                [ngClass]="{'': isAddLiquidityBtnEnabled(),'btn-disabled':!isAddLiquidityBtnEnabled()||loadStatus===1}">{{'Add
                 Liquidity'|translate}}</button>
-            <button *ngIf="boot.accounts.length==0" (click)="connectWallet()" class="myBtn">{{'Connect to a
-                    Wallet'|translate}}</button>
+            <button *ngIf="boot.accounts.length==0" (click)="connectWallet()">{{'Connect to a
+                Wallet'|translate}}</button>
         </div>
     </div>
 </div>

@@ -6,39 +6,15 @@
           <div class="el-checkbox-group" *ngFor="let coin of boot.coins;let i=index;">
             <div class="el-checkbox l" label="复选框 A">
                 <input type="radio" [ngModel]="left" name="left" value="{{i}}" (ngModelChange)="chooseLeft($event)">
-                <img src="assets/img/coin/{{boot.poolId}}-c{{i}}.png" alt="" >
-                <span>{{coin.symbol}}</span>
+                <img src="assets/img/coins/{{boot.poolId}}-c{{i}}.png" alt="" (click)="chooseLeft(i)">
+                <span (click)="chooseLeft(i)">{{coin.symbol}}</span>
             </div>
             <div class="el-checkbox r" label="复选框 B">
                 <input type="radio" [ngModel]="right" name="right" value="{{i}}" (ngModelChange)="chooseRight($event)">
-                <img src="assets/img/coin/{{boot.poolId}}-c{{i}}.png" alt="" (click)="chooseRight(i)">
-                <span>{{coin.symbol}}</span>
+                <img src="assets/img/coins/{{boot.poolId}}-c{{i}}.png" alt="" (click)="chooseRight(i)">
+                <span (click)="chooseRight(i)">{{coin.symbol}}</span>
             </div>
           </div>  
-          <!-- <div class="el-checkbox-group">
-            <div class="el-checkbox l" label="复选框 A">
-                <input type="radio"  name="left">
-                <img src="assets/img/coin/renBTC.png" alt="" >
-                <span>renBTC</span>
-            </div>
-            <div class="el-checkbox r" label="复选框 B">
-                <input type="radio"  name="right">
-                <img src="assets/img/coin/renBTC.png" alt="">
-                <span>renBTC</span>
-            </div>
-          </div>
-          <div class="el-checkbox-group">
-            <div class="el-checkbox l" label="复选框 A">
-                <input type="radio"  name="left">
-                <img src="assets/img/coin/wBTC.png" alt="" >
-                <span>wBTC</span>
-            </div>
-            <div class="el-checkbox r" label="复选框 B">
-                <input type="radio"  name="right">
-                <img src="assets/img/coin/wBTC.png" alt="">
-                <span>wBTC</span>
-            </div>
-          </div> -->
         </div>
           <div class="enterDiv">
             <div class="inputDiv">
@@ -52,7 +28,7 @@
                 <div class="right">
                   <div class="leftInput">
                     <input class="minInput" type="number" name="minAmt" [(ngModel)]="minAmt"
-                    placeholder="{{'Min Amount'|translate}}">
+                        placeholder="{{'Min Amount'|translate}}">
                   </div>
                 </div>
             </div>
@@ -61,7 +37,7 @@
                 <div class="leftInput">
                   <!-- <span class="blance">{{"Balance"|translate}}</span> -->
                   <p>
-                    <span>{{boot.balance.coinsBalance[left].toFixed(9)}}</span><span>&nbsp;</span> <span>{{boot.coins[left].symbol}}</span>
+                    <span>{{boot.balance.coinsBalance[left].toFormat(4)}}</span><span>&nbsp;</span> <span>{{boot.coins[left].symbol}}</span>
                   </p>
                 </div>
               </div>

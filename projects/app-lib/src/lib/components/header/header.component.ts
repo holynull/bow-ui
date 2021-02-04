@@ -27,7 +27,8 @@ export class HeaderComponent implements OnInit {
     @Output('connectWallet')
     connectWallet: EventEmitter<any> = new EventEmitter();
 
-    constructor(public lang: LanguageService) { }
+    constructor(public lang: LanguageService) {
+    }
 
     ngOnInit(): void {
     }
