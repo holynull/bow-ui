@@ -13,7 +13,22 @@ export class AppComponent implements OnInit {
     @ViewChild('header')
     header: HeaderComponent;
 
-    constructor(public boot: ProxyService, public lang: LanguageService, private dialog: MatDialog) { }
+    constructor(public boot: ProxyService, public lang: LanguageService, private dialog: MatDialog) {
+        if (this.boot.isMetaMaskInstalled() || this.boot.isBinanceInstalled()) {
+            let web3Type = localStorage.getItem('web3Type');
+            if (web3Type && web3Type === 'walletconnect') {
+                this.boot.connectWC();
+            } else if (web3Type && web3Type === 'metamask') {
+                this.boot.connentMetaMask();
+            } else if (web3Type === 'binance') {
+                this.boot.connectBinance();
+            } else if (web3Type === 'tokenPocket') {
+                this.boot.connectTokenPocket();
+            } else {
+                this.chooseWallet();
+            }
+        }
+    }
     ngOnInit(): void {
     }
 
