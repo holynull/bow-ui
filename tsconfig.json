@@ -20,28 +20,10 @@
       "path": "./projects/bow-app/tsconfig.spec.json"
     },
     {
-      "path": "./projects/bow-lib/tsconfig.lib.json"
-    },
-    {
-      "path": "./projects/bow-lib/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/app-lib/tsconfig.lib.json"
     },
     {
       "path": "./projects/app-lib/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/bow-fauce/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/bow-fauce/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/bow-stake/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/bow-stake/tsconfig.spec.json"
     }
 ]
 }

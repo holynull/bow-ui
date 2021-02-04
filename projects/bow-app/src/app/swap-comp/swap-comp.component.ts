@@ -2,13 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import BigNumber from 'bignumber.js';
 import { ChooseWalletDlgComponent } from 'app-lib';
-<<<<<<< HEAD
-import { IntallWalletDlgComponent } from 'app-lib';
-import { BootService } from 'app-lib';
-=======
 import { InstallWalletDlgComponent } from 'app-lib';
 import { ProxyService } from 'app-lib';
->>>>>>> upstream/main
 
 export enum ApproveStatus {
     None, Approved, NoApproved

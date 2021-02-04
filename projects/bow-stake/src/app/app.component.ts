@@ -3,9 +3,9 @@ import { ThemePalette } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSlideToggle } from '@angular/material/slide-toggle';
 import BigNumber from 'bignumber.js';
-import { BootService } from 'app-lib';
 import { ChooseWalletDlgComponent } from 'app-lib';
-import { IntallWalletDlgComponent } from 'app-lib';
+import { InstallWalletDlgComponent } from 'app-lib';
+import { ProxyService } from 'app-lib';
 
 export enum ActionStatus {
     None, Transfering, TrasactionEnd
@@ -15,9 +15,9 @@ export enum LoadStatus {
     None, Loading, Loaded
 }
 @Component({
-    selector: 'app-redeemliquidity-comp',
-    templateUrl: './redeemliquidity-comp.component.html',
-    styleUrls: ['./redeemliquidity-comp.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class RedeemliquidityCompComponent implements OnInit {
 
@@ -49,7 +49,7 @@ export class RedeemliquidityCompComponent implements OnInit {
     @ViewChild('redeemToThree')
     redeemToThree: MatSlideToggle;
 
-    constructor(public boot: BootService, private dialog: MatDialog) {
+    constructor(public boot: ProxyService, private dialog: MatDialog) {
         this.amts = new Array();
         this.boot.coins.forEach((e, i, arr) => {
             this.amts.push(0);
@@ -147,7 +147,7 @@ export class RedeemliquidityCompComponent implements OnInit {
 
     public async connectWallet() {
         if (!this.boot.isMetaMaskInstalled() && !this.boot.isBinanceInstalled()) {
-            this.dialog.open(IntallWalletDlgComponent, { width: '30em' });
+            this.dialog.open(InstallWalletDlgComponent, { width: '30em' });
             return;
         } else {
             this.chooseWallet();
