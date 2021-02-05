@@ -1,0 +1,82 @@
+.coinDiv {
+  border-radius: 16px;
+  margin-bottom: 18px;
+  height: 100px;
+  background: linear-gradient(130deg, #ECF3FA 0%, #E3EDF7 100%);
+  box-shadow: 8px 8px 30px 0px rgba(128, 152, 176, 0.2), -22px -8px 15px 0px #F3F9FF;
+  border-radius: 26px;
+  margin-bottom: 25px;
+}
+.coinDiv .firstPart {
+  width: 90%;
+  height: 48px;
+  margin: 0px auto;
+  line-height: 45px;
+}
+.coinDiv .firstPart div:nth-child(1) {
+  float: left;
+}
+.coinDiv .firstPart div:nth-child(1) img {
+  width: 30px;
+  margin-top: -3px;
+  margin-right: 8px;
+}
+.coinDiv .firstPart div:nth-child(1) span {
+  font-size: 16px;
+  font-family: "PingFangSC-Medium, PingFang SC";
+  font-weight: 500;
+  color: #000000;
+  display: inline-block;
+}
+.coinDiv .firstPart div:nth-child(2) {
+  float: right;
+  font-family: "PingFangSC-Regular, PingFang SC";
+  font-weight: 400;
+}
+.coinDiv .firstPart div:nth-child(2) span:nth-child(1) {
+  font-size: 14px;
+  color: #000000;
+}
+.coinDiv .firstPart div:nth-child(2) span:nth-child(2),
+.coinDiv .firstPart div:nth-child(2) span:nth-child(3) {
+  color: #3A8DFF;
+}
+.coinDiv .second {
+  height: 40px;
+  width: 90%;
+  margin: 0 auto;
+}
+.coinDiv .second input {
+  float: left;
+  margin-bottom: 12px;
+  padding: 0px 13px;
+  height: 40px;
+  border-radius: 10px;
+  margin-right: 10px;
+  font-family: " DINAlternate-Bold, DINAlternate";
+  font-weight: bold;
+  color: #000000;
+  background: linear-gradient(338deg, #F1F5FA 0%, #DEE8F2 100%);
+  box-shadow: inset 2px 2px 5px 0px rgba(164, 182, 194, 0.72), inset -2px -2px 4px 0px rgba(255, 255, 255, 0.96);
+}
+.coinDiv .second button {
+  width: 133.5px;
+  text-align: center;
+  height: 40px;
+  margin-bottom: 12px;
+  float: right;
+  background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+  box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+  border-radius: 10px;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .coinDiv .second input {
+    width: 57%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .coinDiv .second input {
+    width: 48%;
+  }
+}
