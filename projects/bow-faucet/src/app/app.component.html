@@ -1,3 +1,7 @@
+<lib-header [showPoolsMenu]="true" [needWallet]="true" [vpDiff]="getVpDiff()"
+    [network]="boot.chainConfig?boot.chainConfig.name:'Unsupport Network'"
+    [account]="boot.accounts.length>0?boot.accounts[0]:''" (chooseWallet)="chooseWallet()"
+    (connectWallet)="connectWallet()" #header></lib-header>
 <div class="fauceDiv">
   <div class="versionHeart">
     <div class="header">
@@ -66,7 +70,7 @@
           </ul>
         </div>
         <div class="part3">
-          <p>没有HT?<a href="https://scan-testnet.hecochain.com/faucet">heco.fancet</a> </p>
+          <p>没有HT?<a href="https://scan-testnet.hecochain.com/faucet" target="_blank">heco.fancet</a> </p>
         </div>
         <div class="part4">
           <button class="stake">领取</button> 

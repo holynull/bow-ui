@@ -389,32 +389,43 @@
                 }
             }
         },
-        "bow-fauce": {
+        "bow-faucet": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
                     "style": "less"
                 }
             },
-            "root": "projects/bow-fauce",
-            "sourceRoot": "projects/bow-fauce/src",
+            "root": "projects/bow-faucet",
+            "sourceRoot": "projects/bow-faucet/src",
             "prefix": "app",
             "architect": {
                 "build": {
                     "builder": "@angular-devkit/build-angular:browser",
                     "options": {
-                        "outputPath": "dist/bow-fauce",
-                        "index": "projects/bow-fauce/src/index.html",
-                        "main": "projects/bow-fauce/src/main.ts",
-                        "polyfills": "projects/bow-fauce/src/polyfills.ts",
-                        "tsConfig": "projects/bow-fauce/tsconfig.app.json",
+                        "outputPath": "dist/bow-faucet",
+                        "index": "projects/bow-faucet/src/index.html",
+                        "main": "projects/bow-faucet/src/main.ts",
+                        "polyfills": "projects/bow-faucet/src/polyfills.ts",
+                        "tsConfig": "projects/bow-faucet/tsconfig.app.json",
                         "aot": true,
                         "assets": [
-                            "projects/bow-fauce/src/favicon.ico",
-                            "projects/bow-fauce/src/assets"
+                            "projects/bow-faucet/src/assets",
+                            {
+                                "glob": "**/*",
+                                "input": "libs/shared-assets/",
+                                "output": "./assets"
+                            },
+                            {
+                                "glob": "favicon.ico",
+                                "input": "libs/",
+                                "output": "./"
+                            }
                         ],
                         "styles": [
-                            "projects/bow-fauce/src/styles.less"
+                            "projects/bow-faucet/src/styles.less",
+                            "libs/base.less",
+                            "libs/mat.scss"
                         ],
                         "scripts": []
                     },
@@ -422,8 +433,8 @@
                         "production": {
                             "fileReplacements": [
                                 {
-                                    "replace": "projects/bow-fauce/src/environments/environment.ts",
-                                    "with": "projects/bow-fauce/src/environments/environment.prod.ts"
+                                    "replace": "projects/bow-faucet/src/environments/environment.ts",
+                                    "with": "projects/bow-faucet/src/environments/environment.prod.ts"
                                 }
                             ],
                             "optimization": true,
@@ -452,33 +463,33 @@
                 "serve": {
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "options": {
-                        "browserTarget": "bow-fauce:build"
+                        "browserTarget": "bow-faucet:build"
                     },
                     "configurations": {
                         "production": {
-                            "browserTarget": "bow-fauce:build:production"
+                            "browserTarget": "bow-faucet:build:production"
                         }
                     }
                 },
                 "extract-i18n": {
                     "builder": "@angular-devkit/build-angular:extract-i18n",
                     "options": {
-                        "browserTarget": "bow-fauce:build"
+                        "browserTarget": "bow-faucet:build"
                     }
                 },
                 "test": {
                     "builder": "@angular-devkit/build-angular:karma",
                     "options": {
-                        "main": "projects/bow-fauce/src/test.ts",
-                        "polyfills": "projects/bow-fauce/src/polyfills.ts",
-                        "tsConfig": "projects/bow-fauce/tsconfig.spec.json",
-                        "karmaConfig": "projects/bow-fauce/karma.conf.js",
+                        "main": "projects/bow-faucet/src/test.ts",
+                        "polyfills": "projects/bow-faucet/src/polyfills.ts",
+                        "tsConfig": "projects/bow-faucet/tsconfig.spec.json",
+                        "karmaConfig": "projects/bow-faucet/karma.conf.js",
                         "assets": [
-                            "projects/bow-fauce/src/favicon.ico",
-                            "projects/bow-fauce/src/assets"
+                            "projects/bow-faucet/src/favicon.ico",
+                            "projects/bow-faucet/src/assets"
                         ],
                         "styles": [
-                            "projects/bow-fauce/src/styles.less"
+                            "projects/bow-faucet/src/styles.less"
                         ],
                         "scripts": []
                     }
@@ -487,9 +498,9 @@
                     "builder": "@angular-devkit/build-angular:tslint",
                     "options": {
                         "tsConfig": [
-                            "projects/bow-fauce/tsconfig.app.json",
-                            "projects/bow-fauce/tsconfig.spec.json",
-                            "projects/bow-fauce/e2e/tsconfig.json"
+                            "projects/bow-faucet/tsconfig.app.json",
+                            "projects/bow-faucet/tsconfig.spec.json",
+                            "projects/bow-faucet/e2e/tsconfig.json"
                         ],
                         "exclude": [
                             "**/node_modules/**"
@@ -499,12 +510,12 @@
                 "e2e": {
                     "builder": "@angular-devkit/build-angular:protractor",
                     "options": {
-                        "protractorConfig": "projects/bow-fauce/e2e/protractor.conf.js",
-                        "devServerTarget": "bow-fauce:serve"
+                        "protractorConfig": "projects/bow-faucet/e2e/protractor.conf.js",
+                        "devServerTarget": "bow-faucet:serve"
                     },
                     "configurations": {
                         "production": {
-                            "devServerTarget": "bow-fauce:serve:production"
+                            "devServerTarget": "bow-faucet:serve:production"
                         }
                     }
                 }
