@@ -68,7 +68,7 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
                                 }
                             ]
                         }
@@ -211,7 +211,7 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
                                 }
                             ]
                         },
@@ -239,7 +239,7 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
                                 }
                             ]
                         },
@@ -267,7 +267,7 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
                                 }
                             ]
                         }
@@ -454,7 +454,63 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
+                                }
+                            ]
+                        },
+                        "p1": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-faucet/src/environments/environment.ts",
+                                    "with": "projects/bow-faucet/src/environments/environment.prod.p1.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "12kb"
+                                }
+                            ]
+                        },
+                        "p2": {
+                            "fileReplacements": [
+                                {
+                                    "replace": "projects/bow-faucet/src/environments/environment.ts",
+                                    "with": "projects/bow-faucet/src/environments/environment.prod.p2.ts"
+                                }
+                            ],
+                            "optimization": true,
+                            "outputHashing": "all",
+                            "sourceMap": false,
+                            "extractCss": true,
+                            "namedChunks": false,
+                            "extractLicenses": true,
+                            "vendorChunk": false,
+                            "buildOptimizer": true,
+                            "budgets": [
+                                {
+                                    "type": "initial",
+                                    "maximumWarning": "2mb",
+                                    "maximumError": "5mb"
+                                },
+                                {
+                                    "type": "anyComponentStyle",
+                                    "maximumWarning": "6kb",
+                                    "maximumError": "12kb"
                                 }
                             ]
                         }
@@ -586,7 +642,7 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
                                 }
                             ]
                         },
@@ -614,7 +670,7 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
                                 }
                             ]
                         },
@@ -642,7 +698,7 @@
                                 {
                                     "type": "anyComponentStyle",
                                     "maximumWarning": "6kb",
-                                    "maximumError": "10kb"
+                                    "maximumError": "12kb"
                                 }
                             ]
                         }

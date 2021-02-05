@@ -28,6 +28,37 @@
           width: 100%;
         }
       }
+      .leftpart{
+        height: 66px; 
+        width: 166px;
+        background: url(../assets/img/bg_dropdown.png) no-repeat;
+        background-size: 100% 100%;
+        .xialaBtn{
+          width: 50px;
+          float: right;
+          .dropdown{
+            button{
+              width: 50px;
+              height: 50px;
+              background: none;
+              outline: none;
+            }
+            .dropdown-menu{               
+              background: linear-gradient(138deg, #EAF2F9 0%, #E3EDF7 100%);
+              box-shadow: 8px 8px 9px 0px rgba(128, 152, 176, 0.2);
+              border-radius: 18px;
+              border: none;
+              margin: 0.625rem 0 0;
+              color: #2C3A47;
+              font-size: 14px;
+              img{
+                width: 10px;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
     }
   }
   .body{

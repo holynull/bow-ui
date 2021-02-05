@@ -3,7 +3,9 @@
     <div class="navigation">
         <div class="main">
             <div class="logo">
-                <img class="cursor" src="assets/img/logo.png" alt="logo">
+                <a href="/">
+                    <img class="cursor" src="assets/img/logo.png" alt="logo">
+                </a>
             </div>
             <div class="leftpart">
                 <div class="walletBtn">
@@ -21,27 +23,41 @@
                     <div class="dropdown">
                         <button type="button" class="" data-toggle="dropdown"></button>
                         <div class="dropdown-menu dropdown-menu-right">
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="/p1">
                                 <img src="assets/img/pool.png" alt="">
                                 <span>{{"Pool 1"|translate}}</span>
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="/p2">
                                 <img src="assets/img/pool.png" alt="">
                                 <span>{{"Pool 2"|translate}}</span>
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="/stake1">
                                 <img src="assets/img/pool.png" alt="">
-                                <span>{{"stake & reward"|translate}}</span>
+                                <span>{{"stake & reward"|translate}} Pool1</span>
                             </a>
-                            <a class="dropdown-item" href="#">
+                            <a class="dropdown-item" href="/stake2">
+                                <img src="assets/img/pool.png" alt="">
+                                <span>{{"stake & reward"|translate}} Pool2</span>
+                            </a>
+                            <a class="dropdown-item" href="/faucet1">
+                                <img src="assets/img/pool.png" alt="">
+                                <span>Faucet of Pool1</span>
+                            </a>
+                            <a class="dropdown-item" href="/faucet2">
+                                <img src="assets/img/pool.png" alt="">
+                                <span>Faucet of Pool2</span>
+                            </a>
+                            <!-- <a class="dropdown-item" href="#">
                                 <img src="assets/img/zhinan.png" alt="">
                                 <span>{{"Tutorial"|translate}}</span>
-                            </a>
-                            <a class="dropdown-item" href="#" *ngIf="lang.curLanguage.indexOf('en')===0" (click)="changeLang(lang.curLanguage.indexOf('zh')===0?'en':'zh')">
+                            </a> -->
+                            <a class="dropdown-item" href="#" *ngIf="lang.curLanguage.indexOf('en')===0"
+                                (click)="changeLang(lang.curLanguage.indexOf('zh')===0?'en':'zh')">
                                 <img src="assets/img/cn.png" alt="">
                                 <span>中文</span>
                             </a>
-                            <a class="dropdown-item" href="#" *ngIf="lang.curLanguage.indexOf('zh')===0" (click)="changeLang(lang.curLanguage.indexOf('zh')===0?'en':'zh')">
+                            <a class="dropdown-item" href="#" *ngIf="lang.curLanguage.indexOf('zh')===0"
+                                (click)="changeLang(lang.curLanguage.indexOf('zh')===0?'en':'zh')">
                                 <img src="assets/img/en.png" alt="">
                                 <span>English</span>
                             </a>

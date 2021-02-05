@@ -12,7 +12,7 @@ export const environment = {
     chains: {
         256: {
             enabled: true,
-            name: 'HECO Testnet',
+            name: 'DEV',
             rpc: 'https://http-testnet.hecochain.com',
             contracts: {
                 proxy: {
