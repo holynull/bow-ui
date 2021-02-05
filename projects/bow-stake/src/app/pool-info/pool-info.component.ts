@@ -21,19 +21,11 @@ export class PoolInfoComponent implements OnInit {
         return this.boot.poolInfo.shareRewardRate.multipliedBy(100);
     }
 
-    farmingRewardAmt() {
-        return this.boot.poolInfo.shareRewardRate.multipliedBy(this.boot.poolInfo.tokenBalance.multipliedBy(this.allocationPercent().div(100))).toFormat(2, BigNumber.ROUND_DOWN) + " " + this.boot.tokenSymbol;
-    }
-
     volRewardPercent() {
         return this.boot.poolInfo.swapRewardRate.multipliedBy(100);
     }
 
-    volRewardAmt() {
-        return this.boot.poolInfo.swapRewardRate.multipliedBy(this.boot.poolInfo.tokenBalance.multipliedBy(this.allocationPercent().div(100))).toFormat(2, BigNumber.ROUND_DOWN) + " " + this.boot.tokenSymbol;
-    }
-
     tokenBalance() {
-        return this.boot.poolInfo.tokenBalance.multipliedBy(this.allocationPercent()).div(100);
+        return this.boot.poolInfo.tokenShareBalance.plus(this.boot.poolInfo.tokenSwapBalance);
     }
 }

@@ -1,0 +1,20 @@
+<lib-header [showPoolsMenu]="true" [needWallet]="true" [vpDiff]="getVpDiff()"
+    [network]="boot.chainConfig?boot.chainConfig.name:'Unsupport Network'"
+    [account]="boot.accounts.length>0?boot.accounts[0]:''" (chooseWallet)="chooseWallet()"
+    (connectWallet)="connectWallet()" #header></lib-header>
+<div class="fauceDiv">
+    <div class="versionHeart">
+        <div class="header">
+            <img src="assets/img/pool.png" alt="">
+            <span>HecoTestnet</span>
+        </div>
+        <div class="bodyDiv">
+            <div class="centerDiv">
+                <app-claim (loading)="header.onLoading()" (loaded)="header.onLoaded()"></app-claim>
+                <div class="part3" style="margin-top: 5px;">
+                    <p>没有HT?<a href="https://scan-testnet.hecochain.com/faucet" target="_blank">heco.fancet</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

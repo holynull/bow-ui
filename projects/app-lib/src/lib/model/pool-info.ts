@@ -19,7 +19,8 @@ export class PoolInfo {
 
     tokenTotalSupply: BigNumber = new BigNumber(0);
     tokenAvailableSupply: BigNumber = new BigNumber(0);
-    tokenBalance: BigNumber = new BigNumber(0);
+    tokenShareBalance: BigNumber = new BigNumber(0);
+    tokenSwapBalance: BigNumber = new BigNumber(0);
     totalLPStaking: BigNumber = new BigNumber(0);
 
     constructor(coinsLength: number) {
