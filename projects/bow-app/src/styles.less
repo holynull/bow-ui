@@ -1,3 +1,11 @@
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 @media screen and (max-width: 768px) {
     html{
       body{
@@ -63,6 +71,7 @@
                 color: #7E92A6;
                 line-height: 2.75rem;;  
                 text-align: center;
+                float: left;
                 a{
                   display: block;
                 }
@@ -128,7 +137,7 @@
                       width: 70%;
                       margin: 0px;
                       .coinName {
-                        width: 50px;
+                        width: 90px;
                         display: inline-block;
                         font-size: 14px;
                         font-weight: 400;
@@ -304,6 +313,7 @@
                   color: #7E92A6;
                   line-height: 2.75rem;;  
                   text-align: center;
+                  float: left;
                   a{
                     display: block;
                   }
@@ -368,7 +378,7 @@
                         width: 70%;
                         margin: 0px;
                         .coinName {
-                          width: 50px;
+                          width: 90px;
                           display: inline-block;
                           font-size: 14px;
                           font-weight: 400;

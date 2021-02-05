@@ -15,6 +15,24 @@
   padding: 0.7em;
   vertical-align: middle;
 }
+.approve {
+  padding: 0.7em;
+  vertical-align: middle;
+  background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+  box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+  border-radius: 12px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.approve-disabled,
+.btn-disabled {
+  background: #D4DDE9;
+  border-radius: 12px;
+  font-size: 12px;
+  color: #ffffff;
+  padding: 0.7em;
+  vertical-align: middle;
+}
 @media screen and (min-width: 768px) {
   .tab-pane .swapDiv .main {
     height: 300px;
@@ -86,6 +104,7 @@
     font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: #3A8DFF;
+    cursor: pointer;
   }
   .tab-pane .swapDiv .main .enterDiv .inputDiv .right {
     width: 50%;
@@ -144,8 +163,6 @@
     width: 90%;
     margin: 20px auto;
     height: 50px;
-    background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
-    box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
     border-radius: 16px;
     color: #fff;
     font-size: 16px;
@@ -222,6 +239,7 @@
     font-family: "PingFangSC-Regular, PingFang SC";
     font-weight: 400;
     color: #3A8DFF;
+    cursor: pointer;
   }
   .tab-pane .swapDiv .main .enterDiv .inputDiv .right {
     width: 50%;
@@ -278,8 +296,6 @@
     width: 90%;
     margin: 20px auto;
     height: 50px;
-    background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
-    box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
     border-radius: 16px;
     color: #fff;
     font-size: 16px;

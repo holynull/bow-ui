@@ -9,15 +9,16 @@
                         <span>{{coin.symbol}}</span>
                     </div>
                     <div>
-                        <span>{{'Balance'|translate}}&ngsp;</span>
+                        <span>{{'Balance'|translate}}&nbsp;</span>
                         <span>{{boot.balance.coinsBalance[i].toFixed(4)}}&nbsp;</span>
-                        <span>{{coin.symbol}}</span>
+                        <!-- <span>{{coin.symbol}}</span> -->
                     </div>
                 </div>
                 <div class="second">
                     <input type="number" name="{{coin.symbol}}Amt" [ngModel]="amts[i]"
                         (ngModelChange)="amtChange(i,$event)" placeholder="{{'Enter an amount'|translate}}">
                     <button
+                        class="ifApprove"
                         [ngClass]="{approve:isApproveEnabled(i),'approve-disabled':!isApproveEnabled(i)||loadStatus===1}"
                         (click)="approve(i)"
                         [disabled]="!isApproveEnabled(i)||loadStatus===1">{{'Approve'|translate}}</button>
