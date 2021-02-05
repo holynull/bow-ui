@@ -1,0 +1,185 @@
+.fauceDiv{
+  width: 100%;
+  height: 100%;
+  .versionHeart{
+    // width: 90%;
+    // height: 100%;
+    // margin: 0 auto;
+    .header{
+      width: 100%;
+      height: 81px;
+      padding-top: 19px;
+      img{
+        height: 20px;
+        width: 20px;
+        float: left;
+        margin-right: 8px;
+      }
+      span{    
+        font-size: 24px;
+        font-family: "Plumb-Bold, Plumb";
+        font-weight: bold;
+        color: #040820;
+        line-height: 20px;
+        float: left;
+      }
+    }
+    .bodyDiv{
+      width: 100%;
+      height: 340px;
+      background: #EBF2FA;
+      box-shadow: 4px 2px 16px 0px rgba(95, 157, 231, 0.48), -4px -2px 16px 0px #FFFFFF;
+      border-radius: 35px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      .centerDiv{
+        padding-top: 40px;
+        width: 88%;
+        margin: 0 auto;
+        height: 100%;
+        .part1{
+          height: 40px;
+          width: 100%;
+          .inputDiv{
+            float: left;
+            width: 69%;
+            height: 100%;          
+            // background: #E5EDF5;
+            // box-shadow: 4px 2px 8px 0px rgba(95, 157, 231, 0.48), -4px -2px 8px 0px #FFFFFF;
+            // border-radius: 20px 0px 0px 20px;
+            // border: 2px solid rgba(255, 255, 255, 0.2);
+            input{
+              height: 100%;
+              width: 100%;
+              font-size: 14px;
+              padding-left: 10px;
+              background: #E5EDF5;
+              box-shadow: inset 4px 2px 8px 0px rgba(95, 157, 231, 0.48),inset -4px -2px 8px 0px #FFFFFF;
+              border-radius: 20px 0px 0px 20px;
+              border: 2px solid rgba(255, 255, 255, 0.2);
+            }
+          }
+          .btnDiv{
+            float: right;
+            width: 29%;
+            height: 90%;         
+            background: #EBF2FA;
+            box-shadow: 4px 2px 16px 0px rgba(95, 157, 231, 0.48), -4px -2px 16px 0px #FFFFFF;
+            border-radius: 0px 20px 20px 0px;
+            border: 2px solid rgba(255, 255, 255, 0.3);  
+            .dropdown{
+              button{
+                width: 75px;
+                height: 34px;
+                background: none;
+                outline: none;
+                border: none;
+                font-weight: 600;
+                color: #7E97B8;
+              }
+              .dropdown-menu{  
+                font-weight: 600;
+                color: #7E97B8;             
+                background: linear-gradient(138deg, #EAF2F9 0%, #E3EDF7 100%);
+                box-shadow: 8px 8px 9px 0px rgba(128, 152, 176, 0.2);
+                border-radius: 10px;
+                border: none;
+                margin: 0.625rem 0 0;
+                font-size: 14px;
+                left: 35px;
+                min-width: 8rem;
+                img{
+                  width: 15px;
+                  height: 15px;
+                  margin-right: 5px;
+                }
+              }
+            }
+          }
+        }
+        .part2{
+          width: 100%;
+          height: 112px;
+         ul{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content:space-between;
+          padding-top: 25px;
+          li{
+            flex: 1;
+            input{
+              width: 15px;
+              height: 15px;
+              margin-right: 6px;
+            }
+            span{                          
+              font-weight: 600;
+              color: #7E97B8;
+              line-height: 20px;
+            }
+            .val{
+              margin-right: 3px;
+            }
+            .coin{
+              margin-right:6px ;
+            }
+
+          }
+         }
+        }
+        .part3{
+          p{   
+            font-size: 12px;    
+            font-family: PingFangSC-Semibold, PingFang SC;
+            font-weight: 600;
+            color: #7E97B8;
+            a{
+              color: #3F90FF;
+              margin-left: 8px;
+            }
+          }
+        }
+        .part4{
+          padding-top: 25px;
+          button{
+            width: 100%;
+            height: 48px;
+            background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+            box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+            border-radius: 30px;
+            font-size: 16px;
+            padding: 0.7em;
+            border: none;
+          }
+          .stake{
+            color: #ffffff;
+            background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);
+            box-shadow: 4px 17px 21px 0px rgba(163, 202, 255, 0.72);
+          }
+          // 不可点击样式
+          .nostake{
+            background: #D4DDE9;
+            color: #ffffff;
+            vertical-align: middle;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .versionHeart{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .versionHeart{
+    width: 450px;
+    height: 100%;
+    margin: 0 auto;
+  }
+}
