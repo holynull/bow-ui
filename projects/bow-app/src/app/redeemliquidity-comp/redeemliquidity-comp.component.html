@@ -3,12 +3,13 @@
     <div class="withdrawLiquiDiv">
         <div class="main">
             <div class="LiquidityRatio">
-                <p>流动性比(%){{boot.liquiditySymbol}}</p>
+                <p><span class="val_span">{{boot.balance.lp.toFixed(4,1)}}</span> <span class="coin_span">{{boot.liquiditySymbol}}</span> </p>
                 <div class="enterDiv">
                     <div class="inputDiv">
                         <input type="number" name="redeemPercent" [ngModel]="redeemPercent"
                             (ngModelChange)="redeemPercentChange($event)"
                             placeholder="{{'Please enter a number'|translate}}">
+                            <span>%</span>
                     </div>
                 </div>
             </div>
@@ -22,7 +23,7 @@
                             </div>
                             <div class="second">
                                 <input type="text" name="{{coin.symbol}}Amt" [(ngModel)]="amts[i]"
-                                    placeholder="{{'Enter an amount'|translate}}">
+                                    placeholder="{{'Enter an amount'|translate}}">           
                             </div>
                             <div>
                                 <label for="daiEabled">{{"All"|translate}} </label>
@@ -36,17 +37,7 @@
             </div>
         </div>
         <div class="averageDiv">
-            <!-- <div class="leftDiv">
-                <div class="ifOpen">
-                    <div class="switch-container ">
-                        <input type="checkbox" id="switch" class="switch">
-                        <label for="switch" onclick="test()"></label>
-                        
-                    </div>
-                </div>
-                <span>赎回成全部币种</span>
-            </div> -->
-            <mat-slide-toggle [color]="slideToggleColor" [checked]="false"
+            <mat-slide-toggle style="float: right;" [color]="slideToggleColor" [checked]="false"
                 [disabled]="!redeemPercent||redeemPercent===null||redeemPercent===0" (change)="reset($event)"
                 #redeemToThree>{{"Redeem to all coins"|translate}}</mat-slide-toggle>
         </div>
