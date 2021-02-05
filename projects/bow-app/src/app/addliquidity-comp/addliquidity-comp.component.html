@@ -22,7 +22,7 @@
                         (click)="approve(i)"
                         [disabled]="!isApproveEnabled(i)||loadStatus===1">{{'Approve'|translate}}</button>
                 </div>
-            </div> -->
+            </div>
         </div>
         <div class="butDiv">
             <button *ngIf="boot.accounts.length>0" (click)="addLiquidity()"

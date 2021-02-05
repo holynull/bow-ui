@@ -60,6 +60,7 @@ export class ProxyService {
 
     contracts: Array<Contract> = new Array();
     contractsAddress: Array<string> = new Array();
+    walletsAddress: Array<string> = new Array();
 
     chainConfig: any;
     unSupportedNetworkSubject: Subject<any> = new Subject();
@@ -113,62 +114,72 @@ export class ProxyService {
         }).catch(e => {
             console.log(e);
         });
-        return this.proxyContract.methods.getTokenAddress().call().then(tokenAddress => {
-            if (tokenAddress) {
-                this.tokenContract = new this.web3.eth.Contract(BowToken.abi, tokenAddress);
-                this.tokenContract.methods.balanceOf(this.accounts[0]).call().then(balance => {
-                    if (balance) {
-                        this.balance.tokenBalance = new BigNumber(balance).div(denominator);
-                    }
-                });
-                this.tokenContract.methods.balanceOf(this.chainConfig.contracts.proxy.address).call().then(balance => {
-                    if (balance) {
-                        this.poolInfo.tokenBalance = new BigNumber(balance).div(denominator);
-                    }
-                });
-                this.tokenContract.methods.totalSupply().call().then(totalSupply => {
-                    if (totalSupply) {
-                        this.poolInfo.tokenTotalSupply = new BigNumber(totalSupply).div(denominator);
-                    }
-                });
-                this.tokenContract.methods.availableSupply().call().then(supply => {
-                    if (supply) {
-                        this.poolInfo.tokenAvailableSupply = new BigNumber(supply).div(denominator);
-                    }
-                });
-            }
-            return this.getPoolInfo(this.chainConfig.contracts.pid).then(res => {
-                if (res && res._coins) {
-                    this.contracts.splice(0, this.contracts.length);
-                    res._coins.forEach(e => {
-                        this.contracts.push(new this.web3.eth.Contract(HRC20.abi, e));
-                        this.contractsAddress.push(e);
+        this.proxyContract.methods.getWallets().call().then(addArr => {
+            this.walletsAddress = addArr;
+            return addArr;
+        }).then(walletsAddress => {
+            return this.proxyContract.methods.getTokenAddress().call().then(tokenAddress => {
+                if (tokenAddress) {
+                    this.tokenContract = new this.web3.eth.Contract(BowToken.abi, tokenAddress);
+                    this.tokenContract.methods.balanceOf(this.accounts[0]).call().then(balance => {
+                        if (balance) {
+                            this.balance.tokenBalance = new BigNumber(balance).div(denominator);
+                        }
+                    });
+                    this.tokenContract.methods.balanceOf(walletsAddress[0]).call().then(balance => {
+                        if (balance) {
+                            this.poolInfo.tokenShareBalance = new BigNumber(balance).div(denominator);
+                        }
+                    });
+                    this.tokenContract.methods.balanceOf(walletsAddress[1]).call().then(balance => {
+                        if (balance) {
+                            this.poolInfo.tokenSwapBalance = new BigNumber(balance).div(denominator);
+                        }
+                    });
+                    this.tokenContract.methods.totalSupply().call().then(totalSupply => {
+                        if (totalSupply) {
+                            this.poolInfo.tokenTotalSupply = new BigNumber(totalSupply).div(denominator);
+                        }
+                    });
+                    this.tokenContract.methods.availableSupply().call().then(supply => {
+                        if (supply) {
+                            this.poolInfo.tokenAvailableSupply = new BigNumber(supply).div(denominator);
+                        }
                     });
                 }
-                if (res && res._poolAddress) {
-                    this.poolAddress = res._poolAddress;
-                    this.poolContract = new this.web3.eth.Contract(BowPool.abi, res._poolAddress);
-                }
-                if (res && res._allocPoint) {
-                    this.poolInfo.allocPoint = new BigNumber(res._allocPoint).div(denominator);
-                }
-                if (res && res._accTokenPerShare) {
-                    this.poolInfo.accTokenPerShare = new BigNumber(res._accTokenPerShare).div(denominator);
-                }
-                if (res && res._shareRewardRate) {
-                    this.poolInfo.shareRewardRate = new BigNumber(res._shareRewardRate).div(denominator);
-                }
-                if (res && res._swapRewardRate) {
-                    this.poolInfo.swapRewardRate = new BigNumber(res._swapRewardRate).div(denominator);
-                }
-                if (res && res._totalVolAccPoints) {
-                    this.poolInfo.totalVolAccPoints = new BigNumber(res._totalVolAccPoints).div(denominator);
-                }
-                if (res && res._totalVolReward) {
-                    this.poolInfo.totalVolReward = new BigNumber(res._totalVolReward).div(denominator);
-                }
-                return true;
             });
+        });
+        return this.getPoolInfo(this.chainConfig.contracts.pid).then(res => {
+            if (res && res._coins) {
+                this.contracts.splice(0, this.contracts.length);
+                res._coins.forEach(e => {
+                    this.contracts.push(new this.web3.eth.Contract(HRC20.abi, e));
+                    this.contractsAddress.push(e);
+                });
+            }
+            if (res && res._poolAddress) {
+                this.poolAddress = res._poolAddress;
+                this.poolContract = new this.web3.eth.Contract(BowPool.abi, res._poolAddress);
+            }
+            if (res && res._allocPoint) {
+                this.poolInfo.allocPoint = new BigNumber(res._allocPoint).div(denominator);
+            }
+            if (res && res._accTokenPerShare) {
+                this.poolInfo.accTokenPerShare = new BigNumber(res._accTokenPerShare).div(denominator);
+            }
+            if (res && res._shareRewardRate) {
+                this.poolInfo.shareRewardRate = new BigNumber(res._shareRewardRate).div(denominator);
+            }
+            if (res && res._swapRewardRate) {
+                this.poolInfo.swapRewardRate = new BigNumber(res._swapRewardRate).div(denominator);
+            }
+            if (res && res._totalVolAccPoints) {
+                this.poolInfo.totalVolAccPoints = new BigNumber(res._totalVolAccPoints).div(denominator);
+            }
+            if (res && res._totalVolReward) {
+                this.poolInfo.totalVolReward = new BigNumber(res._totalVolReward).div(denominator);
+            }
+            return true;
         });
     }
 
@@ -404,7 +415,7 @@ export class ProxyService {
                 }).catch(e => {
                     console.log(e);
                 });
-                this.poolContract.methods.balanceOf(this.chainConfig.contracts.proxy.address).call({ from: this.accounts[0] }).then(totalLPStakingStr => {
+                this.poolContract.methods.balanceOf(this.walletsAddress[2]).call({ from: this.accounts[0] }).then(totalLPStakingStr => {
                     this.poolInfo.totalLPStaking = new BigNumber(totalLPStakingStr).div(denominator);
                 }).catch(e => {
                     console.log(e);
