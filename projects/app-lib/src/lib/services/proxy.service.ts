@@ -11,6 +11,7 @@ import BowProxy from '../abi/BowProxy.json';
 import HRC20 from '../abi/HRC20.json';
 import BowToken from '../abi/BowToken.json';
 import BowPool from '../abi/BowPool.json';
+import StableCoin from '../abi/StableCoin.json';
 import { AddlpSlippageConfirmComponent } from '../components/addlp-slippage-confirm/addlp-slippage-confirm.component';
 import { ApproveDlgComponent } from '../components/approve-dlg/approve-dlg.component';
 import { Balance } from '../model/balance';
@@ -152,9 +153,10 @@ export class ProxyService {
         return this.getPoolInfo(this.chainConfig.contracts.pid).then(res => {
             if (res && res._coins) {
                 this.contracts.splice(0, this.contracts.length);
-                res._coins.forEach(e => {
+                res._coins.forEach((e, index) => {
                     this.contracts.push(new this.web3.eth.Contract(HRC20.abi, e));
                     this.contractsAddress.push(e);
+                    this.coins[index].address = e;
                 });
             }
             if (res && res._poolAddress) {
@@ -948,6 +950,19 @@ export class ProxyService {
             });
         }).catch(e => {
             this.dialog.open(WalletExceptionDlgComponent, { data: { content: "exchange_exception" } });
+            console.log(e);
+        });
+    }
+
+    public claimSimulationStableCoin(i: number): Promise<any> {
+        let coinContract = new this.web3.eth.Contract(StableCoin.abi, this.contractsAddress[i]);
+        let data = coinContract.methods.claimCoins().encodeABI();
+        let txdata = { from: this.accounts[0], to: this.contractsAddress[i], value: 0, data: data };
+        return this.getTXData(txdata).then(data => {
+            return this.web3.eth.sendTransaction(data).catch(e => {
+                console.log(e);
+            });
+        }).catch(e => {
             console.log(e);
         });
     }

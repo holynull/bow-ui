@@ -1,0 +1,17 @@
+<div class="coinDiv" *ngFor="let coin of boot.coins;let i=index;">
+    <div class="firstPart">
+        <div>
+            <img src="assets/img/coins/{{boot.poolId}}-c{{i}}.png" alt="">
+            <span>{{coin.symbol}}</span>
+        </div>
+        <div>
+            <span>{{'Balance'|translate}}&ngsp;</span>
+            <span>{{boot.balance.coinsBalance[i].toFixed(4)}}&nbsp;</span>
+            <span>{{coin.symbol}}</span>
+        </div>
+    </div>
+    <div class="second">
+        <input type="text" name="{{coin.symbol}}_address" value="{{coin.address}}">
+        <button (click)="claim(i)">Claim 1000 {{coin.symbol}}</button>
+    </div>
+</div>

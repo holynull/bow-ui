@@ -3,81 +3,18 @@
     [account]="boot.accounts.length>0?boot.accounts[0]:''" (chooseWallet)="chooseWallet()"
     (connectWallet)="connectWallet()" #header></lib-header>
 <div class="fauceDiv">
-  <div class="versionHeart">
-    <div class="header">
-      <img src="assets/img/pool.png" alt="">
-      <span>HecoTestnet</span>
-    </div>
-    <div class="bodyDiv">
-      <div class="centerDiv">
-        <div class="part1">
-          <div class="inputDiv">
-            <input type="text" placeholder="请输入接收地址">
-          </div>
-          <div class="btnDiv">
-            <div class="dropdown">
-              <button type="button" class="" data-toggle="dropdown">
-                <img src="assets/img/pool.png" alt="">
-                <span>renBTC</span>
-                <!-- <span>V</span> -->
-              </button>
-              <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" href="#">
-                      <img src="assets/img/coins/p1-c0.png" alt="">
-                      <span>币种1</span>
-                  </a>
-                  <a class="dropdown-item" href="#">
-                      <img src="assets/img/coins/p1-c1.png" alt="">
-                      <span>币种2</span>
-                  </a>
-                  <a class="dropdown-item" href="#">
-                      <img src="assets/img/coins/p1-c2.png" alt="">
-                      <span>币种3</span>
-                  </a>
-                  <a class="dropdown-item" href="#">
-                      <img src="assets/img/coins/p2-c0.png" alt="">
-                      <span>币种4</span>
-                  </a>
-                  <a class="dropdown-item" href="#">
-                      <img src="assets/img/coins/p2-c1.png" alt="">
-                      <span>币种5</span>
-                  </a>
-                  <a class="dropdown-item" href="#" >
-                      <img src="assets/img/coins/p2-c2.png" alt="">
-                      <span>币种6</span>
-                  </a>
-              </div>
+    <div class="versionHeart">
+        <div class="header">
+            <img src="assets/img/pool.png" alt="">
+            <span>HecoTestnet</span>
+        </div>
+        <div class="bodyDiv">
+            <div class="centerDiv">
+                <app-claim (loading)="header.onLoading()" (loaded)="header.onLoaded()"></app-claim>
+                <div class="part3" style="margin-top: 5px;">
+                    <p>没有HT?<a href="https://scan-testnet.hecochain.com/faucet" target="_blank">heco.fancet</a> </p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="part2">
-          <ul>
-            <li>
-              <input type="radio" name="1">
-              <span class="val">1</span>
-              <span class="coin">renBTC</span>
-            </li>
-            <li>
-              <input type="radio" name="1">
-              <span class="val">1</span>
-              <span class="coin">renBTC</span>
-            </li>
-            <li>
-              <input type="radio" name="1">
-              <span class="val">1</span>
-              <span class="coin">renBTC</span>
-            </li>
-          </ul>
-        </div>
-        <div class="part3">
-          <p>没有HT?<a href="https://scan-testnet.hecochain.com/faucet" target="_blank">heco.fancet</a> </p>
-        </div>
-        <div class="part4">
-          <button class="stake">领取</button> 
-          <!-- 不可点击 -->
-          <!-- <button class="nostake">领取</button>  -->
-        </div>
-      </div>
     </div>
-  </div>
 </div>

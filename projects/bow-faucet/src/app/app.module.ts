@@ -9,11 +9,13 @@ import { AppLibModule } from 'app-lib';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClaimComponent } from './claim/claim.component';
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        ClaimComponent
     ],
     imports: [
         BrowserModule,
