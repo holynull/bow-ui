@@ -50,10 +50,14 @@
               border: none;
               margin: 0.625rem 0 0;
               color: #2C3A47;
-              font-size: 14px;
+              font-size: 16px;
+              font-weight: 400;
               img{
                 width: 10px;
                 margin-right: 5px;
+              }
+              .dropdown-item{
+                  margin: 0.5rem 0;
               }
             }
           }
@@ -74,11 +78,10 @@
       .tlttle{
         p{  
           padding-top: 24px;  
-          font-family: "FZLTTHJW--GB1-0, FZLTTHJW--GB1";
-          font-weight: bold;
-          color: #55677F;
-          font-size: 45px;
-          text-align: left;
+        //   font-weight: bold;
+        //   color: #55677F;
+          font-size: 48px;
+          text-align: center;
           line-height: 58px;
         }
       }
@@ -96,7 +99,6 @@
             height: 70px;
             background: url(../assets/img/home/Introduction_bg.png) no-repeat;
             background-size: 100% 100%;             
-            font-family: "PingFangSC-Heavy, PingFang SC";
             font-weight: 800;
             color: #7E97B8;
             line-height: 70px;
@@ -109,13 +111,12 @@
           .textDiv{
             margin-top: 15px;
             width: 740px;
-            font-family: "PingFangSC-Regular, PingFang SC";
-            font-weight: 400;
-            color: #738BA4;
+            
+            // color: #738BA4;
             p{
               line-height: 2;
-              font-weight: 100;
-              font-size: 18px;
+                font-weight: 400;
+            font-size: 1.38316rem;
             }
           }
 
@@ -145,7 +146,6 @@
               float: left;
             }
             p{
-              font-family: FZLTTHJW--GB1-0, FZLTTHJW--GB1;
               font-weight: normal;
               color: #7E97B8;
               float: left;

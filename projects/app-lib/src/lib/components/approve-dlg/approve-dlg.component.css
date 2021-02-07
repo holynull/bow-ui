@@ -11,12 +11,10 @@
   margin-right: 15px;
 }
 .matDiv h1 {
-  font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #000000;
 }
 .matDiv .tip {
-  font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #6B6B6B;
   line-height: 28px;
@@ -49,7 +47,6 @@
 }
 .matDiv .btnDiv div p {
   float: left;
-  font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #006BFF;
 }

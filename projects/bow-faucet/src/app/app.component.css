@@ -15,7 +15,6 @@
 }
 .fauceDiv .versionHeart .header span {
   font-size: 24px;
-  font-family: "Plumb-Bold, Plumb";
   font-weight: bold;
   color: #040820;
   line-height: 20px;
@@ -121,7 +120,6 @@
 }
 .fauceDiv .versionHeart .bodyDiv .centerDiv .part3 p {
   font-size: 12px;
-  font-family: PingFangSC-Semibold, PingFang SC;
   font-weight: 600;
   color: #7E97B8;
 }
