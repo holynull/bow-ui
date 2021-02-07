@@ -11,7 +11,7 @@
                         <p><em class="coinName">{{coin.symbol}}:</em>
                             <em class="coinVal">{{boot.poolInfo.coinsRealBalance[i].toFormat(4)}}</em>
                         </p>
-                        <span>{{percent(i).toFixed(2)}}%</span>
+                        <span>{{percent(i).toFormat(2,1)}}%</span>
                     </li>
                 </ul>
             </div>

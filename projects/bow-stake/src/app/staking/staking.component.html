@@ -8,7 +8,7 @@
             <div class="depositDiv">
                 <p class="textDiv">
                     <span class="text_span">{{boot.liquiditySymbol}}</span>
-                    <span class="val_span">{{boot.balance.lp.toFixed(4,1)}}</span>
+                    <span class="val_span">{{boot.balance.lp.toFormat(4,1)}}</span>
                 </p>
                 <div class="inputDiv">
                     <div>
@@ -36,7 +36,7 @@
             <div class="withdrawdiv">
                 <p class="textDiv">
                     <span class="text_span">Staking {{boot.liquiditySymbol}}</span>
-                    <span class="val_span">{{boot.balance.stakingLP.toFixed(4,1)}}</span>
+                    <span class="val_span">{{boot.balance.stakingLP.toFormat(4,1)}}</span>
                 </p>
                 <div class="inputDiv">
                     <div>
@@ -65,7 +65,7 @@
 
         <div class="rewardDiv">
             <p class="textDiv">
-                <span class="val_span">{{boot.balance.pendingToken.toFixed(4,1)}}</span>
+                <span class="val_span">{{boot.balance.pendingToken.toFormat(4,1)}}</span>
                 <span class="text_span">Pending {{boot.tokenSymbol}}</span>
             </p>
             <div class="btnDiv">

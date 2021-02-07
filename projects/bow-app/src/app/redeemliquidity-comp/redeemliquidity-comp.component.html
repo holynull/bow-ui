@@ -3,7 +3,7 @@
     <div class="withdrawLiquiDiv">
         <div class="main">
             <div class="LiquidityRatio">
-                <p><span class="val_span">{{boot.balance.lp.toFixed(4,1)}}</span> <span class="coin_span">{{boot.liquiditySymbol}}</span> </p>
+                <p><span class="val_span">{{boot.balance.lp.toFormat(4,1)}}</span> <span class="coin_span">{{boot.liquiditySymbol}}</span> </p>
                 <div class="enterDiv">
                     <div class="inputDiv">
                         <input type="number" name="redeemPercent" [ngModel]="redeemPercent"
