@@ -28,7 +28,7 @@
         <div class="butDiv">
             <button *ngIf="boot.accounts.length>0" (click)="addLiquidity()"
                 [disabled]="!isAddLiquidityBtnEnabled()||loadStatus===1"
-                [ngClass]="{'': isAddLiquidityBtnEnabled(),'btn-disabled':!isAddLiquidityBtnEnabled()||loadStatus===1}">{{'Add
+                [ngClass]="{'btnAdd': isAddLiquidityBtnEnabled(),'btn-disabled':!isAddLiquidityBtnEnabled()||loadStatus===1}">{{'Add
                 Liquidity'|translate}}</button>
             <button *ngIf="boot.accounts.length==0" (click)="connectWallet()">{{'Connect to a
                 Wallet'|translate}}</button>
