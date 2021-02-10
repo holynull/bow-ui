@@ -15,7 +15,8 @@
   padding: 0.7em;
   vertical-align: middle;
 }
-.approve {
+.approve,
+.btnAdd {
   padding: 0.7em;
   vertical-align: middle;
   background: linear-gradient(139deg, #7FB5FF 0%, #3489FF 100%);

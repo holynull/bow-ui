@@ -1,0 +1,46 @@
+@media screen and (min-width: 768px) {
+  .row ul li {
+    float: left;
+    width: 100%;
+  }
+  .row ul li a {
+    display: block;
+    height: 64px;
+    margin: 0;
+  }
+  .row ul li img {
+    width: 62px;
+    height: 62px;
+    float: left;
+    margin: 0 5px;
+  }
+  .row ul li span {
+    float: left;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 3.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .row ul li {
+    float: left;
+    width: 100%;
+  }
+  .row ul li a {
+    display: block;
+    height: 64px;
+    margin: 0;
+  }
+  .row ul li img {
+    width: 64px;
+    height: 64px;
+    float: left;
+    margin: 0 10px;
+  }
+  .row ul li span {
+    float: left;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 3.5em;
+  }
+}

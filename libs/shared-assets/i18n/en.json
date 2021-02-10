@@ -16,5 +16,6 @@
     "redeem_ImBalance_exception": "You may not have enough liquidity({{symbol}}) or redeem the desired amount.",
     "redeem_allcoin_exception": "You may not have enough liquidity({{symbol}}) or redeem the desired amount.",
     "redeem_onecoin_exception": "You may not have enough liquidity({{symbol}}) or redeem the desired amount.",
-    "addliquidity_exception": "Your balance may be too low or you may not have pre-approved the funds."
+    "addliquidity_exception": "Your balance may be too low or you may not have pre-approved the funds.",
+    "nohaveHT":"You need HT as gas fee, get the test HT on Heco here:"
 }
