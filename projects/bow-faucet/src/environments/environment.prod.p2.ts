@@ -16,7 +16,7 @@ export const environment = {
             rpc: 'https://http-testnet.hecochain.com',
             contracts: {
                 proxy: {
-                    address: "0x2079eCf1bb1FA3a98f09f5743b3Aa6edA9338c06"
+                    address: "0xe6D92fed3b36188bD37b63C86419822Eec6e07B5"
                 },
                 pid: 1
             }
